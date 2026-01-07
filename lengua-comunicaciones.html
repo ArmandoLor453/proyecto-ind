@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lengua y Comunicaciones - CECyTEM</title>
+    <link rel="stylesheet" href="lengua-comunicaciones.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+
+    <header>
+        <div class="container"></div>
+    </header>
+
+    <main>
+        <div class="container" id="inicio">
+            <div class="materia-header" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                <i class="fas fa-music"></i>
+                <h1>Lengua y Comunicaciones</h1>
+                <p>Canción, partes, tipos de texto, estrofa, verso y autoría</p>
+            </div>
+
+            <a href="index.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Volver al inicio
+            </a>
+
+            <!-- Recursos Multimedia -->
+            <section class="recursos-section" id="recursos">
+                <h2><i class="fas fa-folder-open"></i> Recursos de Aprendizaje</h2>
+                <div class="recursos-grid">
+                    <!-- PDF -->
+                    <div class="recurso-card">
+                        <div class="recurso-header">
+                            <i class="fas fa-file-pdf"></i>
+                            <h3>Guía: Poesía y Canción</h3>
+                        </div>
+                        <p>Introducción a verso, estrofa y estructura de canciones.</p>
+                        <div class="pdf-viewer">
+                            <iframe src="https://www.rae.es/sites/default/files/Principales_novedades_de_la_Ortografia_de_la_lengua_espanola.pdf"
+                                    frameborder="0" width="100%" height="500"></iframe>
+                        </div>
+                        <a href="https://www.rae.es/recursos/ortografia" target="_blank" class="download-btn">
+                            <i class="fas fa-external-link-alt"></i> Ver RAE
+                        </a>
+                    </div>
+
+                    <!-- Video -->
+                    <div class="recurso-card">
+                        <div class="recurso-header">
+                            <i class="fab fa-youtube"></i>
+                            <h3>Partes de una canción</h3>
+                        </div>
+                        <p>Estructura: introducción, verso, pre-coro, coro, puente y coda.</p>
+                        <div class="video-container">
+                            <iframe src="https://youtu.be/wDTTaBsNDu8?si=7mjQWHyGPRy1hPOt" title="Partes de una canción"
+                                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                        </div>
+                        <a href="https://youtu.be/wDTTaBsNDu8?si=7mjQWHyGPRy1hPOt" target="_blank" class="watch-btn">
+                            <i class="fab fa-youtube"></i> Ver en YouTube
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Índice de contenidos -->
+            <nav class="topic-navigation" id="indice">
+                <h3><i class="fas fa-list"></i> Índice de Contenidos</h3>
+                <ul>
+                    <li><a href="#que-es-cancion">1. ¿Qué es una canción?</a></li>
+                    <li><a href="#como-se-divide">2. ¿Cómo se divide una canción?</a></li>
+                    <li><a href="#tipos-texto">3. Tipos de texto</a></li>
+                    <li><a href="#que-es-estrofa">4. ¿Qué es una estrofa?</a></li>
+                    <li><a href="#que-es-verso">5. ¿Qué es un verso?</a></li>
+                    <li><a href="#que-es-autor">6. ¿Qué es un autor?</a></li>
+                    <li><a href="#que-es-coautor">7. ¿Qué es un coautor?</a></li>
+                    <li><a href="#quiz">📝 Cuestionario</a></li>
+                </ul>
+            </nav>
+
+            <div class="content-wrapper">
+                <!-- 1. ¿Qué es una canción? -->
+                <section class="topic-card" id="que-es-cancion">
+                    <h2><i class="fas fa-music"></i> 1. ¿Qué es una canción?</h2>
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=1200" alt="Canción">
+                    </div>
+                    <p>Una <strong>canción</strong> es una composición artística que integra <em>letra</em> (texto) y <em>música</em> (melodía, armonía y ritmo) pensada para ser interpretada con la voz. Su objetivo puede ser estético, expresivo, narrativo o persuasivo, y suele organizarse en secciones que facilitan la memorización y el impacto emocional.</p>
+                    <div class="example-box">
+                        <strong>Rasgos comunes:</strong>
+                        <ul>
+                            <li>Duración breve (2–5 min aprox.)</li>
+                            <li>Presencia de estribillo o <em>coro</em> memorable</li>
+                            <li>Repeticiones y variaciones controladas</li>
+                            <li>Lenguaje figurado, imágenes y recursos sonoros</li>
+                        </ul>
+                    </div>
+                    <a class="anchor-inline" href="#indice"><i class="fas fa-anchor"></i> Volver al índice</a>
+                </section>
+
+                <!-- 2. ¿Cómo se divide? -->
+                <section class="topic-card" id="como-se-divide">
+                    <h2><i class="fas fa-stream"></i> 2. ¿Cómo se divide una canción?</h2>
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1483412033650-1015ddeb83d1?w=1200" alt="Estructura de canción">
+                    </div>
+                    <p>La estructura puede variar por género, pero un esquema frecuente incluye:</p>
+                    <ul>
+                        <li><strong>Introducción:</strong> Presenta atmósfera y motivos musicales.</li>
+                        <li><strong>Verso:</strong> Aporta la narrativa o el desarrollo de la idea.</li>
+                        <li><strong>Pre-coro:</strong> Transición que eleva tensión hacia el coro.</li>
+                        <li><strong>Coro (estribillo):</strong> Sección central, memorable y repetitiva.</li>
+                        <li><strong>Puente:</strong> Contraste armónico o melódico antes del último coro.</li>
+                        <li><strong>Coda/Outro:</strong> Cierre de la pieza.</li>
+                    </ul>
+                    <div class="code-box">
+                        <code>
+Ejemplo de forma: Intro – Verso – Pre-coro – Coro – Verso – Pre-coro – Coro – Puente – Coro – Coda
+                        </code>
+                    </div>
+                    <a class="anchor-inline" href="#indice"><i class="fas fa-anchor"></i> Volver al índice</a>
+                </section>
+
+                <!-- 3. Tipos de texto -->
+                <section class="topic-card" id="tipos-texto">
+                    <h2><i class="fas fa-file-alt"></i> 3. Tipos de texto</h2>
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=1200" alt="Tipos de texto">
+                    </div>
+                    <p>Los <strong>tipos de texto</strong> se clasifican por su propósito comunicativo:</p>
+                    <ul>
+                        <li><strong>Narrativo:</strong> Cuenta hechos con personajes, tiempo y espacio.</li>
+                        <li><strong>Descriptivo:</strong> Detalla características de personas, lugares u objetos.</li>
+                        <li><strong>Expositivo:</strong> Informa o explica un tema de manera objetiva.</li>
+                        <li><strong>Argumentativo:</strong> Defiende una opinión o punto de vista.</li>
+                        <li><strong>Instructivo:</strong> Indica cómo realizar una tarea o actividad.</li>
+                    </ul>
+                    <a class="anchor-inline" href="#indice"><i class="fas fa-anchor"></i> Volver al índice</a>
+                </section>
+
+                <!-- 4. ¿Qué es una estrofa? -->
+                <section class="topic-card" id="que-es-estrofa">
+                    <h2><i class="fas fa-th"></i> 4. ¿Qué es una estrofa?</h2>
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1200" alt="Estrofa">
+                    </div>
+                    <p>Una <strong>estrofa</strong> es un conjunto de versos que forman una unidad en una composición poética o canción. Las estrofas se utilizan para estructurar el contenido, facilitar la memorización y crear un efecto estético.</p>
+                    <div class="example-box">
+                        <strong>Características:</strong>
+                        <ul>
+                            <li>Conjunto de dos o más versos.</li>
+                            <li>Puede tener rima y métrica fija o libre.</li>
+                            <li>Separa ideas, imágenes o partes de la historia.</li>
+                        </ul>
+                    </div>
+                    <a class="anchor-inline" href="#indice"><i class="fas fa-anchor"></i> Volver al índice</a>
+                </section>
+
+                <!-- 5. ¿Qué es un verso? -->
+                <section class="topic-card" id="que-es-verso">
+                    <h2><i class="fas fa-ruler-horizontal"></i> 5. ¿Qué es un verso?</h2>
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=1200" alt="Verso">
+                    </div>
+                    <p>Un <strong>verso</strong> es una línea de una composición poética o canción. Es la unidad más pequeña de la estructura rítmica y suele tener una medida y un patrón de acentos determinados.</p>
+                    <div class="example-box">
+                        <strong>Ejemplo de verso:</strong>
+                        <p>En el silencio, escucho tu voz.</p>
+                    </div>
+                    <a class="anchor-inline" href="#indice"><i class="fas fa-anchor"></i> Volver al índice</a>
+                </section>
+
+                <!-- 6. ¿Qué es un autor? -->
+                <section class="topic-card" id="que-es-autor">
+                    <h2><i class="fas fa-user"></i> 6. ¿Qué es un autor?</h2>
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1507679790982-8f6d7a7f7a4f?w=1200" alt="Autor">
+                    </div>
+                    <p>Un <strong>autor</strong> es la persona que crea una obra, ya sea literaria, musical, artística, etc. Es el responsable de la concepción, desarrollo y expresión de la obra.</p>
+                    <div class="example-box">
+                        <strong>Funciones del autor:</strong>
+                        <ul>
+                            <li>Crear y desarrollar la idea o historia.</li>
+                            <li>Definir personajes, escenarios y tramas.</li>
+                            <li>Escribir el texto o partitura.</li>
+                            <li>Revisar y corregir la obra.</li>
+                        </ul>
+                    </div>
+                    <a class="anchor-inline" href="#indice"><i class="fas fa-anchor"></i> Volver al índice</a>
+                </section>
+
+                <!-- 7. ¿Qué es un coautor? -->
+                <section class="topic-card" id="que-es-coautor">
+                    <h2><i class="fas fa-users"></i> 7. ¿Qué es un coautor?</h2>
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1517841905240-472c8b3b8f4b?w=1200" alt="Coautor">
+                    </div>
+                    <p>Un <strong>coautor</strong> es una persona que colabora con el autor en la creación de una obra. Juntos comparten la responsabilidad y el crédito de la obra resultante.</p>
+                    <div class="example-box">
+                        <strong>Ejemplo de coautoría:</strong>
+                        <p>Una canción escrita por dos compositores.</p>
+                    </div>
+                    <a class="anchor-inline" href="#indice"><i class="fas fa-anchor"></i> Volver al índice</a>
+                </section>
+
+                <!-- Cuestionario -->
+                <div class="quiz-container" id="quiz">
+                    <h2><i class="fas fa-clipboard-check"></i> Cuestionario de Lengua y Comunicaciones</h2>
+                    <p>Pon a prueba tus conocimientos sobre ortografía, gramática, literatura y comunicación. Selecciona la respuesta correcta para cada pregunta.</p>
+
+                    <form id="quizForm">
+                        <!-- Pregunta 1 -->
+                        <div class="quiz-question">
+                            <h3>1. ¿Cuál es la regla de acentuación de las palabras agudas?</h3>
+                            <label><input type="radio" name="q1" value="a"> Se acentúan cuando terminan en n, s o vocal</label>
+                            <label><input type="radio" name="q1" value="b"> Se acentúan cuando NO terminan en n, s o vocal</label>
+                            <label><input type="radio" name="q1" value="c"> Siempre se acentúan</label>
+                            <label><input type="radio" name="q1" value="d"> Nunca se acentúan</label>
+                        </div>
+
+                        <!-- Pregunta 2 -->
+                        <div class="quiz-question">
+                            <h3>2. ¿Qué tipo de texto tiene como objetivo convencer al lector?</h3>
+                            <label><input type="radio" name="q2" value="a"> Narrativo</label>
+                            <label><input type="radio" name="q2" value="b"> Descriptivo</label>
+                            <label><input type="radio" name="q2" value="c"> Argumentativo</label>
+                            <label><input type="radio" name="q2" value="d"> Expositivo</label>
+                        </div>
+
+                        <!-- Pregunta 3 -->
+                        <div class="quiz-question">
+                            <h3>3. ¿Cuál es la función de la coma (,)?</h3>
+                            <label><input type="radio" name="q3" value="a"> Terminar una oración</label>
+                            <label><input type="radio" name="q3" value="b"> Hacer pausas breves y separar elementos</label>
+                            <label><input type="radio" name="q3" value="c"> Indicar una pregunta</label>
+                            <label><input type="radio" name="q3" value="d"> Expresar sorpresa</label>
+                        </div>
+
+                        <!-- Pregunta 4 -->
+                        <div class="quiz-question">
+                            <h3>4. ¿Cuáles son los tres géneros literarios principales?</h3>
+                            <label><input type="radio" name="q4" value="a"> Cuento, novela y poema</label>
+                            <label><input type="radio" name="q4" value="b"> Narrativo, lírico y dramático</label>
+                            <label><input type="radio" name="q4" value="c"> Comedia, tragedia y romance</label>
+                            <label><input type="radio" name="q4" value="d"> Ficción, no ficción y ensayo</label>
+                        </div>
+
+                        <!-- Pregunta 5 -->
+                        <div class="quiz-question">
+                            <h3>5. ¿Qué es un sustantivo?</h3>
+                            <label><input type="radio" name="q5" value="a"> Una palabra que indica acción</label>
+                            <label><input type="radio" name="q5" value="b"> Una palabra que nombra personas, animales o cosas</label>
+                            <label><input type="radio" name="q5" value="c"> Una palabra que describe</label>
+                            <label><input type="radio" name="q5" value="d"> Una palabra que conecta ideas</label>
+                        </div>
+
+                        <!-- Pregunta 6 -->
+                        <div class="quiz-question">
+                            <h3>6. ¿Cuál es la estructura básica de un texto?</h3>
+                            <label><input type="radio" name="q6" value="a"> Título, párrafos y firma</label>
+                            <label><input type="radio" name="q6" value="b"> Introducción, desarrollo y conclusión</label>
+                            <label><input type="radio" name="q6" value="c"> Planteamiento, nudo y desenlace</label>
+                            <label><input type="radio" name="q6" value="d"> Inicio, medio y final</label>
+                        </div>
+
+                        <!-- Pregunta 7 -->
+                        <div class="quiz-question">
+                            <h3>7. ¿Qué caracteriza a un verbo en modo imperativo?</h3>
+                            <label><input type="radio" name="q7" value="a"> Indica duda o posibilidad</label>
+                            <label><input type="radio" name="q7" value="b"> Expresa órdenes o mandatos</label>
+                            <label><input type="radio" name="q7" value="c"> Narra acciones pasadas</label>
+                            <label><input type="radio" name="q7" value="d"> Describe estados de ánimo</label>
+                        </div>
+
+                        <!-- Pregunta 8 -->
+                        <div class="quiz-question">
+                            <h3>8. ¿Cuál es una estrategia de comprensión lectora?</h3>
+                            <label><input type="radio" name="q8" value="a"> Leer lo más rápido posible</label>
+                            <label><input type="radio" name="q8" value="b"> Identificar ideas principales y hacer inferencias</label>
+                            <label><input type="radio" name="q8" value="c"> Memorizar todo el texto</label>
+                            <label><input type="radio" name="q8" value="d"> Leer solo una vez</label>
+                        </div>
+
+                        <!-- Pregunta 9 -->
+                        <div class="quiz-question">
+                            <h3>9. ¿Qué son los adjetivos?</h3>
+                            <label><input type="radio" name="q9" value="a"> Palabras que indican acciones</label>
+                            <label><input type="radio" name="q9" value="b"> Palabras que modifican o califican al sustantivo</label>
+                            <label><input type="radio" name="q9" value="c"> Palabras que enlazan oraciones</label>
+                            <label><input type="radio" name="q9" value="d"> Palabras que nombran lugares</label>
+                        </div>
+
+                        <!-- Pregunta 10 -->
+                        <div class="quiz-question">
+                            <h3>10. ¿Cuál es una habilidad clave en la expresión oral?</h3>
+                            <label><input type="radio" name="q10" value="a"> Hablar sin pausas</label>
+                            <label><input type="radio" name="q10" value="b"> Usar vocabulario técnico siempre</label>
+                            <label><input type="radio" name="q10" value="c"> Claridad, fluidez y uso adecuado del lenguaje corporal</label>
+                            <label><input type="radio" name="q10" value="d"> Leer directamente del texto</label>
+                        </div>
+
+                        <button type="button" class="submit-btn" onclick="checkQuizLengua()">
+                            <i class="fas fa-check-circle"></i> Verificar Respuestas
+                        </button>
+                        <button type="button" class="retry-btn" onclick="retryQuizLengua()" style="display: none;">
+                            <i class="fas fa-redo"></i> Intentar de Nuevo
+                        </button>
+                    </form>
+
+                    <div id="quizResult" class="quiz-result"></div>
+                </div>
+
+            </div>
+
+            <a href="index.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Volver al inicio
+            </a>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        // Respuestas correctas del cuestionario
+        const correctAnswersLengua = {
+            q1: 'a',
+            q2: 'c',
+            q3: 'b',
+            q4: 'b',
+            q5: 'b',
+            q6: 'b',
+            q7: 'b',
+            q8: 'b',
+            q9: 'b',
+            q10: 'c'
+        };
+
+        function checkQuizLengua() {
+            let score = 0;
+            const totalQuestions = Object.keys(correctAnswersLengua).length;
+            const form = document.getElementById('quizForm');
+            const resultDiv = document.getElementById('quizResult');
+
+            // Revisar cada pregunta
+            for (let question in correctAnswersLengua) {
+                const selectedAnswer = form.querySelector(`input[name="${question}"]:checked`);
+                const questionDiv = form.querySelector(`input[name="${question}"]`).closest('.quiz-question');
+                
+                // Limpiar clases previas
+                questionDiv.classList.remove('correct-answer', 'wrong-answer');
+                
+                if (selectedAnswer) {
+                    if (selectedAnswer.value === correctAnswersLengua[question]) {
+                        score++;
+                        questionDiv.classList.add('correct-answer');
+                    } else {
+                        questionDiv.classList.add('wrong-answer');
+                    }
+                }
+            }
+
+            // Calcular porcentaje
+            const percentage = (score / totalQuestions) * 100;
+
+            // Mostrar resultado
+            let feedback = '';
+            if (percentage === 100) {
+                feedback = '¡Perfecto! 🎉 Dominas completamente lengua y comunicaciones.';
+            } else if (percentage >= 70) {
+                feedback = '¡Bien hecho! 👏 Tienes un buen nivel de comprensión lingüística.';
+            } else if (percentage >= 50) {
+                feedback = 'Regular. 📚 Repasa ortografía, gramática y tipos de texto.';
+            } else {
+                feedback = 'Necesitas estudiar más. 💪 Revisa los conceptos básicos de lengua española.';
+            }
+
+            resultDiv.innerHTML = `
+                <h3>Resultado del Cuestionario</h3>
+                <p class="score">Obtuviste: <strong>${score} de ${totalQuestions}</strong> respuestas correctas</p>
+                <p class="percentage">Porcentaje: <strong>${percentage.toFixed(1)}%</strong></p>
+                <p class="feedback-message">${feedback}</p>
+            `;
+            resultDiv.style.display = 'block';
+
+            // Mostrar botón de reintentar
+            document.querySelector('.submit-btn').style.display = 'none';
+            document.querySelector('.retry-btn').style.display = 'inline-block';
+
+            // Scroll al resultado
+            resultDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        function retryQuizLengua() {
+            const form = document.getElementById('quizForm');
+            const resultDiv = document.getElementById('quizResult');
+            
+            // Limpiar formulario
+            form.reset();
+            
+            // Limpiar clases de respuestas
+            document.querySelectorAll('.quiz-question').forEach(q => {
+                q.classList.remove('correct-answer', 'wrong-answer');
+            });
+            
+            // Ocultar resultado
+            resultDiv.style.display = 'none';
+            
+            // Cambiar botones
+            document.querySelector('.submit-btn').style.display = 'inline-block';
+            document.querySelector('.retry-btn').style.display = 'none';
+            
+            // Scroll al inicio del quiz
+            document.getElementById('quiz').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Smooth scroll para enlaces de ancla
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    target.classList.add('highlight');
+                    setTimeout(() => target.classList.remove('highlight'), 2000);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

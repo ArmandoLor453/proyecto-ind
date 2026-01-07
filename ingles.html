@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inglés - CECyTEM</title>
+    <link rel="stylesheet" href="ingles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .materia-header {
+            background: linear-gradient(135deg, #FFD93D 0%, #F9A825 100%);
+            padding: 4rem 0 2rem;
+            text-align: center;
+        }
+        .materia-header h1 {
+            color: white;
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .materia-header p {
+            color: rgba(255,255,255,0.95);
+            font-size: 1.3rem;
+        }
+        .content-section {
+            padding: 3rem 0;
+        }
+        .topic-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        .topic-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(255, 217, 61, 0.3);
+        }
+        .topic-card h2 {
+            color: #FFD93D;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .topic-card h3 {
+            color: white;
+            font-size: 1.5rem;
+            margin: 1.5rem 0 1rem;
+        }
+        .topic-card p, .topic-card li {
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+        .topic-card ul {
+            margin-left: 2rem;
+        }
+        .example-box {
+            background: rgba(255, 217, 61, 0.1);
+            border-left: 4px solid #FFD93D;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-radius: 10px;
+        }
+        .example-box strong {
+            color: #FFD93D;
+        }
+        .image-container {
+            width: 100%;
+            margin: 2rem 0;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        /* Estilos del botón de regreso se manejan en ingles.css */
+        .grammar-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        .grammar-table th, .grammar-table td {
+            padding: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+        .grammar-table th {
+            background: rgba(255, 217, 61, 0.2);
+            color: #FFD93D;
+        }
+    </style>
+</head>
+<body>
+    <div class="particles"></div>
+    
+    <header>
+        <div class="container">
+            <div class="logo">
+                <div class="logo-circle">
+                    
+                </div>
+                
+            </div>
+        </div>
+    </header>
+
+    <div class="materia-header">
+        <div class="container">
+            <h1><i class="fas fa-language"></i> Inglés</h1>
+            <p>English Grammar & Communication Skills</p>
+        </div>
+    </div>
+
+    <main>
+        <div class="container">
+            <a href="index.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Volver al inicio
+            </a>
+
+            <!-- Recursos Multimedia -->
+            <div class="recursos-section">
+                <h2><i class="fas fa-folder-open"></i> Recursos de Aprendizaje</h2>
+                <div class="recursos-grid">
+                    <!-- PDF -->
+                    <div class="recurso-card">
+                        <div class="recurso-header">
+                            <i class="fas fa-file-pdf"></i>
+                            <h3>Material PDF</h3>
+                        </div>
+                        <p>Descarga o visualiza el material de estudio en formato PDF</p>
+                        <div class="pdf-viewer">
+                            <iframe src="ingles.pdf" 
+                                    frameborder="0" 
+                                    width="100%" 
+                                    height="500px">
+                            </iframe>
+                        </div>
+                        <a href="ingles.pdf" 
+                           target="_blank" 
+                           class="download-btn">
+                            <i class="fas fa-download"></i> Descargar PDF
+                        </a>
+                    </div>
+
+                    <!-- Video -->
+                    <div class="recurso-card">
+                        <div class="recurso-header">
+                            <i class="fab fa-youtube"></i>
+                            <h3>Video Tutorial</h3>
+                        </div>
+                        <p>Aprende con este video explicativo sobre gramática inglesa</p>
+                        <div class="video-container">
+                            <iframe width="100%" 
+                                    height="315" 
+                                    src="https://www.youtube.com/embed/5K_Ayn_JClY" 
+                                    title="English Grammar Video" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=5K_Ayn_JClY" 
+                           target="_blank" 
+                           class="watch-btn">
+                            <i class="fab fa-youtube"></i> Ver en YouTube
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navegación por anclas -->
+            <nav class="topic-navigation">
+                <h3><i class="fas fa-list"></i> Índice de Contenidos</h3>
+                <ul>
+                    <li><a href="#sentence-completion">1. Sentence Completion</a></li>
+                    <li><a href="#matching">2. Matching Exercises</a></li>
+                    <li><a href="#true-false">3. True or False</a></li>
+                    <li><a href="#present-simple">4. Present Simple</a></li>
+                    <li><a href="#present-vs-past">5. Present Simple vs Past Simple</a></li>
+                    <li><a href="#irregular-verbs">6. Irregular Verbs</a></li>
+                    <li><a href="#past-simple">7. Past Simple</a></li>
+                    <li><a href="#past-continuous">8. Past Continuous</a></li>
+                    <li><a href="#comparatives">9. Comparatives & Superlatives</a></li>
+                    <li><a href="#flyers">10. Flyers</a></li>
+                    <li><a href="#quiz">📝 Cuestionario Final</a></li>
+                </ul>
+            </nav>
+
+            <div class="content-section">
+                <!-- 1. Sentence Completion -->
+                <div class="topic-card" id="sentence-completion">
+                    <h2><i class="fas fa-pencil-alt"></i> Complete the Sentences with Words from the Box</h2>
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=1200" alt="English Writing">
+                    </div>
+                    <p>Este ejercicio ayuda a mejorar tu vocabulario y comprensión del contexto. Debes seleccionar la palabra correcta del recuadro para completar cada oración de manera coherente.</p>
+                    
+                    <div class="example-box">
+                        <strong>Example:</strong><br>
+                        <strong>Box:</strong> happy, run, school, cat, beautiful<br><br>
+                        <strong>Sentences:</strong><br>
+                        1. The ____ is sleeping on the sofa. → The <strong>cat</strong> is sleeping on the sofa.<br>
+                        2. She goes to ____ every day. → She goes to <strong>school</strong> every day.<br>
+                        3. The flowers are very ____. → The flowers are very <strong>beautiful</strong>.
+                    </div>
+
+                    <h3>Tips para resolver estos ejercicios:</h3>
+                    <ul>
+                        <li>Lee toda la oración para entender el contexto</li>
+                        <li>Identifica si necesitas un sustantivo, verbo, adjetivo o adverbio</li>
+                        <li>Considera el tiempo verbal y la concordancia</li>
+                        <li>Elimina las palabras ya usadas del recuadro</li>
+                    </ul>
+                </div>
+
+                <!-- Match Tips with Examples -->
+                <div class="topic-card" id="matching">
+                    <h2><i class="fas fa-link"></i> Match the Tips (a-d) with the Examples</h2>
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=1200" alt="Matching Exercise">
+                    </div>
+                    <p>Los ejercicios de emparejamiento ayudan a conectar conceptos con sus aplicaciones prácticas.</p>
+
+                    <div class="example-box">
+                        <strong>Example:</strong><br><br>
+                        <strong>Tips:</strong><br>
+                        a) Use capital letters at the beginning of sentences<br>
+                        b) Add -ed to regular verbs in past tense<br>
+                        c) Use articles (a, an, the) before nouns<br>
+                        d) Subject and verb must agree in number<br><br>
+                        
+                        <strong>Examples:</strong><br>
+                        1. I walked to school yesterday. → <strong>b</strong><br>
+                        2. The cat is sleeping. → <strong>c</strong><br>
+                        3. She loves ice cream. → <strong>d</strong><br>
+                        4. Hello, my name is John. → <strong>a</strong>
+                    </div>
+                </div>
+
+                <!-- 3. True or False -->
+                <div class="topic-card" id="true-false">
+                    <h2><i class="fas fa-check-circle"></i> True or False</h2>
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1516534775068-ba3e7458af70?w=1200" alt="True or False">
+                    </div>
+                    <p>Estos ejercicios evalúan tu comprensión lectora y conocimiento gramatical.</p>
+
+                    <div class="example-box">
+                        <strong>Estrategias:</strong><br>
+                        • Lee el texto cuidadosamente<br>
+                        • Busca palabras clave en las afirmaciones<br>
+                        • Compara con la información del texto<br>
+                        • Presta atención a detalles como números y fechas<br><br>
+                        
+                        <strong>Example:</strong><br>
+                        <em>Text: "Mary goes to school every day. She likes math and science."</em><br><br>
+                        1. Mary is a student. → <strong>True</strong><br>
+                        2. Mary loves history. → <strong>False</strong><br>
+                        3. Mary attends school regularly. → <strong>True</strong>
+                    </div>
+                </div>
+
+                <!-- 4. Present Simple -->
+                <div class="topic-card" id="present-simple">
+                    <h2><i class="fas fa-clock"></i> Present Simple</h2>
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=1200" alt="Present Simple">
+                    </div>
+                    <p>El presente simple se usa para expresar hábitos, rutinas, hechos generales y verdades universales.</p>
+
+                    <h3>Estructura:</h3>
+                    <table class="grammar-table">
+                        <tr>
+                            <th>Tipo</th>
+                            <th>Estructura</th>
+                            <th>Ejemplo</th>
+                        </tr>
+                        <tr>
+                            <td>Afirmativa</td>
+                            <td>Subject + verb (+ s/es)</td>
+                            <td>She <strong>works</strong> every day.</td>
+                        </tr>
+                        <tr>
+                            <td>Negativa</td>
+                            <td>Subject + don't/doesn't + verb</td>
+                            <td>They <strong>don't like</strong> coffee.</td>
+                        </tr>
+                        <tr>
+                            <td>Interrogativa</td>
+                            <td>Do/Does + subject + verb?</td>
+                            <td><strong>Does</strong> he <strong>speak</strong> English?</td>
+                        </tr>
+                    </table>
+
+                    <div class="example-box">
+                        <strong>Rules:</strong><br>
+                        • Con he/she/it, añade <strong>-s</strong> o <strong>-es</strong> al verbo<br>
+                        • Verbos terminados en -ch, -sh, -ss, -x, -o: añade <strong>-es</strong> (watches, goes)<br>
+                        • Verbos terminados en consonante + y: cambia y por <strong>-ies</strong> (study → studies)<br>
+                        • Usa <strong>do/don't</strong> con I, you, we, they<br>
+                        • Usa <strong>does/doesn't</strong> con he, she, it
+                    </div>
+                </div>
+
+                <!-- 5. Present Simple vs Past Simple -->
+                <div class="topic-card" id="present-vs-past">
+                    <h2><i class="fas fa-exchange-alt"></i> Present Simple vs Past Simple</h2>
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1495364141860-b0d03eccd065?w=1200" alt="Present vs Past">
+                    </div>
+                    
+                    <table class="grammar-table">
+                        <tr>
+                            <th>Present Simple</th>
+                            <th>Past Simple</th>
+                        </tr>
+                        <tr>
+                            <td>I <strong>work</strong> at a hospital.</td>
+                            <td>I <strong>worked</strong> at a hospital.</td>
+                        </tr>
+                        <tr>
+                            <td>She <strong>goes</strong> to school.</td>
+                            <td>She <strong>went</strong> to school.</td>
+                        </tr>
+                        <tr>
+                            <td>They <strong>don't eat</strong> meat.</td>
+                            <td>They <strong>didn't eat</strong> meat.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Do</strong> you like pizza?</td>
+                            <td><strong>Did</strong> you like the pizza?</td>
+                        </tr>
+                    </table>
+
+                    <h3>Diferencias clave:</h3>
+                    <ul>
+                        <li><strong>Present Simple:</strong> Acciones habituales, rutinas, hechos generales</li>
+                        <li><strong>Past Simple:</strong> Acciones completadas en el pasado</li>
+                    </ul>
+                </div>
+
+                <!-- 6. Irregular Verbs -->
+                <div class="topic-card" id="irregular-verbs">
+                    <h2><i class="fas fa-list"></i> Irregular Verbs</h2>
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=1200" alt="Irregular Verbs">
+                    </div>
+                    <p>Los verbos irregulares no siguen la regla de añadir -ed en pasado. Deben memorizarse.</p>
+
+                    <h3>Verbos irregulares más comunes:</h3>
+                    <table class="grammar-table">
+                        <tr>
+                            <th>Infinitive</th>
+                            <th>Past Simple</th>
+                            <th>Past Participle</th>
+                            <th>Significado</th>
+                        </tr>
+                        <tr>
+                            <td>be</td>
+                            <td>was/were</td>
+                            <td>been</td>
+                            <td>ser/estar</td>
+                        </tr>
+                        <tr>
+                            <td>go</td>
+                            <td>went</td>
+                            <td>gone</td>
+                            <td>ir</td>
+                        </tr>
+                        <tr>
+                            <td>have</td>
+                            <td>had</td>
+                            <td>had</td>
+                            <td>tener</td>
+                        </tr>
+                        <tr>
+                            <td>do</td>
+                            <td>did</td>
+                            <td>done</td>
+                            <td>hacer</td>
+                        </tr>
+                        <tr>
+                            <td>make</td>
+                            <td>made</td>
+                            <td>made</td>
+                            <td>hacer/crear</td>
+                        </tr>
+                        <tr>
+                            <td>see</td>
+                            <td>saw</td>
+                            <td>seen</td>
+                            <td>ver</td>
+                        </tr>
+                        <tr>
+                            <td>take</td>
+                            <td>took</td>
+                            <td>taken</td>
+                            <td>tomar</td>
+                        </tr>
+                        <tr>
+                            <td>come</td>
+                            <td>came</td>
+                            <td>come</td>
+                            <td>venir</td>
+                        </tr>
+                        <tr>
+                            <td>know</td>
+                            <td>knew</td>
+                            <td>known</td>
+                            <td>saber/conocer</td>
+                        </tr>
+                        <tr>
+                            <td>get</td>
+                            <td>got</td>
+                            <td>gotten/got</td>
+                            <td>obtener</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- 7. Past Simple -->
+                <div class="topic-card" id="past-simple">
+                    <h2><i class="fas fa-history"></i> Past Simple</h2>
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1533749871411-5e21e14bcc7d?w=1200" alt="Past Simple">
+                    </div>
+                    <p>El pasado simple se usa para expresar acciones completadas en un tiempo específico del pasado.</p>
+
+                    <h3>Estructura:</h3>
+                    <table class="grammar-table">
+                        <tr>
+                            <th>Tipo</th>
+                            <th>Regular Verbs</th>
+                            <th>Irregular Verbs</th>
+                        </tr>
+                        <tr>
+                            <td>Afirmativa</td>
+                            <td>I worked yesterday.</td>
+                            <td>I went to school.</td>
+                        </tr>
+                        <tr>
+                            <td>Negativa</td>
+                            <td>I didn't work yesterday.</td>
+                            <td>I didn't go to school.</td>
+                        </tr>
+                        <tr>
+                            <td>Interrogativa</td>
+                            <td>Did you work yesterday?</td>
+                            <td>Did you go to school?</td>
+                        </tr>
+                    </table>
+
+                    <h3>Time expressions:</h3>
+                    <ul>
+                        <li>Yesterday (ayer)</li>
+                        <li>Last week/month/year (la semana/mes/año pasado)</li>
+                        <li>Two days/weeks/months ago (hace dos días/semanas/meses)</li>
+                        <li>In 2020 (en 2020)</li>
+                        <li>When I was young (cuando era joven)</li>
+                    </ul>
+                </div>
+
+                <!-- 8. Past Continuous -->
+                <div class="topic-card" id="past-continuous">
+                    <h2><i class="fas fa-play-circle"></i> Past Continuous</h2>
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1509228468518-180dd4864904?w=1200" alt="Past Continuous">
+                    </div>
+                    <p>El pasado continuo describe acciones que estaban en progreso en un momento específico del pasado.</p>
+
+                    <h3>Estructura: was/were + verb-ing</h3>
+                    <table class="grammar-table">
+                        <tr>
+                            <th>Sujeto</th>
+                            <th>Afirmativa</th>
+                            <th>Negativa</th>
+                            <th>Interrogativa</th>
+                        </tr>
+                        <tr>
+                            <td>I, He, She, It</td>
+                            <td>was working</td>
+                            <td>wasn't working</td>
+                            <td>Was I working?</td>
+                        </tr>
+                        <tr>
+                            <td>You, We, They</td>
+                            <td>were working</td>
+                            <td>weren't working</td>
+                            <td>Were you working?</td>
+                        </tr>
+                    </table>
+
+                    <div class="example-box">
+                        <strong>Usos:</strong><br>
+                        1. <strong>Acción en progreso en el pasado:</strong><br>
+                        "I was studying at 8 pm yesterday."<br><br>
+                        
+                        2. <strong>Dos acciones simultáneas:</strong><br>
+                        "While I was cooking, she was reading."<br><br>
+                        
+                        3. <strong>Acción interrumpida:</strong><br>
+                        "I was sleeping when the phone rang." (Past Continuous + Past Simple)
+                    </div>
+                </div>
+
+                <!-- 9. Comparatives and Superlatives -->
+                <div class="topic-card" id="comparatives">
+                    <h2><i class="fas fa-chart-bar"></i> Comparatives & Superlatives</h2>
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200" alt="Comparatives">
+                    </div>
+                    <p>Los comparativos se usan para comparar dos cosas, mientras que los superlativos indican el grado máximo.</p>
+
+                    <h3>Reglas de formación:</h3>
+                    <table class="grammar-table">
+                        <tr>
+                            <th>Tipo</th>
+                            <th>Comparativo</th>
+                            <th>Superlativo</th>
+                            <th>Ejemplo</th>
+                        </tr>
+                        <tr>
+                            <td>1 sílaba</td>
+                            <td>+ er</td>
+                            <td>+ est</td>
+                            <td>tall → taller → tallest</td>
+                        </tr>
+                        <tr>
+                            <td>2 sílabas (-y)</td>
+                            <td>y → ier</td>
+                            <td>y → iest</td>
+                            <td>happy → happier → happiest</td>
+                        </tr>
+                        <tr>
+                            <td>2+ sílabas</td>
+                            <td>more + adj</td>
+                            <td>most + adj</td>
+                            <td>beautiful → more beautiful → most beautiful</td>
+                        </tr>
+                        <tr>
+                            <td>Irregulares</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>good → better → best<br>bad → worse → worst</td>
+                        </tr>
+                    </table>
+
+                    <div class="example-box">
+                        <strong>Ejemplos:</strong><br>
+                        <strong>Comparativos:</strong><br>
+                        • This book is <strong>more interesting than</strong> that one.<br>
+                        • She is <strong>taller than</strong> her sister.<br>
+                        • Cars are <strong>faster than</strong> bikes.<br><br>
+                        
+                        <strong>Superlativos:</strong><br>
+                        • This is <strong>the most expensive</strong> car in the shop.<br>
+                        • He is <strong>the tallest</strong> student in the class.<br>
+                        • This is <strong>the best</strong> pizza I've ever eaten!
+                    </div>
+                </div>
+
+                <!-- Flyer -->
+                <div class="topic-card" id="flyers">
+                    <h2><i class="fas fa-file-alt"></i> Flyer (Folleto Publicitario)</h2>
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=1200" alt="Flyer Design">
+                    </div>
+                    <p>Un flyer es un documento publicitario que presenta información de manera atractiva y concisa.</p>
+
+                    <h3>Elementos de un Flyer en inglés:</h3>
+                    <ul>
+                        <li><strong>Headline:</strong> Título llamativo y claro</li>
+                        <li><strong>Body text:</strong> Información principal breve</li>
+                        <li><strong>Call to action:</strong> Invitación a realizar una acción (Visit us!, Call now!, Register today!)</li>
+                        <li><strong>Contact information:</strong> Teléfono, email, dirección, redes sociales</li>
+                        <li><strong>Images:</strong> Fotografías o ilustraciones relevantes</li>
+                        <li><strong>Logo:</strong> Identidad de la marca</li>
+                    </ul>
+
+                    <div class="example-box">
+                        <strong>Frases útiles para Flyers:</strong><br>
+                        • <strong>Special Offer!</strong> - ¡Oferta Especial!<br>
+                        • <strong>Limited Time Only</strong> - Por tiempo limitado<br>
+                        • <strong>Don't Miss Out!</strong> - ¡No te lo pierdas!<br>
+                        • <strong>Join Us Today!</strong> - ¡Únete hoy!<br>
+                        • <strong>Free Consultation</strong> - Consulta gratis<br>
+                        • <strong>Book Now!</strong> - ¡Reserva ahora!<br>
+                        • <strong>Visit our website</strong> - Visita nuestro sitio web
+                    </div>
+                </div>
+
+                <!-- Cuestionario -->
+                <div class="topic-card" id="quiz">
+                    <h2><i class="fas fa-question-circle"></i> Cuestionario Final - Inglés</h2>
+                    <p>Pon a prueba tus conocimientos con estas 10 preguntas sobre los temas estudiados.</p>
+                    
+                    <form id="quiz-form" class="quiz-container">
+                        <!-- Pregunta 1 -->
+                        <div class="quiz-question">
+                            <p class="question-text"><strong>1.</strong> What is the correct form of Present Simple for "he/she/it"?</p>
+                            <label><input type="radio" name="q1" value="a"> Add -ing to the verb</label>
+                            <label><input type="radio" name="q1" value="b"> Add -s or -es to the verb</label>
+                            <label><input type="radio" name="q1" value="c"> Use the base form</label>
+                            <label><input type="radio" name="q1" value="d"> Add -ed to the verb</label>
+                        </div>
+
+                        <!-- Pregunta 2 -->
+                        <div class="quiz-question">
+                            <p class="question-text"><strong>2.</strong> Which sentence is in Past Simple?</p>
+                            <label><input type="radio" name="q2" value="a"> I am studying English</label>
+                            <label><input type="radio" name="q2" value="b"> I studied English yesterday</label>
+                            <label><input type="radio" name="q2" value="c"> I will study English</label>
+                            <label><input type="radio" name="q2" value="d"> I study English</label>
+                        </div>
+
+                        <!-- Pregunta 3 -->
+                        <div class="quiz-question">
+                            <p class="question-text"><strong>3.</strong> What is the past form of "go"?</p>
+                            <label><input type="radio" name="q3" value="a"> goed</label>
+                            <label><input type="radio" name="q3" value="b"> went</label>
+                            <label><input type="radio" name="q3" value="c"> gone</label>
+                            <label><input type="radio" name="q3" value="d"> going</label>
+                        </div>
+
+                        <!-- Pregunta 4 -->
+                        <div class="quiz-question">
+                            <p class="question-text"><strong>4.</strong> Past Continuous is formed with:</p>
+                            <label><input type="radio" name="q4" value="a"> was/were + verb-ing</label>
+                            <label><input type="radio" name="q4" value="b"> have/has + past participle</label>
+                            <label><input type="radio" name="q4" value="c"> will + base verb</label>
+                            <label><input type="radio" name="q4" value="d"> verb + -ed</label>
+                        </div>
+
+                        <!-- Pregunta 5 -->
+                        <div class="quiz-question">
+                            <p class="question-text"><strong>5.</strong> Complete: "She is _____ than her sister."</p>
+                            <label><input type="radio" name="q5" value="a"> tall</label>
+                            <label><input type="radio" name="q5" value="b"> taller</label>
+                            <label><input type="radio" name="q5" value="c"> tallest</label>
+                            <label><input type="radio" name="q5" value="d"> more tall</label>
+                        </div>
+
+                        <!-- Pregunta 6 -->
+                        <div class="quiz-question">
+                            <p class="question-text"><strong>6.</strong> Which is the superlative form of "good"?</p>
+                            <label><input type="radio" name="q6" value="a"> gooder</label>
+                            <label><input type="radio" name="q6" value="b"> more good</label>
+                            <label><input type="radio" name="q6" value="c"> best</label>
+                            <label><input type="radio" name="q6" value="d"> better</label>
+                        </div>
+
+                        <!-- Pregunta 7 -->
+                        <div class="quiz-question">
+                            <p class="question-text"><strong>7.</strong> What are irregular verbs?</p>
+                            <label><input type="radio" name="q7" value="a"> Verbs that don't follow standard -ed pattern in past</label>
+                            <label><input type="radio" name="q7" value="b"> Verbs that are rarely used</label>
+                            <label><input type="radio" name="q7" value="c"> Verbs that end in -ing</label>
+                            <label><input type="radio" name="q7" value="d"> Verbs that express emotions</label>
+                        </div>
+
+                        <!-- Pregunta 8 -->
+                        <div class="quiz-question">
+                            <p class="question-text"><strong>8.</strong> Complete with Past Continuous: "They _____ TV when I arrived."</p>
+                            <label><input type="radio" name="q8" value="a"> watch</label>
+                            <label><input type="radio" name="q8" value="b"> watched</label>
+                            <label><input type="radio" name="q8" value="c"> were watching</label>
+                            <label><input type="radio" name="q8" value="d"> are watching</label>
+                        </div>
+
+                        <!-- Pregunta 9 -->
+                        <div class="quiz-question">
+                            <p class="question-text"><strong>9.</strong> Which sentence uses Present Simple correctly?</p>
+                            <label><input type="radio" name="q9" value="a"> She go to school every day</label>
+                            <label><input type="radio" name="q9" value="b"> She goes to school every day</label>
+                            <label><input type="radio" name="q9" value="c"> She going to school every day</label>
+                            <label><input type="radio" name="q9" value="d"> She went to school every day</label>
+                        </div>
+
+                        <!-- Pregunta 10 -->
+                        <div class="quiz-question">
+                            <p class="question-text"><strong>10.</strong> What is a "Flyer" in English exams?</p>
+                            <label><input type="radio" name="q10" value="a"> A type of bird</label>
+                            <label><input type="radio" name="q10" value="b"> A beginner level English exam for children</label>
+                            <label><input type="radio" name="q10" value="c"> An advanced grammar book</label>
+                            <label><input type="radio" name="q10" value="d"> A speaking test only</label>
+                        </div>
+
+                        <button type="button" class="submit-quiz-btn" onclick="checkQuizIngles()">
+                            <i class="fas fa-check-circle"></i> Enviar Respuestas
+                        </button>
+                    </form>
+
+                    <div id="quiz-result" class="quiz-result" style="display: none;">
+                        <h3><i class="fas fa-trophy"></i> Resultados</h3>
+                        <div class="result-summary">
+                            <div class="result-item correct-answers">
+                                <i class="fas fa-check"></i>
+                                <span>Correctas: <strong id="correct-count">0</strong></span>
+                            </div>
+                            <div class="result-item incorrect-answers">
+                                <i class="fas fa-times"></i>
+                                <span>Incorrectas: <strong id="incorrect-count">0</strong></span>
+                            </div>
+                            <div class="result-item score-percentage">
+                                <i class="fas fa-star"></i>
+                                <span>Puntuación: <strong id="score-percentage">0%</strong></span>
+                            </div>
+                        </div>
+                        <div id="feedback-message" class="feedback-message"></div>
+                        <button class="retry-btn" onclick="retryQuizIngles()">
+                            <i class="fas fa-redo"></i> Intentar de nuevo
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <a href="index.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Volver al inicio
+            </a>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        // Respuestas correctas para el cuestionario de Inglés
+        const correctAnswersIngles = {
+            q1: 'b', // Add -s or -es to the verb
+            q2: 'b', // I studied English yesterday
+            q3: 'b', // went
+            q4: 'a', // was/were + verb-ing
+            q5: 'b', // taller
+            q6: 'c', // best
+            q7: 'a', // Verbs that don't follow standard -ed pattern
+            q8: 'c', // were watching
+            q9: 'b', // She goes to school every day
+            q10: 'b' // A beginner level English exam for children
+        };
+
+        function checkQuizIngles() {
+            let correct = 0;
+            let incorrect = 0;
+            const form = document.getElementById('quiz-form');
+            const questions = form.querySelectorAll('.quiz-question');
+
+            // Resetear estilos previos
+            questions.forEach(question => {
+                question.classList.remove('correct', 'incorrect');
+                const labels = question.querySelectorAll('label');
+                labels.forEach(label => label.classList.remove('correct-answer', 'wrong-answer'));
+            });
+
+            // Verificar respuestas
+            for (let i = 1; i <= 10; i++) {
+                const selectedAnswer = form.querySelector(`input[name="q${i}"]:checked`);
+                const questionDiv = questions[i - 1];
+                
+                if (selectedAnswer) {
+                    if (selectedAnswer.value === correctAnswersIngles[`q${i}`]) {
+                        correct++;
+                        questionDiv.classList.add('correct');
+                        selectedAnswer.parentElement.classList.add('correct-answer');
+                    } else {
+                        incorrect++;
+                        questionDiv.classList.add('incorrect');
+                        selectedAnswer.parentElement.classList.add('wrong-answer');
+                        // Mostrar la respuesta correcta
+                        const correctLabel = questionDiv.querySelector(`input[value="${correctAnswersIngles[`q${i}`]}"]`).parentElement;
+                        correctLabel.classList.add('correct-answer');
+                    }
+                } else {
+                    incorrect++;
+                    questionDiv.classList.add('incorrect');
+                }
+            }
+
+            // Mostrar resultados
+            document.getElementById('correct-count').textContent = correct;
+            document.getElementById('incorrect-count').textContent = incorrect;
+            const percentage = (correct / 10) * 100;
+            document.getElementById('score-percentage').textContent = percentage + '%';
+
+            // Mensaje de retroalimentación
+            const feedbackDiv = document.getElementById('feedback-message');
+            if (percentage === 100) {
+                feedbackDiv.innerHTML = '<i class="fas fa-star"></i> ¡Excelente! Dominas perfectamente el tema.';
+                feedbackDiv.className = 'feedback-message excellent';
+            } else if (percentage >= 70) {
+                feedbackDiv.innerHTML = '<i class="fas fa-thumbs-up"></i> ¡Muy bien! Buen dominio del contenido.';
+                feedbackDiv.className = 'feedback-message good';
+            } else if (percentage >= 50) {
+                feedbackDiv.innerHTML = '<i class="fas fa-book"></i> Bien, pero puedes mejorar. Revisa los temas.';
+                feedbackDiv.className = 'feedback-message average';
+            } else {
+                feedbackDiv.innerHTML = '<i class="fas fa-book-reader"></i> Necesitas repasar más. ¡Tú puedes!';
+                feedbackDiv.className = 'feedback-message poor';
+            }
+
+            // Mostrar resultados y ocultar botón
+            document.getElementById('quiz-result').style.display = 'block';
+            document.querySelector('.submit-quiz-btn').style.display = 'none';
+            
+            // Scroll suave a resultados
+            document.getElementById('quiz-result').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        function retryQuizIngles() {
+            // Resetear formulario
+            document.getElementById('quiz-form').reset();
+            
+            // Remover clases de resultados
+            const questions = document.querySelectorAll('.quiz-question');
+            questions.forEach(question => {
+                question.classList.remove('correct', 'incorrect');
+                const labels = question.querySelectorAll('label');
+                labels.forEach(label => label.classList.remove('correct-answer', 'wrong-answer'));
+            });
+
+            // Ocultar resultados y mostrar botón
+            document.getElementById('quiz-result').style.display = 'none';
+            document.querySelector('.submit-quiz-btn').style.display = 'block';
+
+            // Scroll al inicio del cuestionario
+            document.getElementById('quiz').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

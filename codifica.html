@@ -1,0 +1,2000 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codifica - CECyTEM</title>
+    <link rel="stylesheet" href="codifica.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .materia-header {
+            background: linear-gradient(135deg, #A8E6CF 0%, #56AB91 100%);
+            padding: 4rem 0 2rem;
+            text-align: center;
+        }
+        .materia-header h1 {
+            color: white;
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .materia-header p {
+            color: rgba(255,255,255,0.95);
+            font-size: 1.3rem;
+        }
+        .content-section {
+            padding: 3rem 0;
+        }
+        .topic-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        .topic-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(168, 230, 207, 0.3);
+        }
+        .topic-card h2 {
+            color: #A8E6CF;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .topic-card h3 {
+            color: white;
+            font-size: 1.5rem;
+            margin: 1.5rem 0 1rem;
+        }
+        .topic-card p, .topic-card li {
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+        .topic-card ul, .topic-card ol {
+            margin-left: 2rem;
+        }
+        .example-box {
+            background: rgba(168, 230, 207, 0.1);
+            border-left: 4px solid #A8E6CF;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-radius: 10px;
+        }
+        .code-box {
+            background: #1e1e1e;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            overflow-x: auto;
+        }
+        .code-box code {
+            color: #A8E6CF;
+            font-family: 'Courier New', monospace;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        .example-box strong {
+            color: #A8E6CF;
+        }
+        .image-container {
+            width: 100%;
+            margin: 2rem 0;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        /* Estilos del botón de regreso se manejan en codifica.css */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        .data-table th, .data-table td {
+            padding: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+        .data-table th {
+            background: rgba(168, 230, 207, 0.2);
+            color: #A8E6CF;
+        }
+    </style>
+</head>
+<body>
+    <div class="particles"></div>
+    
+    <header>
+        <div class="container">
+            
+        </div>
+    </header>
+
+    <div class="materia-header">
+        <div class="container">
+            <h1><i class="fas fa-code"></i> Codifica</h1>
+            <p>Programación en Java y Desarrollo de Software</p>
+        </div>
+    </div>
+
+    <main>
+        <div class="container">
+            <a href="index.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Volver al inicio
+            </a>
+
+            <!-- Recursos Multimedia -->
+            <div class="recursos-section">
+                <h2><i class="fas fa-folder-open"></i> Recursos de Aprendizaje</h2>
+                <div class="recursos-grid">
+                    <!-- PDF -->
+                    <div class="recurso-card">
+                        <div class="recurso-header">
+                            <i class="fas fa-file-pdf"></i>
+                            <h3>Material PDF</h3>
+                        </div>
+                        <p>Guía rápida de Java: sintaxis, POO y conceptos clave</p>
+                        <div class="pdf-viewer">
+                            <iframe src="codifica.pdf" 
+                                    frameborder="0" 
+                                    width="100%" 
+                                    height="500px">
+                            </iframe>
+                        </div>
+                        <a href="codifica.pdf" 
+                           target="_blank" 
+                           class="download-btn">
+                            <i class="fas fa-external-link-alt"></i> Ver Documentación
+                        </a>
+                    </div>
+
+                    <!-- Video -->
+                    <div class="recurso-card">
+                        <div class="recurso-header">
+                            <i class="fab fa-youtube"></i>
+                            <h3>Video Tutorial</h3>
+                        </div>
+                        <p>Curso completo de Java para principiantes</p>
+                        <div class="video-container">
+                            <iframe width="100%" 
+                                    height="315" 
+                                    src="https://youtube.com/shorts/HdAcPg-62tE?si=UUIBenp95RdNBJDe" 
+                                    title="Java Programming Video" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                        <a href="https://youtube.com/shorts/HdAcPg-62tE?si=UUIBenp95RdNBJDe" 
+                           target="_blank" 
+                           class="watch-btn">
+                            <i class="fab fa-youtube"></i> Ver en YouTube
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navegación por anclas -->
+            <nav class="topic-navigation">
+                <h3><i class="fas fa-list"></i> Índice de Contenidos</h3>
+                <ul>
+                    <li><a href="#poo">1. POO</a></li>
+                    <li><a href="#clases">2. Clases</a></li>
+                    <li><a href="#herencia">3. Herencia</a></li>
+                    <li><a href="#polimorfismo">4. Polimorfismo</a></li>
+                    <li><a href="#tipos-datos">5. Tipos de Datos</a></li>
+                    <li><a href="#operadores">6. Operadores</a></li>
+                    <li><a href="#condicionales">7. Condicionales</a></li>
+                    <li><a href="#bucles">8. Bucles</a></li>
+                    <li><a href="#math">9. Clase Math</a></li>
+                    <li><a href="#gui">10. GUI con Swing</a></li>
+                    <li><a href="#jar">11. Archivos JAR</a></li>
+                    <li><a href="#quiz">📝 Cuestionario Final</a></li>
+                </ul>
+            </nav>
+
+            <div class="content-section">
+                <!-- 1. Programación Orientada a Objetos -->
+                <div class="topic-card" id="poo">
+                    <h2><i class="fas fa-cubes"></i> 1. Programación Orientada a Objetos (POO)</h2>
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=1200" alt="POO">
+                    </div>
+                    <p>La Programación Orientada a Objetos es un paradigma de programación que organiza el código en objetos que contienen datos (atributos) y funciones (métodos).</p>
+
+                    <h3>Pilares fundamentales de la POO:</h3>
+                    <ul>
+                        <li><strong>Encapsulamiento:</strong> Ocultar los detalles de implementación y proteger los datos</li>
+                        <li><strong>Herencia:</strong> Reutilizar código mediante clases padre e hijas</li>
+                        <li><strong>Polimorfismo:</strong> Múltiples formas de un mismo método</li>
+                        <li><strong>Abstracción:</strong> Representar conceptos esenciales sin detalles de implementación</li>
+                    </ul>
+
+                    <div class="example-box">
+                        <strong>Ventajas de POO:</strong><br>
+                        ✓ Código más organizado y mantenible<br>
+                        ✓ Reutilización de código<br>
+                        ✓ Modelado natural del mundo real<br>
+                        ✓ Facilita el trabajo en equipo<br>
+                        ✓ Mayor escalabilidad
+                    </div>
+                </div>
+
+                <!-- 2. Clase, Objeto e Instancia -->
+                <div class="topic-card" id="clases">
+                    <h2><i class="fas fa-cube"></i> 2. Clase, Objeto e Instancia</h2>
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200" alt="Clase y Objeto">
+                    </div>
+                    
+                    <h3>Definiciones:</h3>
+                    <ul>
+                        <li><strong>Clase:</strong> Es una plantilla o molde que define las características (atributos) y comportamientos (métodos) que tendrán los objetos</li>
+                        <li><strong>Objeto:</strong> Es una instancia concreta de una clase, con valores específicos</li>
+                        <li><strong>Instancia:</strong> Es el proceso de crear un objeto a partir de una clase</li>
+                    </ul>
+
+                    <div class="code-box">
+                        <code>
+<strong>// Definición de una CLASE</strong><br>
+public class Auto {<br>
+&nbsp;&nbsp;// Atributos<br>
+&nbsp;&nbsp;private String marca;<br>
+&nbsp;&nbsp;private String modelo;<br>
+&nbsp;&nbsp;private int año;<br>
+&nbsp;&nbsp;private String color;<br><br>
+&nbsp;&nbsp;
+&nbsp;&nbsp;// Constructor<br>
+&nbsp;&nbsp;public Auto(String marca, String modelo, int año, String color) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;this.marca = marca;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;this.modelo = modelo;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;this.año = año;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;this.color = color;<br>
+&nbsp;&nbsp;}<br><br>
+&nbsp;&nbsp;
+&nbsp;&nbsp;// Métodos<br>
+&nbsp;&nbsp;public void arrancar() {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("El auto está arrancando...");<br>
+&nbsp;&nbsp;}<br><br>
+&nbsp;&nbsp;
+&nbsp;&nbsp;public void frenar() {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("El auto está frenando...");<br>
+&nbsp;&nbsp;}<br>
+}<br><br>
+
+<strong>// Crear OBJETOS (INSTANCIAS) de la clase Auto</strong><br>
+Auto miAuto = new Auto("Toyota", "Corolla", 2023, "Rojo");<br>
+Auto tuAuto = new Auto("Honda", "Civic", 2024, "Azul");<br><br>
+
+<strong>// Usar los objetos</strong><br>
+miAuto.arrancar(); // Salida: El auto está arrancando...<br>
+tuAuto.frenar(); // Salida: El auto está frenando...
+                        </code>
+                    </div>
+
+                    <div class="example-box">
+                        <strong>Analogía:</strong> Si la clase "Auto" es el plano arquitectónico de un coche, los objetos "miAuto" y "tuAuto" son los coches reales construidos a partir de ese plano.
+                    </div>
+                </div>
+
+                <!-- 3. Encapsulamiento y Abstracción -->
+                <div class="topic-card">
+                    <h2><i class="fas fa-lock"></i> 3. Encapsulamiento y Abstracción</h2>
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=1200" alt="Encapsulamiento">
+                    </div>
+                    
+                    <h3>Encapsulamiento:</h3>
+                    <p>Es el mecanismo que oculta los detalles internos de una clase y protege los datos mediante modificadores de acceso.</p>
+
+                    <h3>Modificadores de acceso en Java:</h3>
+                    <ul>
+                        <li><strong>private:</strong> Solo accesible dentro de la misma clase</li>
+                        <li><strong>public:</strong> Accesible desde cualquier lugar</li>
+                        <li><strong>protected:</strong> Accesible en la misma clase, subclases y mismo paquete</li>
+                        <li><strong>default (sin modificador):</strong> Accesible en el mismo paquete</li>
+                    </ul>
+
+                    <div class="code-box">
+                        <code>
+public class CuentaBancaria {<br>
+&nbsp;&nbsp;// Atributos privados (encapsulados)<br>
+&nbsp;&nbsp;private String titular;<br>
+&nbsp;&nbsp;private double saldo;<br>
+&nbsp;&nbsp;private String numeroCuenta;<br><br>
+&nbsp;&nbsp;
+&nbsp;&nbsp;// Constructor<br>
+&nbsp;&nbsp;public CuentaBancaria(String titular, String numeroCuenta) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;this.titular = titular;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;this.numeroCuenta = numeroCuenta;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;this.saldo = 0.0;<br>
+&nbsp;&nbsp;}<br><br>
+&nbsp;&nbsp;
+&nbsp;&nbsp;// Métodos públicos (getters y setters)<br>
+&nbsp;&nbsp;public double getSaldo() {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return saldo;<br>
+&nbsp;&nbsp;}<br><br>
+&nbsp;&nbsp;
+&nbsp;&nbsp;public void depositar(double cantidad) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if (cantidad > 0) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;saldo += cantidad;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Depósito exitoso. Nuevo saldo: " + saldo);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;}<br><br>
+&nbsp;&nbsp;
+&nbsp;&nbsp;public void retirar(double cantidad) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if (cantidad > 0 && cantidad <= saldo) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;saldo -= cantidad;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Retiro exitoso. Nuevo saldo: " + saldo);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;}<br>
+}
+                        </code>
+                    </div>
+
+                    <h3>Abstracción:</h3>
+                    <p>Es el proceso de ocultar los detalles de implementación y mostrar solo la funcionalidad esencial al usuario.</p>
+
+                    <div class="example-box">
+                        <strong>Ejemplo de abstracción:</strong> Cuando usas un cajero automático, solo presionas botones para retirar dinero. No necesitas saber cómo funciona internamente el sistema bancario, la verificación de saldo, o la comunicación con el banco. Eso está abstraído para ti.
+                    </div>
+                </div>
+
+                <!-- 4. Java y NetBeans -->
+                <div class="topic-card">
+                    <h2><i class="fab fa-java"></i> 4. Java y NetBeans (Cómo Instalarlo)</h2>
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200" alt="Java NetBeans">
+                    </div>
+                    
+                    <h3>¿Qué es Java?</h3>
+                    <p>Java es un lenguaje de programación orientado a objetos, multiplataforma y de propósito general creado por Sun Microsystems (ahora Oracle).</p>
+
+                    <h3>¿Qué es NetBeans?</h3>
+                    <p>NetBeans es un IDE (Entorno de Desarrollo Integrado) gratuito y de código abierto para desarrollar aplicaciones en Java y otros lenguajes.</p>
+
+                    <h3>Pasos para instalar Java y NetBeans:</h3>
+                    <ol>
+                        <li><strong>Descargar JDK (Java Development Kit):</strong>
+                            <ul>
+                                <li>Visita: oracle.com/java/technologies/downloads/</li>
+                                <li>Descarga la versión más reciente del JDK</li>
+                                <li>Ejecuta el instalador y sigue las instrucciones</li>
+                            </ul>
+                        </li>
+                        <li><strong>Verificar instalación de Java:</strong>
+                            <ul>
+                                <li>Abre la terminal/cmd</li>
+                                <li>Escribe: <code>java -version</code></li>
+                                <li>Debe mostrar la versión instalada</li>
+                            </ul>
+                        </li>
+                        <li><strong>Descargar NetBeans:</strong>
+                            <ul>
+                                <li>Visita: netbeans.apache.org/download/</li>
+                                <li>Descarga la versión más reciente</li>
+                                <li>Ejecuta el instalador</li>
+                                <li>Selecciona el JDK instalado previamente</li>
+                            </ul>
+                        </li>
+                        <li><strong>Crear primer proyecto:</strong>
+                            <ul>
+                                <li>Abre NetBeans</li>
+                                <li>File → New Project → Java Application</li>
+                                <li>Asigna nombre y ubicación</li>
+                                <li>¡Comienza a programar!</li>
+                            </ul>
+                        </li>
+                    </ol>
+
+                    <div class="example-box">
+                        <strong>Características de Java:</strong><br>
+                        ✓ Multiplataforma (Write Once, Run Anywhere)<br>
+                        ✓ Orientado a objetos<br>
+                        ✓ Seguro y robusto<br>
+                        ✓ Gran comunidad y bibliotecas<br>
+                        ✓ Ampliamente usado en empresas
+                    </div>
+                </div>
+
+                <!-- 5. Herencia y Tipos de Herencia -->
+                <div class="topic-card" id="herencia">
+                    <h2><i class="fas fa-sitemap"></i> 5. Herencia y Tipos de Herencia</h2>
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200" alt="Herencia">
+                    </div>
+                    
+                    <p>La herencia es un mecanismo que permite crear nuevas clases basadas en clases existentes, reutilizando código y estableciendo relaciones jerárquicas.</p>
+
+                    <h3>Tipos de Herencia:</h3>
+                    <ul>
+                        <li><strong>Herencia Simple:</strong> Una clase hija hereda de una sola clase padre</li>
+                        <li><strong>Herencia Multinivel:</strong> Una clase hereda de otra que a su vez hereda de otra (A → B → C)</li>
+                        <li><strong>Herencia Jerárquica:</strong> Múltiples clases heredan de una misma clase padre</li>
+                        <li><strong>Herencia Múltiple:</strong> (No soportada directamente en Java, pero se puede lograr con interfaces)</li>
+                    </ul>
+
+                    <div class="code-box">
+                        <code>
+<strong>// Clase PADRE (Superclase)</strong><br>
+public class Animal {<br>
+&nbsp;&nbsp;protected String nombre;<br>
+&nbsp;&nbsp;protected int edad;<br><br>
+&nbsp;&nbsp;
+&nbsp;&nbsp;public Animal(String nombre, int edad) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;this.nombre = nombre;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;this.edad = edad;<br>
+&nbsp;&nbsp;}<br><br>
+&nbsp;&nbsp;
+&nbsp;&nbsp;public void comer() {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(nombre + " está comiendo");<br>
+&nbsp;&nbsp;}<br><br>
+&nbsp;&nbsp;
+&nbsp;&nbsp;public void dormir() {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(nombre + " está durmiendo");<br>
+&nbsp;&nbsp;}<br>
+}<br><br>
+
+<strong>// Clase HIJA 1 (Subclase) - Herencia Simple</strong><br>
+public class Perro extends Animal {<br>
+&nbsp;&nbsp;private String raza;<br><br>
+&nbsp;&nbsp;
+&nbsp;&nbsp;public Perro(String nombre, int edad, String raza) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;super(nombre, edad); // Llamar al constructor del padre<br>
+&nbsp;&nbsp;&nbsp;&nbsp;this.raza = raza;<br>
+&nbsp;&nbsp;}<br><br>
+&nbsp;&nbsp;
+&nbsp;&nbsp;public void ladrar() {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(nombre + " está ladrando: ¡Guau guau!");<br>
+&nbsp;&nbsp;}<br>
+}<br><br>
+
+<strong>// Clase HIJA 2 - Herencia Jerárquica</strong><br>
+public class Gato extends Animal {<br>
+&nbsp;&nbsp;private String color;<br><br>
+&nbsp;&nbsp;
+&nbsp;&nbsp;public Gato(String nombre, int edad, String color) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;super(nombre, edad);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;this.color = color;<br>
+&nbsp;&nbsp;}<br><br>
+&nbsp;&nbsp;
+&nbsp;&nbsp;public void maullar() {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(nombre + " está maullando: ¡Miau!");<br>
+&nbsp;&nbsp;}<br>
+}<br><br>
+
+<strong>// USO:</strong><br>
+Perro miPerro = new Perro("Max", 3, "Labrador");<br>
+miPerro.comer(); // Heredado de Animal<br>
+miPerro.ladrar(); // Propio de Perro<br><br>
+
+Gato miGato = new Gato("Luna", 2, "Blanco");<br>
+miGato.dormir(); // Heredado de Animal<br>
+miGato.maullar(); // Propio de Gato
+                        </code>
+                    </div>
+
+                    <div class="example-box">
+                        <strong>Palabra clave "super":</strong><br>
+                        • Se usa para llamar al constructor de la clase padre<br>
+                        • También para acceder a métodos y atributos del padre<br>
+                        • Debe ser la primera línea en el constructor hijo
+                    </div>
+                </div>
+
+                <!-- 6. Polimorfismo -->
+                <div class="topic-card" id="polimorfismo">
+                    <h2><i class="fas fa-shapes"></i> 6. Polimorfismo y Tipos de Polimorfismo</h2>
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=1200" alt="Polimorfismo">
+                    </div>
+                    
+                    <p>El polimorfismo permite que un objeto tome múltiples formas. Permite que diferentes clases respondan de manera distinta al mismo mensaje.</p>
+
+                    <h3>Tipos de Polimorfismo:</h3>
+                    
+                    <h4>1. Polimorfismo en tiempo de compilación (Sobrecarga - Overloading):</h4>
+                    <p>Múltiples métodos con el mismo nombre pero diferentes parámetros.</p>
+
+                    <div class="code-box">
+                        <code>
+public class Calculadora {<br>
+&nbsp;&nbsp;// Mismo nombre, diferentes parámetros<br>
+&nbsp;&nbsp;public int sumar(int a, int b) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return a + b;<br>
+&nbsp;&nbsp;}<br><br>
+&nbsp;&nbsp;
+&nbsp;&nbsp;public int sumar(int a, int b, int c) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return a + b + c;<br>
+&nbsp;&nbsp;}<br><br>
+&nbsp;&nbsp;
+&nbsp;&nbsp;public double sumar(double a, double b) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return a + b;<br>
+&nbsp;&nbsp;}<br>
+}<br><br>
+
+Calculadora calc = new Calculadora();<br>
+calc.sumar(5, 3); // Llama al primer método → 8<br>
+calc.sumar(5, 3, 2); // Llama al segundo método → 10<br>
+calc.sumar(5.5, 3.2); // Llama al tercer método → 8.7
+                        </code>
+                    </div>
+
+                    <h4>2. Polimorfismo en tiempo de ejecución (Sobrescritura - Overriding):</h4>
+                    <p>Una clase hija redefine un método de la clase padre.</p>
+
+                    <div class="code-box">
+                        <code>
+class Figura {<br>
+&nbsp;&nbsp;public void dibujar() {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Dibujando una figura");<br>
+&nbsp;&nbsp;}<br>
+}<br><br>
+
+class Circulo extends Figura {<br>
+&nbsp;&nbsp;@Override<br>
+&nbsp;&nbsp;public void dibujar() {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Dibujando un círculo ⭕");<br>
+&nbsp;&nbsp;}<br>
+}<br><br>
+
+class Cuadrado extends Figura {<br>
+&nbsp;&nbsp;@Override<br>
+&nbsp;&nbsp;public void dibujar() {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Dibujando un cuadrado ⬛");<br>
+&nbsp;&nbsp;}<br>
+}<br><br>
+
+<strong>// Polimorfismo en acción:</strong><br>
+Figura f1 = new Circulo();<br>
+Figura f2 = new Cuadrado();<br><br>
+
+f1.dibujar(); // Salida: Dibujando un círculo ⭕<br>
+f2.dibujar(); // Salida: Dibujando un cuadrado ⬛
+                        </code>
+                    </div>
+
+                    <div class="example-box">
+                        <strong>Ventajas del Polimorfismo:</strong><br>
+                        ✓ Código más flexible y extensible<br>
+                        ✓ Reduce duplicación de código<br>
+                        ✓ Facilita el mantenimiento<br>
+                        ✓ Permite escribir código más genérico
+                    </div>
+                </div>
+
+                <!-- 7. Tipos de Datos en Java -->
+                <div class="topic-card" id="tipos-datos">
+                    <h2><i class="fas fa-database"></i> 7. Tipos de Datos en Java y Cuáles Son</h2>
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200" alt="Tipos de Datos">
+                    </div>
+                    
+                    <p>Java tiene dos categorías principales de tipos de datos: primitivos y de referencia.</p>
+
+                    <h3>Tipos de Datos Primitivos:</h3>
+                    <table class="data-table">
+                        <tr>
+                            <th>Tipo</th>
+                            <th>Tamaño</th>
+                            <th>Rango</th>
+                            <th>Valor por Defecto</th>
+                            <th>Ejemplo</th>
+                        </tr>
+                        <tr>
+                            <td>byte</td>
+                            <td>8 bits</td>
+                            <td>-128 a 127</td>
+                            <td>0</td>
+                            <td>byte edad = 25;</td>
+                        </tr>
+                        <tr>
+                            <td>short</td>
+                            <td>16 bits</td>
+                            <td>-32,768 a 32,767</td>
+                            <td>0</td>
+                            <td>short año = 2026;</td>
+                        </tr>
+                        <tr>
+                            <td>int</td>
+                            <td>32 bits</td>
+                            <td>-2,147,483,648 a 2,147,483,647</td>
+                            <td>0</td>
+                            <td>int cantidad = 1000;</td>
+                        </tr>
+                        <tr>
+                            <td>long</td>
+                            <td>64 bits</td>
+                            <td>-9,223,372,036,854,775,808 a 9,223,372,036,854,775,807</td>
+                            <td>0L</td>
+                            <td>long poblacion = 7800000000L;</td>
+                        </tr>
+                        <tr>
+                            <td>float</td>
+                            <td>32 bits</td>
+                            <td>±3.4e−038 a ±3.4e+038</td>
+                            <td>0.0f</td>
+                            <td>float precio = 19.99f;</td>
+                        </tr>
+                        <tr>
+                            <td>double</td>
+                            <td>64 bits</td>
+                            <td>±1.7e−308 a ±1.7e+308</td>
+                            <td>0.0d</td>
+                            <td>double pi = 3.14159;</td>
+                        </tr>
+                        <tr>
+                            <td>char</td>
+                            <td>16 bits</td>
+                            <td>0 a 65,535 (Unicode)</td>
+                            <td>'\u0000'</td>
+                            <td>char letra = 'A';</td>
+                        </tr>
+                        <tr>
+                            <td>boolean</td>
+                            <td>1 bit</td>
+                            <td>true o false</td>
+                            <td>false</td>
+                            <td>boolean activo = true;</td>
+                        </tr>
+                    </table>
+
+                    <h3>Tipos de Datos de Referencia:</h3>
+                    <ul>
+                        <li><strong>String:</strong> Cadenas de texto</li>
+                        <li><strong>Arrays:</strong> Colecciones de elementos del mismo tipo</li>
+                        <li><strong>Clases:</strong> Objetos definidos por el usuario</li>
+                        <li><strong>Interfaces:</strong> Contratos que las clases deben implementar</li>
+                    </ul>
+
+                    <div class="code-box">
+                        <code>
+<strong>// Ejemplos de uso:</strong><br>
+// Primitivos<br>
+int edad = 20;<br>
+double estatura = 1.75;<br>
+char inicial = 'J';<br>
+boolean esEstudiante = true;<br><br>
+
+// Referencia<br>
+String nombre = "Juan Pérez";<br>
+int[] numeros = {1, 2, 3, 4, 5};<br>
+Persona persona = new Persona("Ana", 22);
+                        </code>
+                    </div>
+                </div>
+
+                <!-- 8. Operadores en Java -->
+                <div class="topic-card" id="operadores">
+                    <h2><i class="fas fa-plus-circle"></i> 8. Operadores en Java</h2>
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1555952494-efd681c7e3f9?w=1200" alt="Operadores">
+                    </div>
+                    
+                    <h3>1. Operadores Aritméticos:</h3>
+                    <table class="data-table">
+                        <tr>
+                            <th>Operador</th>
+                            <th>Descripción</th>
+                            <th>Ejemplo</th>
+                            <th>Resultado</th>
+                        </tr>
+                        <tr>
+                            <td>+</td>
+                            <td>Suma</td>
+                            <td>5 + 3</td>
+                            <td>8</td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td>Resta</td>
+                            <td>5 - 3</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>*</td>
+                            <td>Multiplicación</td>
+                            <td>5 * 3</td>
+                            <td>15</td>
+                        </tr>
+                        <tr>
+                            <td>/</td>
+                            <td>División</td>
+                            <td>10 / 2</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>%</td>
+                            <td>Módulo (residuo)</td>
+                            <td>10 % 3</td>
+                            <td>1</td>
+                        </tr>
+                    </table>
+
+                    <h3>2. Operadores de Comparación:</h3>
+                    <table class="data-table">
+                        <tr>
+                            <th>Operador</th>
+                            <th>Descripción</th>
+                            <th>Ejemplo</th>
+                        </tr>
+                        <tr>
+                            <td>==</td>
+                            <td>Igual a</td>
+                            <td>5 == 5 → true</td>
+                        </tr>
+                        <tr>
+                            <td>!=</td>
+                            <td>Diferente de</td>
+                            <td>5 != 3 → true</td>
+                        </tr>
+                        <tr>
+                            <td>&gt;</td>
+                            <td>Mayor que</td>
+                            <td>5 > 3 → true</td>
+                        </tr>
+                        <tr>
+                            <td>&lt;</td>
+                            <td>Menor que</td>
+                            <td>5 < 3 → false</td>
+                        </tr>
+                        <tr>
+                            <td>&gt;=</td>
+                            <td>Mayor o igual que</td>
+                            <td>5 >= 5 → true</td>
+                        </tr>
+                        <tr>
+                            <td>&lt;=</td>
+                            <td>Menor o igual que</td>
+                            <td>3 <= 5 → true</td>
+                        </tr>
+                    </table>
+
+                    <h3>3. Operadores Lógicos:</h3>
+                    <table class="data-table">
+                        <tr>
+                            <th>Operador</th>
+                            <th>Descripción</th>
+                            <th>Ejemplo</th>
+                        </tr>
+                        <tr>
+                            <td>&&</td>
+                            <td>AND lógico</td>
+                            <td>(5 > 3) && (2 < 4) → true</td>
+                        </tr>
+                        <tr>
+                            <td>||</td>
+                            <td>OR lógico</td>
+                            <td>(5 > 3) || (2 > 4) → true</td>
+                        </tr>
+                        <tr>
+                            <td>!</td>
+                            <td>NOT lógico</td>
+                            <td>!(5 > 3) → false</td>
+                        </tr>
+                    </table>
+
+                    <h3>4. Operadores de Asignación:</h3>
+                    <div class="code-box">
+                        <code>
+int x = 10; // Asignación simple<br>
+x += 5; // x = x + 5 → x = 15<br>
+x -= 3; // x = x - 3 → x = 12<br>
+x *= 2; // x = x * 2 → x = 24<br>
+x /= 4; // x = x / 4 → x = 6<br>
+x %= 4; // x = x % 4 → x = 2
+                        </code>
+                    </div>
+
+                    <h3>5. Operadores de Incremento/Decremento:</h3>
+                    <div class="code-box">
+                        <code>
+int i = 5;<br>
+i++; // Post-incremento: primero usa, luego incrementa → i = 6<br>
+++i; // Pre-incremento: primero incrementa, luego usa → i = 7<br>
+i--; // Post-decremento: primero usa, luego decrementa → i = 6<br>
+--i; // Pre-decremento: primero decrementa, luego usa → i = 5
+                        </code>
+                    </div>
+                </div>
+
+                <!-- 9. Condiciones en Java -->
+                <div class="topic-card" id="condicionales">
+                    <h2><i class="fas fa-code-branch"></i> 9. Condiciones en Java</h2>
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1550439062-609e1531270e?w=1200" alt="Condiciones">
+                    </div>
+                    
+                    <p>Las estructuras condicionales permiten ejecutar diferentes bloques de código según se cumplan ciertas condiciones.</p>
+
+                    <h3>1. IF - ELSE IF - ELSE:</h3>
+                    <div class="code-box">
+                        <code>
+int edad = 18;<br><br>
+
+if (edad < 13) {<br>
+&nbsp;&nbsp;System.out.println("Eres un niño");<br>
+} else if (edad >= 13 && edad < 18) {<br>
+&nbsp;&nbsp;System.out.println("Eres un adolescente");<br>
+} else if (edad >= 18 && edad < 65) {<br>
+&nbsp;&nbsp;System.out.println("Eres un adulto");<br>
+} else {<br>
+&nbsp;&nbsp;System.out.println("Eres un adulto mayor");<br>
+}
+                        </code>
+                    </div>
+
+                    <h3>2. SWITCH:</h3>
+                    <div class="code-box">
+                        <code>
+int dia = 3;<br>
+String nombreDia;<br><br>
+
+switch (dia) {<br>
+&nbsp;&nbsp;case 1:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;nombreDia = "Lunes";<br>
+&nbsp;&nbsp;&nbsp;&nbsp;break;<br>
+&nbsp;&nbsp;case 2:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;nombreDia = "Martes";<br>
+&nbsp;&nbsp;&nbsp;&nbsp;break;<br>
+&nbsp;&nbsp;case 3:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;nombreDia = "Miércoles";<br>
+&nbsp;&nbsp;&nbsp;&nbsp;break;<br>
+&nbsp;&nbsp;case 4:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;nombreDia = "Jueves";<br>
+&nbsp;&nbsp;&nbsp;&nbsp;break;<br>
+&nbsp;&nbsp;case 5:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;nombreDia = "Viernes";<br>
+&nbsp;&nbsp;&nbsp;&nbsp;break;<br>
+&nbsp;&nbsp;case 6:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;nombreDia = "Sábado";<br>
+&nbsp;&nbsp;&nbsp;&nbsp;break;<br>
+&nbsp;&nbsp;case 7:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;nombreDia = "Domingo";<br>
+&nbsp;&nbsp;&nbsp;&nbsp;break;<br>
+&nbsp;&nbsp;default:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;nombreDia = "Día inválido";<br>
+}<br><br>
+
+System.out.println("Hoy es: " + nombreDia);
+                        </code>
+                    </div>
+
+                    <h3>3. Operador Ternario:</h3>
+                    <div class="code-box">
+                        <code>
+int edad = 20;<br>
+String mensaje = (edad >= 18) ? "Eres mayor de edad" : "Eres menor de edad";<br>
+System.out.println(mensaje);<br><br>
+
+// Equivalente a:<br>
+if (edad >= 18) {<br>
+&nbsp;&nbsp;mensaje = "Eres mayor de edad";<br>
+} else {<br>
+&nbsp;&nbsp;mensaje = "Eres menor de edad";<br>
+}
+                        </code>
+                    </div>
+                </div>
+
+                <!-- 10. Ciclo FOR -->
+                <div class="topic-card">
+                    <h2><i class="fas fa-repeat"></i> 10. Ciclo FOR</h2>
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=1200" alt="Ciclo FOR">
+                    </div>
+                    
+                    <p>El ciclo FOR es una estructura de control que permite repetir un bloque de código un número determinado de veces.</p>
+
+                    <h3>Sintaxis:</h3>
+                    <div class="code-box">
+                        <code>
+for (inicialización; condición; actualización) {<br>
+&nbsp;&nbsp;// Código a repetir<br>
+}
+                        </code>
+                    </div>
+
+                    <h3>Ejemplos:</h3>
+                    <div class="code-box">
+                        <code>
+<strong>// Ejemplo 1: Contar del 1 al 10</strong><br>
+for (int i = 1; i <= 10; i++) {<br>
+&nbsp;&nbsp;System.out.println("Número: " + i);<br>
+}<br><br>
+
+<strong>// Ejemplo 2: Números pares del 0 al 20</strong><br>
+for (int i = 0; i <= 20; i += 2) {<br>
+&nbsp;&nbsp;System.out.println("Par: " + i);<br>
+}<br><br>
+
+<strong>// Ejemplo 3: Contar regresivo</strong><br>
+for (int i = 10; i >= 1; i--) {<br>
+&nbsp;&nbsp;System.out.println(i);<br>
+}<br>
+System.out.println("¡Despegue! 🚀");<br><br>
+
+<strong>// Ejemplo 4: Recorrer un array</strong><br>
+String[] frutas = {"Manzana", "Banana", "Naranja", "Uva"};<br>
+for (int i = 0; i < frutas.length; i++) {<br>
+&nbsp;&nbsp;System.out.println("Fruta " + (i+1) + ": " + frutas[i]);<br>
+}<br><br>
+
+<strong>// Ejemplo 5: For-Each (para colecciones)</strong><br>
+for (String fruta : frutas) {<br>
+&nbsp;&nbsp;System.out.println("Me gusta la " + fruta);<br>
+}<br><br>
+
+<strong>// Ejemplo 6: Tabla de multiplicar</strong><br>
+int numero = 5;<br>
+for (int i = 1; i <= 10; i++) {<br>
+&nbsp;&nbsp;System.out.println(numero + " x " + i + " = " + (numero * i));<br>
+}
+                        </code>
+                    </div>
+
+                    <div class="example-box">
+                        <strong>Partes del ciclo FOR:</strong><br>
+                        • <strong>Inicialización:</strong> Se ejecuta una vez al inicio (int i = 0)<br>
+                        • <strong>Condición:</strong> Se evalúa antes de cada iteración (i < 10)<br>
+                        • <strong>Actualización:</strong> Se ejecuta después de cada iteración (i++)<br>
+                        • <strong>Cuerpo:</strong> Código que se repite
+                    </div>
+                </div>
+
+                <!-- 11. Qué es un IDE y qué significan sus siglas -->
+                <div class="topic-card">
+                    <h2><i class="fas fa-laptop-code"></i> 11. ¿Qué es un IDE y qué significan sus siglas?</h2>
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=1200" alt="IDE">
+                    </div>
+                    
+                    <p><strong>IDE</strong> significa <strong>Integrated Development Environment</strong> (Entorno de Desarrollo Integrado en español).</p>
+
+                    <h3>¿Qué es un IDE?</h3>
+                    <p>Es una aplicación de software que proporciona herramientas completas para facilitar el desarrollo de programas. Integra múltiples herramientas en una sola interfaz.</p>
+
+                    <h3>Componentes principales de un IDE:</h3>
+                    <ul>
+                        <li><strong>Editor de código:</strong> Con resaltado de sintaxis, autocompletado y detección de errores</li>
+                        <li><strong>Compilador/Intérprete:</strong> Traduce el código a lenguaje máquina</li>
+                        <li><strong>Depurador (Debugger):</strong> Permite encontrar y corregir errores paso a paso</li>
+                        <li><strong>Administrador de proyectos:</strong> Organiza archivos y recursos</li>
+                        <li><strong>Consola/Terminal integrada:</strong> Para ejecutar comandos</li>
+                        <li><strong>Control de versiones:</strong> Integración con Git/GitHub</li>
+                    </ul>
+
+                    <div class="example-box">
+                        <strong>IDEs populares para Java:</strong><br>
+                        • <strong>NetBeans:</strong> IDE oficial de Java, gratuito y completo<br>
+                        • <strong>IntelliJ IDEA:</strong> Potente y moderno, con versión gratuita<br>
+                        • <strong>Eclipse:</strong> Open source, muy extensible<br>
+                        • <strong>Visual Studio Code:</strong> Ligero con extensiones para Java<br>
+                        • <strong>Android Studio:</strong> Basado en IntelliJ, para apps Android
+                    </div>
+
+                    <div class="example-box">
+                        <strong>Ventajas de usar un IDE:</strong><br>
+                        ✓ Mayor productividad<br>
+                        ✓ Detección automática de errores<br>
+                        ✓ Autocompletado inteligente<br>
+                        ✓ Refactorización de código<br>
+                        ✓ Depuración visual<br>
+                        ✓ Gestión de proyectos integrada
+                    </div>
+                </div>
+
+                <!-- 12. Diferencia entre primitivos y compuestos -->
+                <div class="topic-card">
+                    <h2><i class="fas fa-layer-group"></i> 12. Diferencia entre Primitivos y Compuestos</h2>
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200" alt="Primitivos vs Compuestos">
+                    </div>
+                    
+                    <h3>Tipos de Datos Primitivos:</h3>
+                    <p>Son los tipos de datos más básicos del lenguaje. Almacenan valores simples directamente en memoria.</p>
+                    
+                    <ul>
+                        <li><strong>Características:</strong>
+                            <ul>
+                                <li>Almacenan un solo valor</li>
+                                <li>Ocupan un tamaño fijo de memoria</li>
+                                <li>Se almacenan en el stack (pila)</li>
+                                <li>Se comparan por valor</li>
+                                <li>No pueden ser null</li>
+                                <li>Tienen valor por defecto (0, false, etc.)</li>
+                            </ul>
+                        </li>
+                        <li><strong>8 tipos primitivos en Java:</strong> byte, short, int, long, float, double, char, boolean</li>
+                    </ul>
+
+                    <h3>Tipos de Datos Compuestos (Referencia):</h3>
+                    <p>Son tipos de datos complejos que pueden contener múltiples valores y comportamientos.</p>
+                    
+                    <ul>
+                        <li><strong>Características:</strong>
+                            <ul>
+                                <li>Almacenan referencias a objetos en memoria</li>
+                                <li>Tamaño variable</li>
+                                <li>Se almacenan en el heap (montículo)</li>
+                                <li>Se comparan por referencia</li>
+                                <li>Pueden ser null</li>
+                                <li>Valor por defecto: null</li>
+                            </ul>
+                        </li>
+                        <li><strong>Ejemplos:</strong> String, Arrays, Clases, Interfaces, Collections</li>
+                    </ul>
+
+                    <div class="code-box">
+                        <code>
+<strong>// PRIMITIVOS</strong><br>
+int numero = 10; // Almacena directamente el valor 10<br>
+double precio = 19.99; // Almacena directamente 19.99<br>
+boolean activo = true; // Almacena directamente true<br>
+char letra = 'A'; // Almacena directamente 'A'<br><br>
+
+<strong>// COMPUESTOS (Referencia)</strong><br>
+String nombre = "Juan"; // Almacena referencia al objeto String<br>
+int[] numeros = {1, 2, 3}; // Almacena referencia al array<br>
+Persona p = new Persona(); // Almacena referencia al objeto Persona<br><br>
+
+<strong>// Comparación:</strong><br>
+int a = 5;<br>
+int b = 5;<br>
+System.out.println(a == b); // true (compara valores)<br><br>
+
+String s1 = new String("Hola");<br>
+String s2 = new String("Hola");<br>
+System.out.println(s1 == s2); // false (compara referencias)<br>
+System.out.println(s1.equals(s2)); // true (compara contenido)
+                        </code>
+                    </div>
+
+                    <table class="data-table">
+                        <tr>
+                            <th>Aspecto</th>
+                            <th>Primitivos</th>
+                            <th>Compuestos</th>
+                        </tr>
+                        <tr>
+                            <td>Almacenamiento</td>
+                            <td>Valor directo</td>
+                            <td>Referencia a objeto</td>
+                        </tr>
+                        <tr>
+                            <td>Memoria</td>
+                            <td>Stack (pila)</td>
+                            <td>Heap (montículo)</td>
+                        </tr>
+                        <tr>
+                            <td>Tamaño</td>
+                            <td>Fijo</td>
+                            <td>Variable</td>
+                        </tr>
+                        <tr>
+                            <td>Null</td>
+                            <td>No puede ser null</td>
+                            <td>Puede ser null</td>
+                        </tr>
+                        <tr>
+                            <td>Métodos</td>
+                            <td>No tienen métodos</td>
+                            <td>Tienen métodos</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- 13. Qué es un acumulador -->
+                <div class="topic-card">
+                    <h2><i class="fas fa-plus-square"></i> 13. ¿Qué es un Acumulador?</h2>
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1200" alt="Acumulador">
+                    </div>
+                    
+                    <p>Un <strong>acumulador</strong> es una variable que se utiliza para almacenar y sumar valores progresivamente dentro de un ciclo. Su propósito es ir acumulando (sumando) valores.</p>
+
+                    <h3>Características:</h3>
+                    <ul>
+                        <li>Se inicializa generalmente en 0 (o el valor neutro de la operación)</li>
+                        <li>En cada iteración se le suma un nuevo valor</li>
+                        <li>Al final del ciclo contiene la suma total</li>
+                        <li>Se usa para calcular totales, promedios, sumas, etc.</li>
+                    </ul>
+
+                    <div class="code-box">
+                        <code>
+<strong>// Ejemplo 1: Acumular suma de números del 1 al 10</strong><br>
+int acumulador = 0; // Inicializar en 0<br>
+for (int i = 1; i <= 10; i++) {<br>
+&nbsp;&nbsp;acumulador = acumulador + i; // También: acumulador += i;<br>
+&nbsp;&nbsp;System.out.println("Suma parcial: " + acumulador);<br>
+}<br>
+System.out.println("Suma total: " + acumulador); // 55<br><br>
+
+<strong>// Ejemplo 2: Acumular el precio total de productos</strong><br>
+double[] precios = {19.99, 25.50, 10.00, 45.75};<br>
+double totalCompra = 0.0; // Acumulador<br><br>
+
+for (double precio : precios) {<br>
+&nbsp;&nbsp;totalCompra += precio;<br>
+}<br>
+System.out.println("Total a pagar: $" + totalCompra); // $101.24<br><br>
+
+<strong>// Ejemplo 3: Calcular promedio con acumulador</strong><br>
+int[] calificaciones = {85, 90, 78, 92, 88};<br>
+int sumaCalificaciones = 0; // Acumulador<br><br>
+
+for (int cal : calificaciones) {<br>
+&nbsp;&nbsp;sumaCalificaciones += cal;<br>
+}<br>
+double promedio = (double) sumaCalificaciones / calificaciones.length;<br>
+System.out.println("Promedio: " + promedio); // 86.6<br><br>
+
+<strong>// Ejemplo 4: Acumulador para concatenar strings</strong><br>
+String[] palabras = {"Hola", "mundo", "desde", "Java"};<br>
+String frase = ""; // Acumulador de texto<br><br>
+
+for (String palabra : palabras) {<br>
+&nbsp;&nbsp;frase += palabra + " ";<br>
+}<br>
+System.out.println(frase); // "Hola mundo desde Java "
+                        </code>
+                    </div>
+
+                    <div class="example-box">
+                        <strong>Diferencia entre acumulador y contador:</strong><br>
+                        • <strong>Acumulador:</strong> Suma valores variables (suma += valor)<br>
+                        • <strong>Contador:</strong> Suma siempre de 1 en 1 (contador++)
+                    </div>
+                </div>
+
+                <!-- 14. Qué es un contador -->
+                <div class="topic-card">
+                    <h2><i class="fas fa-sort-numeric-up"></i> 14. ¿Qué es un Contador?</h2>
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1509228468518-180dd4864904?w=1200" alt="Contador">
+                    </div>
+                    
+                    <p>Un <strong>contador</strong> es una variable que se utiliza para llevar la cuenta del número de veces que ocurre algo, incrementándose en una cantidad fija (generalmente 1) en cada iteración.</p>
+
+                    <h3>Características:</h3>
+                    <ul>
+                        <li>Se inicializa generalmente en 0</li>
+                        <li>Se incrementa en 1 cada vez (contador++)</li>
+                        <li>Se usa para contar eventos, iteraciones, elementos, etc.</li>
+                        <li>Útil para llevar control de repeticiones</li>
+                    </ul>
+
+                    <div class="code-box">
+                        <code>
+<strong>// Ejemplo 1: Contar números pares</strong><br>
+int contador = 0;<br>
+for (int i = 1; i <= 100; i++) {<br>
+&nbsp;&nbsp;if (i % 2 == 0) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;contador++; // Incrementar el contador<br>
+&nbsp;&nbsp;}<br>
+}<br>
+System.out.println("Hay " + contador + " números pares"); // 50<br><br>
+
+<strong>// Ejemplo 2: Contar palabras en un texto</strong><br>
+String texto = "Java es un lenguaje de programación";<br>
+String[] palabras = texto.split(" ");<br>
+int contadorPalabras = palabras.length;<br>
+System.out.println("Número de palabras: " + contadorPalabras); // 6<br><br>
+
+<strong>// Ejemplo 3: Contar aprobados y reprobados</strong><br>
+int[] calificaciones = {85, 55, 90, 45, 78, 92, 50, 88};<br>
+int aprobados = 0;<br>
+int reprobados = 0;<br><br>
+
+for (int cal : calificaciones) {<br>
+&nbsp;&nbsp;if (cal >= 60) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;aprobados++;<br>
+&nbsp;&nbsp;} else {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;reprobados++;<br>
+&nbsp;&nbsp;}<br>
+}<br>
+System.out.println("Aprobados: " + aprobados); // 5<br>
+System.out.println("Reprobados: " + reprobados); // 3<br><br>
+
+<strong>// Ejemplo 4: Contar vocales en un texto</strong><br>
+String frase = "Programación en Java";<br>
+int contadorVocales = 0;<br><br>
+
+for (int i = 0; i < frase.length(); i++) {<br>
+&nbsp;&nbsp;char c = Character.toLowerCase(frase.charAt(i));<br>
+&nbsp;&nbsp;if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;contadorVocales++;<br>
+&nbsp;&nbsp;}<br>
+}<br>
+System.out.println("Vocales encontradas: " + contadorVocales);
+                        </code>
+                    </div>
+
+                    <div class="example-box">
+                        <strong>Resumen:</strong><br>
+                        • <strong>Contador:</strong> variable++ (incremento fijo de 1)<br>
+                        • <strong>Acumulador:</strong> variable += valor (suma valores variables)<br>
+                        • Ambos son fundamentales en programación para llevar control de datos
+                    </div>
+                </div>
+
+                <!-- 15. Qué es un bucle y cuáles son los más usados -->
+                <div class="topic-card" id="bucles">
+                    <h2><i class="fas fa-sync-alt"></i> 15. ¿Qué es un Bucle y cuáles son los más usados en Java?</h2>
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=1200" alt="Bucles">
+                    </div>
+                    
+                    <p>Un <strong>bucle</strong> (o ciclo) es una estructura de control que permite repetir un bloque de código múltiples veces mientras se cumpla una condición.</p>
+
+                    <h3>Los 3 bucles más usados en Java:</h3>
+
+                    <h4>1. Bucle FOR:</h4>
+                    <p>Se usa cuando se conoce el número exacto de iteraciones.</p>
+                    <div class="code-box">
+                        <code>
+<strong>// Sintaxis:</strong><br>
+for (inicialización; condición; actualización) {<br>
+&nbsp;&nbsp;// Código a repetir<br>
+}<br><br>
+
+<strong>// Ejemplo:</strong><br>
+for (int i = 0; i < 5; i++) {<br>
+&nbsp;&nbsp;System.out.println("Iteración: " + i);<br>
+}<br>
+// Salida: 0, 1, 2, 3, 4
+                        </code>
+                    </div>
+
+                    <h4>2. Bucle WHILE:</h4>
+                    <p>Se usa cuando no se conoce el número de iteraciones, pero sí la condición de parada.</p>
+                    <div class="code-box">
+                        <code>
+<strong>// Sintaxis:</strong><br>
+while (condición) {<br>
+&nbsp;&nbsp;// Código a repetir<br>
+}<br><br>
+
+<strong>// Ejemplo:</strong><br>
+int i = 0;<br>
+while (i < 5) {<br>
+&nbsp;&nbsp;System.out.println("Iteración: " + i);<br>
+&nbsp;&nbsp;i++;<br>
+}<br>
+// Salida: 0, 1, 2, 3, 4<br><br>
+
+<strong>// Ejemplo práctico: Validar entrada</strong><br>
+Scanner sc = new Scanner(System.in);<br>
+int numero = 0;<br>
+while (numero <= 0) {<br>
+&nbsp;&nbsp;System.out.println("Ingrese un número positivo:");<br>
+&nbsp;&nbsp;numero = sc.nextInt();<br>
+}<br>
+System.out.println("Número válido: " + numero);
+                        </code>
+                    </div>
+
+                    <h4>3. Bucle DO-WHILE:</h4>
+                    <p>Similar al while, pero garantiza al menos una ejecución porque evalúa la condición al final.</p>
+                    <div class="code-box">
+                        <code>
+<strong>// Sintaxis:</strong><br>
+do {<br>
+&nbsp;&nbsp;// Código a repetir<br>
+} while (condición);<br><br>
+
+<strong>// Ejemplo:</strong><br>
+int i = 0;<br>
+do {<br>
+&nbsp;&nbsp;System.out.println("Iteración: " + i);<br>
+&nbsp;&nbsp;i++;<br>
+} while (i < 5);<br>
+// Salida: 0, 1, 2, 3, 4<br><br>
+
+<strong>// Ejemplo práctico: Menú</strong><br>
+int opcion;<br>
+do {<br>
+&nbsp;&nbsp;System.out.println("=== MENÚ ===");<br>
+&nbsp;&nbsp;System.out.println("1. Jugar");<br>
+&nbsp;&nbsp;System.out.println("2. Configuración");<br>
+&nbsp;&nbsp;System.out.println("3. Salir");<br>
+&nbsp;&nbsp;opcion = sc.nextInt();<br>
+} while (opcion != 3);
+                        </code>
+                    </div>
+
+                    <h4>4. For-Each (para colecciones):</h4>
+                    <div class="code-box">
+                        <code>
+String[] nombres = {"Ana", "Carlos", "María", "Juan"};<br>
+for (String nombre : nombres) {<br>
+&nbsp;&nbsp;System.out.println("Hola, " + nombre);<br>
+}
+                        </code>
+                    </div>
+
+                    <table class="data-table">
+                        <tr>
+                            <th>Bucle</th>
+                            <th>Cuándo usarlo</th>
+                            <th>Característica</th>
+                        </tr>
+                        <tr>
+                            <td>FOR</td>
+                            <td>Número exacto de iteraciones</td>
+                            <td>Más compacto</td>
+                        </tr>
+                        <tr>
+                            <td>WHILE</td>
+                            <td>No se sabe cuántas iteraciones</td>
+                            <td>Evalúa condición antes</td>
+                        </tr>
+                        <tr>
+                            <td>DO-WHILE</td>
+                            <td>Al menos una ejecución garantizada</td>
+                            <td>Evalúa condición después</td>
+                        </tr>
+                        <tr>
+                            <td>FOR-EACH</td>
+                            <td>Recorrer colecciones/arrays</td>
+                            <td>Más simple y legible</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- 16. Funciones en la clase Math -->
+                <div class="topic-card" id="math">
+                    <h2><i class="fas fa-calculator"></i> 16. Funciones en la Clase Math, cómo son y cómo se implementan en Java</h2>
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=1200" alt="Math">
+                    </div>
+                    
+                    <p>La clase <strong>Math</strong> en Java proporciona métodos estáticos para realizar operaciones matemáticas comunes.</p>
+
+                    <h3>Funciones más utilizadas:</h3>
+
+                    <div class="code-box">
+                        <code>
+<strong>// 1. POTENCIA y RAÍZ</strong><br>
+double potencia = Math.pow(2, 3); // 2^3 = 8.0<br>
+double raiz = Math.sqrt(16); // √16 = 4.0<br>
+double raizCubica = Math.cbrt(27); // ∛27 = 3.0<br><br>
+
+<strong>// 2. VALOR ABSOLUTO</strong><br>
+int absoluto = Math.abs(-10); // 10<br>
+double absDouble = Math.abs(-15.5); // 15.5<br><br>
+
+<strong>// 3. MÁXIMO y MÍNIMO</strong><br>
+int maximo = Math.max(10, 25); // 25<br>
+int minimo = Math.min(10, 25); // 10<br><br>
+
+<strong>// 4. REDONDEO</strong><br>
+double num = 3.7;<br>
+long redondeado = Math.round(num); // 4<br>
+double arriba = Math.ceil(num); // 4.0 (redondea hacia arriba)<br>
+double abajo = Math.floor(num); // 3.0 (redondea hacia abajo)<br><br>
+
+<strong>// 5. NÚMEROS ALEATORIOS</strong><br>
+double aleatorio = Math.random(); // Número entre 0.0 y 1.0<br>
+// Número aleatorio entre 1 y 100:<br>
+int aleatorio1a100 = (int)(Math.random() * 100) + 1;<br><br>
+
+<strong>// 6. FUNCIONES TRIGONOMÉTRICAS</strong><br>
+double angulo = Math.toRadians(45); // Convertir grados a radianes<br>
+double seno = Math.sin(angulo);<br>
+double coseno = Math.cos(angulo);<br>
+double tangente = Math.tan(angulo);<br><br>
+
+<strong>// 7. EXPONENCIAL y LOGARITMOS</strong><br>
+double exp = Math.exp(2); // e^2<br>
+double log = Math.log(10); // Logaritmo natural<br>
+double log10 = Math.log10(100); // Logaritmo base 10 = 2.0<br><br>
+
+<strong>// 8. CONSTANTES</strong><br>
+double pi = Math.PI; // 3.141592653589793<br>
+double e = Math.E; // 2.718281828459045
+                        </code>
+                    </div>
+
+                    <h3>Ejemplos prácticos:</h3>
+                    <div class="code-box">
+                        <code>
+<strong>// Ejemplo 1: Calcular hipotenusa</strong><br>
+public static double calcularHipotenusa(double cateto1, double cateto2) {<br>
+&nbsp;&nbsp;return Math.sqrt(Math.pow(cateto1, 2) + Math.pow(cateto2, 2));<br>
+}<br>
+double h = calcularHipotenusa(3, 4); // 5.0<br><br>
+
+<strong>// Ejemplo 2: Generar número aleatorio en rango</strong><br>
+public static int aleatorioEnRango(int min, int max) {<br>
+&nbsp;&nbsp;return (int)(Math.random() * (max - min + 1)) + min;<br>
+}<br>
+int dado = aleatorioEnRango(1, 6); // Simular lanzamiento de dado<br><br>
+
+<strong>// Ejemplo 3: Calcular área de círculo</strong><br>
+public static double areaCirculo(double radio) {<br>
+&nbsp;&nbsp;return Math.PI * Math.pow(radio, 2);<br>
+}<br>
+double area = areaCirculo(5); // 78.53981633974483<br><br>
+
+<strong>// Ejemplo 4: Redondear a decimales específicos</strong><br>
+public static double redondear(double valor, int decimales) {<br>
+&nbsp;&nbsp;double factor = Math.pow(10, decimales);<br>
+&nbsp;&nbsp;return Math.round(valor * factor) / factor;<br>
+}<br>
+double precio = redondear(19.9567, 2); // 19.96
+                        </code>
+                    </div>
+
+                    <div class="example-box">
+                        <strong>Nota importante:</strong><br>
+                        Todos los métodos de la clase Math son <strong>estáticos</strong>, por lo que se acceden directamente con Math.nombreMetodo() sin necesidad de crear una instancia.
+                    </div>
+                </div>
+
+                <!-- 17. Qué es un GUI -->
+                <div class="topic-card" id="gui">
+                    <h2><i class="fas fa-desktop"></i> 17. ¿Qué es un GUI (Interfaz Gráfica de Usuario)?</h2>
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=1200" alt="GUI">
+                    </div>
+                    
+                    <p><strong>GUI</strong> significa <strong>Graphical User Interface</strong> (Interfaz Gráfica de Usuario). Es un sistema de interacción visual que permite al usuario comunicarse con el programa mediante elementos gráficos como ventanas, botones, menús, etc.</p>
+
+                    <h3>Componentes comunes de un GUI:</h3>
+                    <ul>
+                        <li><strong>Ventanas (Windows/Frames):</strong> Contenedor principal de la aplicación</li>
+                        <li><strong>Botones (Buttons):</strong> Para ejecutar acciones</li>
+                        <li><strong>Campos de texto (TextFields):</strong> Para entrada de datos</li>
+                        <li><strong>Etiquetas (Labels):</strong> Para mostrar texto</li>
+                        <li><strong>Menús (Menus):</strong> Para organizar opciones</li>
+                        <li><strong>Listas (Lists):</strong> Para mostrar elementos seleccionables</li>
+                        <li><strong>Casillas de verificación (CheckBoxes):</strong> Opciones múltiples</li>
+                        <li><strong>Botones de radio (RadioButtons):</strong> Opciones excluyentes</li>
+                    </ul>
+
+                    <h3>Bibliotecas GUI en Java:</h3>
+
+                    <h4>1. Swing (más usado):</h4>
+                    <div class="code-box">
+                        <code>
+import javax.swing.*;<br><br>
+
+public class VentanaSimple {<br>
+&nbsp;&nbsp;public static void main(String[] args) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;// Crear ventana<br>
+&nbsp;&nbsp;&nbsp;&nbsp;JFrame ventana = new JFrame("Mi Primera Ventana");<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ventana.setSize(400, 300);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;// Crear botón<br>
+&nbsp;&nbsp;&nbsp;&nbsp;JButton boton = new JButton("¡Haz clic!");<br>
+&nbsp;&nbsp;&nbsp;&nbsp;boton.addActionListener(e -> {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JOptionPane.showMessageDialog(null, "¡Botón presionado!");<br>
+&nbsp;&nbsp;&nbsp;&nbsp;});<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;// Agregar botón a la ventana<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ventana.add(boton);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ventana.setVisible(true);<br>
+&nbsp;&nbsp;}<br>
+}
+                        </code>
+                    </div>
+
+                    <h4>2. JavaFX (moderno):</h4>
+                    <div class="code-box">
+                        <code>
+import javafx.application.Application;<br>
+import javafx.scene.Scene;<br>
+import javafx.scene.control.Button;<br>
+import javafx.scene.layout.StackPane;<br>
+import javafx.stage.Stage;<br><br>
+
+public class MiApp extends Application {<br>
+&nbsp;&nbsp;@Override<br>
+&nbsp;&nbsp;public void start(Stage primaryStage) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Button btn = new Button("Haz clic");<br>
+&nbsp;&nbsp;&nbsp;&nbsp;btn.setOnAction(e -> System.out.println("¡Hola!"));<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;StackPane root = new StackPane();<br>
+&nbsp;&nbsp;&nbsp;&nbsp;root.getChildren().add(btn);<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;Scene scene = new Scene(root, 300, 250);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;primaryStage.setTitle("Mi App JavaFX");<br>
+&nbsp;&nbsp;&nbsp;&nbsp;primaryStage.setScene(scene);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;primaryStage.show();<br>
+&nbsp;&nbsp;}<br>
+}
+                        </code>
+                    </div>
+
+                    <div class="example-box">
+                        <strong>Ventajas de GUI:</strong><br>
+                        ✓ Más intuitivo para el usuario<br>
+                        ✓ Mejor experiencia de usuario<br>
+                        ✓ Más profesional<br>
+                        ✓ Fácil de usar (no requiere comandos)<br><br>
+                        
+                        <strong>vs CLI (Command Line Interface):</strong><br>
+                        • CLI: Solo texto y comandos (como la consola)<br>
+                        • GUI: Visual, con mouse e interacción gráfica
+                    </div>
+                </div>
+
+                <!-- 18. Formas de mostrar un mensaje -->
+                <div class="topic-card">
+                    <h2><i class="fas fa-comment-dots"></i> 18. Formas de Mostrar un Mensaje</h2>
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200" alt="Mensajes">
+                    </div>
+                    
+                    <p>En Java existen varias formas de mostrar mensajes al usuario, dependiendo del contexto (consola o GUI).</p>
+
+                    <h3>1. En Consola (CLI):</h3>
+                    <div class="code-box">
+                        <code>
+<strong>// a) System.out.println() - Imprime con salto de línea</strong><br>
+System.out.println("Hola, mundo!");<br>
+System.out.println("Segunda línea");<br>
+// Salida:<br>
+// Hola, mundo!<br>
+// Segunda línea<br><br>
+
+<strong>// b) System.out.print() - Imprime SIN salto de línea</strong><br>
+System.out.print("Hola ");<br>
+System.out.print("mundo");<br>
+// Salida: Hola mundo<br><br>
+
+<strong>// c) System.out.printf() - Imprime con formato</strong><br>
+String nombre = "Juan";<br>
+int edad = 25;<br>
+System.out.printf("Mi nombre es %s y tengo %d años%n", nombre, edad);<br>
+// Salida: Mi nombre es Juan y tengo 25 años<br><br>
+
+<strong>// d) System.err.println() - Para mensajes de error</strong><br>
+System.err.println("¡Error crítico!");<br><br>
+
+<strong>// e) Formato con String.format()</strong><br>
+String mensaje = String.format("Total: $%.2f", 19.99);<br>
+System.out.println(mensaje); // Total: $19.99
+                        </code>
+                    </div>
+
+                    <h3>2. En Interfaz Gráfica (GUI con Swing):</h3>
+                    <div class="code-box">
+                        <code>
+import javax.swing.JOptionPane;<br><br>
+
+<strong>// a) Mensaje de información</strong><br>
+JOptionPane.showMessageDialog(null, "Operación exitosa");<br><br>
+
+<strong>// b) Mensaje con tipo específico</strong><br>
+JOptionPane.showMessageDialog(null, <br>
+&nbsp;&nbsp;"Este es un mensaje informativo", <br>
+&nbsp;&nbsp;"Información", <br>
+&nbsp;&nbsp;JOptionPane.INFORMATION_MESSAGE);<br><br>
+
+<strong>// c) Mensaje de advertencia</strong><br>
+JOptionPane.showMessageDialog(null, <br>
+&nbsp;&nbsp;"¡Cuidado con esta acción!", <br>
+&nbsp;&nbsp;"Advertencia", <br>
+&nbsp;&nbsp;JOptionPane.WARNING_MESSAGE);<br><br>
+
+<strong>// d) Mensaje de error</strong><br>
+JOptionPane.showMessageDialog(null, <br>
+&nbsp;&nbsp;"Ha ocurrido un error", <br>
+&nbsp;&nbsp;"Error", <br>
+&nbsp;&nbsp;JOptionPane.ERROR_MESSAGE);<br><br>
+
+<strong>// e) Mensaje de confirmación</strong><br>
+int respuesta = JOptionPane.showConfirmDialog(null, <br>
+&nbsp;&nbsp;"¿Desea continuar?", <br>
+&nbsp;&nbsp;"Confirmar", <br>
+&nbsp;&nbsp;JOptionPane.YES_NO_OPTION);<br>
+if (respuesta == JOptionPane.YES_OPTION) {<br>
+&nbsp;&nbsp;System.out.println("Usuario confirmó");<br>
+}<br><br>
+
+<strong>// f) Solicitar entrada de texto</strong><br>
+String nombre = JOptionPane.showInputDialog("Ingrese su nombre:");<br>
+System.out.println("Nombre ingresado: " + nombre);<br><br>
+
+<strong>// g) Menú de opciones</strong><br>
+String[] opciones = {"Opción 1", "Opción 2", "Opción 3"};<br>
+int seleccion = JOptionPane.showOptionDialog(null,<br>
+&nbsp;&nbsp;"Seleccione una opción:",<br>
+&nbsp;&nbsp;"Menú",<br>
+&nbsp;&nbsp;JOptionPane.DEFAULT_OPTION,<br>
+&nbsp;&nbsp;JOptionPane.QUESTION_MESSAGE,<br>
+&nbsp;&nbsp;null,<br>
+&nbsp;&nbsp;opciones,<br>
+&nbsp;&nbsp;opciones[0]);
+                        </code>
+                    </div>
+
+                    <h3>3. En Archivo Log:</h3>
+                    <div class="code-box">
+                        <code>
+import java.util.logging.*;<br><br>
+
+Logger logger = Logger.getLogger("MiApp");<br>
+logger.info("Mensaje informativo");<br>
+logger.warning("Mensaje de advertencia");<br>
+logger.severe("Mensaje de error grave");
+                        </code>
+                    </div>
+
+                    <table class="data-table">
+                        <tr>
+                            <th>Método</th>
+                            <th>Dónde se ve</th>
+                            <th>Uso principal</th>
+                        </tr>
+                        <tr>
+                            <td>System.out.println()</td>
+                            <td>Consola</td>
+                            <td>Aplicaciones de consola, debugging</td>
+                        </tr>
+                        <tr>
+                            <td>JOptionPane</td>
+                            <td>Ventana emergente</td>
+                            <td>Aplicaciones GUI, mensajes al usuario</td>
+                        </tr>
+                        <tr>
+                            <td>Logger</td>
+                            <td>Archivo/Consola</td>
+                            <td>Registro de eventos, debugging avanzado</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- 19. Qué es un .jar -->
+                <div class="topic-card" id="jar">
+                    <h2><i class="fas fa-file-archive"></i> 19. ¿Qué es un .jar?</h2>
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1618761714954-0b8cd0026356?w=1200" alt="JAR File">
+                    </div>
+                    
+                    <p><strong>.jar</strong> significa <strong>Java ARchive</strong> (Archivo Java). Es un formato de archivo que empaqueta múltiples archivos Java en un solo archivo comprimido.</p>
+
+                    <h3>¿Qué contiene un archivo .jar?</h3>
+                    <ul>
+                        <li>Archivos .class compilados</li>
+                        <li>Recursos (imágenes, sonidos, archivos de configuración)</li>
+                        <li>Bibliotecas y dependencias</li>
+                        <li>Archivo MANIFEST.MF (metadatos del jar)</li>
+                    </ul>
+
+                    <h3>Tipos de archivos .jar:</h3>
+                    
+                    <h4>1. Biblioteca (Library JAR):</h4>
+                    <p>Contiene clases que pueden ser usadas por otros programas.</p>
+                    <div class="example-box">
+                        <strong>Ejemplos:</strong> mysql-connector.jar, gson.jar, apache-commons.jar
+                    </div>
+
+                    <h4>2. Ejecutable (Executable JAR):</h4>
+                    <p>Puede ejecutarse directamente como una aplicación.</p>
+                    <div class="code-box">
+                        <code>
+<strong>// Para ejecutar un jar:</strong><br>
+java -jar mi-aplicacion.jar
+                        </code>
+                    </div>
+
+                    <h3>Cómo crear un archivo .jar:</h3>
+
+                    <h4>Opción 1: Desde línea de comandos:</h4>
+                    <div class="code-box">
+                        <code>
+<strong>// Crear un jar</strong><br>
+jar cvf mi-archivo.jar *.class<br><br>
+
+<strong>// Crear jar ejecutable</strong><br>
+jar cvfe mi-app.jar ClasePrincipal *.class<br><br>
+
+<strong>// Ver contenido de un jar</strong><br>
+jar tf mi-archivo.jar<br><br>
+
+<strong>// Extraer un jar</strong><br>
+jar xf mi-archivo.jar
+                        </code>
+                    </div>
+
+                    <h4>Opción 2: Desde NetBeans:</h4>
+                    <ol>
+                        <li>Click derecho en el proyecto</li>
+                        <li>Seleccionar "Clean and Build"</li>
+                        <li>El .jar se genera en la carpeta dist/</li>
+                    </ol>
+
+                    <h4>Opción 3: Desde IntelliJ IDEA:</h4>
+                    <ol>
+                        <li>File → Project Structure → Artifacts</li>
+                        <li>Click en "+" → JAR → From modules with dependencies</li>
+                        <li>Seleccionar clase principal</li>
+                        <li>Build → Build Artifacts</li>
+                    </ol>
+
+                    <h3>Estructura del archivo MANIFEST.MF:</h3>
+                    <div class="code-box">
+                        <code>
+Manifest-Version: 1.0<br>
+Main-Class: com.miapp.Principal<br>
+Class-Path: libs/mysql-connector.jar libs/gson.jar<br>
+Created-By: 17.0.1 (Oracle Corporation)
+                        </code>
+                    </div>
+
+                    <h3>Ventajas de los archivos .jar:</h3>
+                    <div class="example-box">
+                        <strong>Beneficios:</strong><br>
+                        ✓ <strong>Portabilidad:</strong> Un solo archivo para distribuir<br>
+                        ✓ <strong>Compresión:</strong> Reduce el tamaño de los archivos<br>
+                        ✓ <strong>Organización:</strong> Agrupa archivos relacionados<br>
+                        ✓ <strong>Seguridad:</strong> Puede incluir firmas digitales<br>
+                        ✓ <strong>Facilidad:</strong> Fácil de distribuir y ejecutar<br>
+                        ✓ <strong>Reutilización:</strong> Las bibliotecas pueden usarse en múltiples proyectos
+                    </div>
+
+                    <h3>Ejemplo de uso:</h3>
+                    <div class="code-box">
+                        <code>
+<strong>// Incluir una biblioteca .jar en el proyecto:</strong><br>
+// 1. Copiar el .jar a una carpeta "libs"<br>
+// 2. En NetBeans: Click derecho en Libraries → Add JAR/Folder<br>
+// 3. Seleccionar el .jar<br>
+// 4. Ahora puedes importar y usar las clases:<br><br>
+
+import com.google.gson.Gson; // De gson.jar<br>
+import java.sql.*; // De mysql-connector.jar<br><br>
+
+public class MiApp {<br>
+&nbsp;&nbsp;public static void main(String[] args) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Gson gson = new Gson();<br>
+&nbsp;&nbsp;&nbsp;&nbsp;// Usar las clases de la biblioteca<br>
+&nbsp;&nbsp;}<br>
+}
+                        </code>
+                    </div>
+
+                    <div class="example-box">
+                        <strong>Nota:</strong> Los archivos .jar son similares a los .zip, pero específicamente diseñados para Java. Incluso puedes abrirlos con un programa de descompresión como WinRAR o 7-Zip para ver su contenido.
+                    </div>
+                </div>
+
+                <!-- Cuestionario -->
+                <div class="quiz-container" id="quiz">
+                    <h2><i class="fas fa-clipboard-check"></i> Cuestionario de Programación Java</h2>
+                    <p>Pon a prueba tus conocimientos sobre Java, POO y desarrollo de software. Selecciona la respuesta correcta para cada pregunta.</p>
+
+                    <form id="quizForm">
+                        <!-- Pregunta 1 -->
+                        <div class="quiz-question">
+                            <h3>1. ¿Cuáles son los 4 pilares de la POO?</h3>
+                            <label><input type="radio" name="q1" value="a"> Clases, Objetos, Métodos, Variables</label>
+                            <label><input type="radio" name="q1" value="b"> Encapsulamiento, Herencia, Polimorfismo, Abstracción</label>
+                            <label><input type="radio" name="q1" value="c"> Java, Python, C++, JavaScript</label>
+                            <label><input type="radio" name="q1" value="d"> IF, ELSE, FOR, WHILE</label>
+                        </div>
+
+                        <!-- Pregunta 2 -->
+                        <div class="quiz-question">
+                            <h3>2. ¿Qué es una clase en Java?</h3>
+                            <label><input type="radio" name="q2" value="a"> Una variable global</label>
+                            <label><input type="radio" name="q2" value="b"> Un plantilla o molde para crear objetos</label>
+                            <label><input type="radio" name="q2" value="c"> Un tipo de dato primitivo</label>
+                            <label><input type="radio" name="q2" value="d"> Una función matemática</label>
+                        </div>
+
+                        <!-- Pregunta 3 -->
+                        <div class="quiz-question">
+                            <h3>3. ¿Cuál es el tipo de dato correcto para almacenar un número decimal en Java?</h3>
+                            <label><input type="radio" name="q3" value="a"> int</label>
+                            <label><input type="radio" name="q3" value="b"> String</label>
+                            <label><input type="radio" name="q3" value="c"> double</label>
+                            <label><input type="radio" name="q3" value="d"> boolean</label>
+                        </div>
+
+                        <!-- Pregunta 4 -->
+                        <div class="quiz-question">
+                            <h3>4. ¿Qué operador se usa para verificar si dos valores son iguales en Java?</h3>
+                            <label><input type="radio" name="q4" value="a"> =</label>
+                            <label><input type="radio" name="q4" value="b"> ==</label>
+                            <label><input type="radio" name="q4" value="c"> !=</label>
+                            <label><input type="radio" name="q4" value="d"> equals()</label>
+                        </div>
+
+                        <!-- Pregunta 5 -->
+                        <div class="quiz-question">
+                            <h3>5. ¿Qué palabra clave se usa para heredar de una clase en Java?</h3>
+                            <label><input type="radio" name="q5" value="a"> implements</label>
+                            <label><input type="radio" name="q5" value="b"> extends</label>
+                            <label><input type="radio" name="q5" value="c"> inherits</label>
+                            <label><input type="radio" name="q5" value="d"> super</label>
+                        </div>
+
+                        <!-- Pregunta 6 -->
+                        <div class="quiz-question">
+                            <h3>6. ¿Cuál es la sintaxis correcta de un bucle FOR en Java?</h3>
+                            <label><input type="radio" name="q6" value="a"> for i = 0 to 10</label>
+                            <label><input type="radio" name="q6" value="b"> for (int i = 0; i < 10; i++)</label>
+                            <label><input type="radio" name="q6" value="c"> for (i in range(10))</label>
+                            <label><input type="radio" name="q6" value="d"> for i from 0 until 10</label>
+                        </div>
+
+                        <!-- Pregunta 7 -->
+                        <div class="quiz-question">
+                            <h3>7. ¿Qué método de la clase Math se usa para obtener el valor absoluto?</h3>
+                            <label><input type="radio" name="q7" value="a"> Math.sqrt()</label>
+                            <label><input type="radio" name="q7" value="b"> Math.abs()</label>
+                            <label><input type="radio" name="q7" value="c"> Math.pow()</label>
+                            <label><input type="radio" name="q7" value="d"> Math.max()</label>
+                        </div>
+
+                        <!-- Pregunta 8 -->
+                        <div class="quiz-question">
+                            <h3>8. ¿Qué significa GUI?</h3>
+                            <label><input type="radio" name="q8" value="a"> General User Interface</label>
+                            <label><input type="radio" name="q8" value="b"> Graphical Universal Input</label>
+                            <label><input type="radio" name="q8" value="c"> Graphical User Interface</label>
+                            <label><input type="radio" name="q8" value="d"> Generic Update Interface</label>
+                        </div>
+
+                        <!-- Pregunta 9 -->
+                        <div class="quiz-question">
+                            <h3>9. ¿Qué biblioteca de Java se usa para crear interfaces gráficas?</h3>
+                            <label><input type="radio" name="q9" value="a"> java.io</label>
+                            <label><input type="radio" name="q9" value="b"> java.util</label>
+                            <label><input type="radio" name="q9" value="c"> javax.swing</label>
+                            <label><input type="radio" name="q9" value="d"> java.net</label>
+                        </div>
+
+                        <!-- Pregunta 10 -->
+                        <div class="quiz-question">
+                            <h3>10. ¿Qué es un archivo .jar?</h3>
+                            <label><input type="radio" name="q10" value="a"> Un archivo de texto plano</label>
+                            <label><input type="radio" name="q10" value="b"> Un archivo de imagen</label>
+                            <label><input type="radio" name="q10" value="c"> Un archivo Java comprimido que empaqueta múltiples clases</label>
+                            <label><input type="radio" name="q10" value="d"> Un archivo de configuración XML</label>
+                        </div>
+
+                        <button type="button" class="submit-btn" onclick="checkQuizCodifica()">
+                            <i class="fas fa-check-circle"></i> Verificar Respuestas
+                        </button>
+                        <button type="button" class="retry-btn" onclick="retryQuizCodifica()" style="display: none;">
+                            <i class="fas fa-redo"></i> Intentar de Nuevo
+                        </button>
+                    </form>
+
+                    <div id="quizResult" class="quiz-result"></div>
+                </div>
+
+            </div>
+
+            <a href="index.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Volver al inicio
+            </a>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        // Respuestas correctas del cuestionario
+        const correctAnswersCodifica = {
+            q1: 'b',
+            q2: 'b',
+            q3: 'c',
+            q4: 'b',
+            q5: 'b',
+            q6: 'b',
+            q7: 'b',
+            q8: 'c',
+            q9: 'c',
+            q10: 'c'
+        };
+
+        function checkQuizCodifica() {
+            let score = 0;
+            const totalQuestions = Object.keys(correctAnswersCodifica).length;
+            const form = document.getElementById('quizForm');
+            const resultDiv = document.getElementById('quizResult');
+
+            // Revisar cada pregunta
+            for (let question in correctAnswersCodifica) {
+                const selectedAnswer = form.querySelector(`input[name="${question}"]:checked`);
+                const questionDiv = form.querySelector(`input[name="${question}"]`).closest('.quiz-question');
+                
+                // Limpiar clases previas
+                questionDiv.classList.remove('correct-answer', 'wrong-answer');
+                
+                if (selectedAnswer) {
+                    if (selectedAnswer.value === correctAnswersCodifica[question]) {
+                        score++;
+                        questionDiv.classList.add('correct-answer');
+                    } else {
+                        questionDiv.classList.add('wrong-answer');
+                    }
+                }
+            }
+
+            // Calcular porcentaje
+            const percentage = (score / totalQuestions) * 100;
+
+            // Mostrar resultado
+            let feedback = '';
+            if (percentage === 100) {
+                feedback = '¡Perfecto! 🎉 Eres un experto en Java y POO.';
+            } else if (percentage >= 70) {
+                feedback = '¡Bien hecho! 👏 Tienes un buen dominio de Java.';
+            } else if (percentage >= 50) {
+                feedback = 'Regular. 📚 Repasa POO, tipos de datos y estructuras de control.';
+            } else {
+                feedback = 'Necesitas estudiar más. 💪 Revisa los conceptos básicos de Java.';
+            }
+
+            resultDiv.innerHTML = `
+                <h3>Resultado del Cuestionario</h3>
+                <p class="score">Obtuviste: <strong>${score} de ${totalQuestions}</strong> respuestas correctas</p>
+                <p class="percentage">Porcentaje: <strong>${percentage.toFixed(1)}%</strong></p>
+                <p class="feedback-message">${feedback}</p>
+            `;
+            resultDiv.style.display = 'block';
+
+            // Mostrar botón de reintentar
+            document.querySelector('.submit-btn').style.display = 'none';
+            document.querySelector('.retry-btn').style.display = 'inline-block';
+
+            // Scroll al resultado
+            resultDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        function retryQuizCodifica() {
+            const form = document.getElementById('quizForm');
+            const resultDiv = document.getElementById('quizResult');
+            
+            // Limpiar formulario
+            form.reset();
+            
+            // Limpiar clases de respuestas
+            document.querySelectorAll('.quiz-question').forEach(q => {
+                q.classList.remove('correct-answer', 'wrong-answer');
+            });
+            
+            // Ocultar resultado
+            resultDiv.style.display = 'none';
+            
+            // Cambiar botones
+            document.querySelector('.submit-btn').style.display = 'inline-block';
+            document.querySelector('.retry-btn').style.display = 'none';
+            
+            // Scroll al inicio del quiz
+            document.getElementById('quiz').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Smooth scroll para enlaces de ancla
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    target.classList.add('highlight');
+                    setTimeout(() => target.classList.remove('highlight'), 2000);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

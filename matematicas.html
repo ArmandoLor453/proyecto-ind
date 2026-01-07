@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matemáticas - CECyTEM</title>
+    <link rel="stylesheet" href="matematicas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+
+    <header>
+        
+    </header>
+
+    <main>
+        <div class="container" id="inicio">
+            <div class="materia-header" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                <i class="fas fa-calculator"></i>
+                <h1>Matemáticas</h1>
+                <p>Álgebra básica: campos, números y reglas fundamentales</p>
+            </div>
+
+            <a href="index.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Volver al inicio
+            </a>
+
+            <!-- Anclas rápidas -->
+            <div class="quick-anchors">
+                <a href="#inicio"><i class="fas fa-house"></i> Inicio</a>
+                <a href="#recursos"><i class="fas fa-folder-open"></i> Recursos</a>
+                <a href="#indice"><i class="fas fa-list"></i> Índice</a>
+                <a href="#quiz"><i class="fas fa-question-circle"></i> Quiz</a>
+            </div>
+
+            <!-- Recursos Multimedia -->
+            <div class="recursos-section" id="recursos">
+                <h2><i class="fas fa-folder-open"></i> Recursos de Aprendizaje</h2>
+                <div class="recursos-grid">
+                    <!-- PDF -->
+                    <div class="recurso-card">
+                        <div class="recurso-header">
+                            <i class="fas fa-file-pdf"></i>
+                            <h3>Material PDF</h3>
+                        </div>
+                        <p>Guía: sistemas numéricos y propiedades básicas</p>
+                        <div class="pdf-viewer">
+                            <iframe src="mate.pdf" 
+                                    frameborder="0" 
+                                    width="100%" 
+                                    height="500px">
+                            </iframe>
+                        </div>
+                        <a href="mate.pdf" 
+                           target="_blank" 
+                           class="download-btn">
+                            <i class="fas fa-download"></i> Descargar PDF
+                        </a>
+                    </div>
+
+                    <!-- Video -->
+                    <div class="recurso-card">
+                        <div class="recurso-header">
+                            <i class="fab fa-youtube"></i>
+                            <h3>Video: Números y Operaciones</h3>
+                        </div>
+                        <p>Repaso de conjuntos numéricos y jerarquía de operaciones</p>
+                        <div class="video-container">
+                            <iframe width="100%" 
+                                    height="315" 
+                                    src="https://www.youtube.com/embed/NybHckSEQBI" 
+                                    title="Conjuntos numéricos y operaciones" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=NybHckSEQBI" 
+                           target="_blank" 
+                           class="watch-btn">
+                            <i class="fab fa-youtube"></i> Ver en YouTube
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navegación por anclas -->
+            <nav class="topic-navigation" id="indice">
+                <h3><i class="fas fa-list"></i> Índice de Contenidos</h3>
+                <ul>
+                    <li><a href="#campo-algebra">1. ¿Qué es un campo en álgebra?</a></li>
+                    <li><a href="#numeros-reales">2. Los números reales y sus propiedades</a></li>
+                    <li><a href="#conjuntos-numericos">3. Enteros, racionales y naturales</a></li>
+                    <li><a href="#numeros-primos">4. ¿Qué son los números primos?</a></li>
+                    <li><a href="#inverso-aditivo">5. Definición de inverso aditivo</a></li>
+                    <li><a href="#cociente-potencias">6. Cociente de potencias en la misma base</a></li>
+                    <li><a href="#signos-agrupacion">7. ¿Qué son los signos de agrupación?</a></li>
+                    <li><a href="#jerarquia-operaciones">8. Jerarquía de operaciones</a></li>
+                    <li><a href="#campo-vs-conjunto">9. ¿Por qué es un campo y no solo un conjunto?</a></li>
+                    <li><a href="#quiz">📝 Cuestionario Final</a></li>
+                </ul>
+            </nav>
+
+            <div class="content-wrapper">
+                <!-- 1. Campo en Álgebra -->
+                <div class="topic-card" id="campo-algebra">
+                    <h2><i class="fas fa-university"></i> 1. ¿Qué es un campo en álgebra?</h2>
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?w=1200" alt="Álgebra abstracta">
+                    </div>
+                    <p>Un <strong>campo</strong> es una estructura algebraica formada por un conjunto no vacío con dos operaciones: <em>suma</em> y <em>multiplicación</em>, que cumplen los axiomas de cierre, asociatividad, conmutatividad, existencia de elementos neutros, existencia de inversos y la distributividad de la multiplicación sobre la suma.</p>
+                    <div class="example-box">
+                        <strong>Ejemplos de campos:</strong><br>
+                        • Los números reales (ℝ)<br>
+                        • Los números racionales (ℚ)<br>
+                        • Los números complejos (ℂ)
+                    </div>
+                    <a class="anchor-inline" href="#indice"><i class="fas fa-anchor"></i> Volver al índice</a>
+                </div>
+
+                <!-- 2. Números reales y propiedades -->
+                <div class="topic-card" id="numeros-reales">
+                    <h2><i class="fas fa-infinity"></i> 2. Los números reales y sus propiedades</h2>
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1517816743773-6e0fd518b4a6?w=1200" alt="Números reales">
+                    </div>
+                    <p>El conjunto de los <strong>reales</strong> (ℝ) incluye naturales, enteros, racionales e irracionales. Es <em>denso</em> (entre dos reales siempre hay otro), <em>ordenado</em> (tiene relación ≤) y <em>completo</em> (todo conjunto acotado y no vacío tiene supremo).</p>
+                    <ul>
+                        <li><strong>Propiedades de orden:</strong> si a ≤ b y b ≤ c ⇒ a ≤ c (transitividad).</li>
+                        <li><strong>Valor absoluto:</strong> |a| ≥ 0 y |a| = √(a²).</li>
+                        <li><strong>Intervalos:</strong> [a,b], (a,b), [a,b), (a,b].</li>
+                        <li><strong>Densidad:</strong> ∀a<b, ∃c tal que a<c<b.</li>
+                    </ul>
+                    <div class="example-box">
+                        <strong>Clasificación:</strong> ℕ ⊂ ℤ ⊂ ℚ ⊂ ℝ; irracionales como √2, π, e no son racionales.
+                    </div>
+                    <a class="anchor-inline" href="#indice"><i class="fas fa-anchor"></i> Volver al índice</a>
+                </div>
+
+                <!-- 3. Enteros, racionales y naturales -->
+                <div class="topic-card" id="conjuntos-numericos">
+                    <h2><i class="fas fa-hashtag"></i> 3. Enteros, racionales y naturales</h2>
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1516534775068-ba3e7458af70?w=1200" alt="Conjuntos numéricos">
+                    </div>
+                    <div class="code-box">
+                        <code>
+<strong>ℕ (Naturales):</strong> 0, 1, 2, 3, ...<br>
+<strong>ℤ (Enteros):</strong> ..., −3, −2, −1, 0, 1, 2, 3, ...<br>
+<strong>ℚ (Racionales):</strong> { p/q | p, q ∈ ℤ, q ≠ 0 }<br>
+<strong>ℝ (Reales):</strong> ℚ ∪ irracionales (π, √2, e, ...)<br>
+                        </code>
+                    </div>
+                    <p>Los racionales tienen <em>expansión decimal finita o periódica</em>. Los irracionales tienen expansión infinita <em>no periódica</em>. Los enteros incluyen negativos, cero y positivos; los naturales suelen comenzar en 0 o 1 según convención.</p>
+                    <div class="example-box">
+                        <strong>Ejemplos:</strong> −4 ∈ ℤ; 3/5 ∈ ℚ; √2 ∈ ℝ\ℚ; 0 ∈ ℕ (convención común).
+                    </div>
+                    <a class="anchor-inline" href="#indice"><i class="fas fa-anchor"></i> Volver al índice</a>
+                </div>
+
+                <!-- 4. Números primos -->
+                <div class="topic-card" id="numeros-primos">
+                    <h2><i class="fas fa-key"></i> 4. ¿Qué son los números primos?</h2>
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?w=1200" alt="Números primos">
+                    </div>
+                    <p>Un <strong>primo</strong> es un entero mayor que 1 con solo dos divisores positivos: 1 y él mismo. Todo entero n&gt;1 se descompone <em>de forma única</em> como producto de primos (Teorema Fundamental de la Aritmética).</p>
+                    <ul>
+                        <li><strong>2</strong> es el único primo par.</li>
+                        <li>Si n no tiene divisores ≤ √n, entonces es primo.</li>
+                    </ul>
+                    <div class="example-box">
+                        <strong>Primos pequeños:</strong> 2, 3, 5, 7, 11, 13, 17, 19...
+                    </div>
+                    <a class="anchor-inline" href="#indice"><i class="fas fa-anchor"></i> Volver al índice</a>
+                </div>
+
+                <!-- 5. Inverso aditivo -->
+                <div class="topic-card" id="inverso-aditivo">
+                    <h2><i class="fas fa-plus-minus"></i> 5. Definición de inverso aditivo</h2>
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1523246191901-923a2cfd8f2b?w=1200" alt="Inverso aditivo">
+                    </div>
+                    <p>El <strong>inverso aditivo</strong> de a es −a, tal que a + (−a) = 0. En ℝ, cada número tiene inverso aditivo y es único. Geométricamente, es el punto simétrico respecto a 0 en la recta real.</p>
+                    <div class="code-box">
+                        <code>inv<sub>+</sub>(7) = −7; inv<sub>+</sub>(−3) = 3; inv<sub>+</sub>(0) = 0.</code>
+                    </div>
+                    <a class="anchor-inline" href="#indice"><i class="fas fa-anchor"></i> Volver al índice</a>
+                </div>
+
+                <!-- 6. Cociente de potencias -->
+                <div class="topic-card" id="cociente-potencias">
+                    <h2><i class="fas fa-superscript"></i> 6. Cociente de potencias en la misma base</h2>
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=1200" alt="Potencias">
+                    </div>
+                    <p>Si a ≠ 0 y m, n ∈ ℤ, entonces <strong>a<sup>m</sup> / a<sup>n</sup> = a<sup>m−n</sup></strong>. Esta regla se extiende a exponentes negativos: a<sup>−k</sup> = 1/a<sup>k</sup>.</p>
+                    <ul>
+                        <li><strong>a<sup>0</sup> = 1</strong> para a ≠ 0.</li>
+                        <li>No se define 0<sup>0</sup> en aritmética elemental.</li>
+                    </ul>
+                    <div class="example-box">
+                        2<sup>5</sup> / 2<sup>3</sup> = 2<sup>2</sup> = 4; x<sup>7</sup> / x<sup>2</sup> = x<sup>5</sup>.
+                    </div>
+                    <a class="anchor-inline" href="#indice"><i class="fas fa-anchor"></i> Volver al índice</a>
+                </div>
+
+                <!-- 7. Signos de agrupación -->
+                <div class="topic-card" id="signos-agrupacion">
+                    <h2><i class="fas fa-brackets-curly"></i> 7. ¿Qué son los signos de agrupación?</h2>
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=1200" alt="Signos de agrupación">
+                    </div>
+                    <p>Se usan para organizar y clarificar el orden de las operaciones:</p>
+                    <ul>
+                        <li><strong>Paréntesis ( )</strong></li>
+                        <li><strong>Corchetes [ ]</strong></li>
+                        <li><strong>Llaves { }</strong></li>
+                        <li><strong>Barra de fracción</strong> y <strong>radical</strong> también actúan como agrupadores.</li>
+                    </ul>
+                    <div class="example-box">
+                        { 2 · [3 + (4 − 1)] } = { 2 · [3 + 3] } = 12
+                    </div>
+                    <a class="anchor-inline" href="#indice"><i class="fas fa-anchor"></i> Volver al índice</a>
+                </div>
+
+                <!-- 8. Jerarquía de operaciones -->
+                <div class="topic-card" id="jerarquia-operaciones">
+                    <h2><i class="fas fa-sort-amount-up-alt"></i> 8. Jerarquía de operaciones</h2>
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?w=1200" alt="Jerarquía de operaciones">
+                    </div>
+                    <p>Orden estándar (PEMDAS):</p>
+                    <ol>
+                        <li><strong>Paréntesis</strong> y agrupación</li>
+                        <li><strong>Exponentes</strong> y raíces</li>
+                        <li><strong>Multiplicación</strong> y <strong>división</strong> (izquierda a derecha)</li>
+                        <li><strong>Suma</strong> y <strong>resta</strong> (izquierda a derecha)</li>
+                    </ol>
+                    <ul>
+                        <li>El <em>signo menos</em> puede ser <strong>unario</strong> (−a) o <strong>binario</strong> (a−b); respeta la jerarquía.</li>
+                        <li>La <strong>barra de fracción</strong> agrupa numerador y denominador.</li>
+                    </ul>
+                    <div class="example-box">
+                        6 + 2 × (3² − 1) = 6 + 2 × 8 = 22
+                    </div>
+                    <a class="anchor-inline" href="#indice"><i class="fas fa-anchor"></i> Volver al índice</a>
+                </div>
+
+                <!-- 9. Campo vs conjunto -->
+                <div class="topic-card" id="campo-vs-conjunto">
+                    <h2><i class="fas fa-balance-scale"></i> 9. ¿Por qué es un campo y no solo un conjunto?</h2>
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1551135049-8a33b5883817?w=1200" alt="Campo vs conjunto">
+                    </div>
+                    <p>Un <strong>conjunto</strong> solo colecciona elementos. Un <strong>campo</strong> añade estructura: define suma y multiplicación y exige axiomas. Por eso ℝ no es solo “un conjunto de números”, sino un <em>campo</em> con propiedades que permiten operaciones coherentes.</p>
+                    <div class="code-box">
+                        <code>
+Comparación:<br>
+• Conjunto: elementos sin operaciones.<br>
+• Grupo (suma): cierre, asociativa, neutro, inverso.<br>
+• Anillo: suma (grupo abeliano) y producto asociativo, distributivo.<br>
+• Campo: anillo conmutativo donde todo elemento ≠ 0 tiene inverso multiplicativo.
+                        </code>
+                    </div>
+                    <a class="anchor-inline" href="#indice"><i class="fas fa-anchor"></i> Volver al índice</a>
+                </div>
+
+                <!-- Cuestionario -->
+                <div class="topic-card" id="quiz">
+                    <h2><i class="fas fa-question-circle"></i> Cuestionario Final - Matemáticas</h2>
+                    <p>Responde las siguientes 10 preguntas basadas en los temas estudiados.</p>
+                    
+                    <form id="quiz-form" class="quiz-container">
+                        <!-- Pregunta 1 -->
+                        <div class="quiz-question">
+                            <p class="question-text"><strong>1.</strong> ¿Cuál describe mejor un campo en álgebra?</p>
+                            <label><input type="radio" name="q1" value="a"> Un conjunto sin operaciones</label>
+                            <label><input type="radio" name="q1" value="b"> Un conjunto con suma y multiplicación que cumplen axiomas</label>
+                            <label><input type="radio" name="q1" value="c"> Solo números naturales</label>
+                            <label><input type="radio" name="q1" value="d"> Un sistema con una sola operación</label>
+                        </div>
+
+                        <!-- Pregunta 2 -->
+                        <div class="quiz-question">
+                            <p class="question-text"><strong>2.</strong> ¿Qué propiedad se cumple en ℝ para la suma?</p>
+                            <label><input type="radio" name="q2" value="a"> Distributiva</label>
+                            <label><input type="radio" name="q2" value="b"> Conmutativa: a + b = b + a</label>
+                            <label><input type="radio" name="q2" value="c"> Idempotencia</label>
+                            <label><input type="radio" name="q2" value="d"> Antisimetría</label>
+                        </div>
+
+                        <!-- Pregunta 3 -->
+                        <div class="quiz-question">
+                            <p class="question-text"><strong>3.</strong> ¿En qué conjunto está el número −3?</p>
+                            <label><input type="radio" name="q3" value="a"> ℕ</label>
+                            <label><input type="radio" name="q3" value="b"> ℤ</label>
+                            <label><input type="radio" name="q3" value="c"> ℚ únicamente</label>
+                            <label><input type="radio" name="q3" value="d"> Ninguno</label>
+                        </div>
+
+                        <!-- Pregunta 4 -->
+                        <div class="quiz-question">
+                            <p class="question-text"><strong>4.</strong> ¿Cuál de los siguientes es primo?</p>
+                            <label><input type="radio" name="q4" value="a"> 1</label>
+                            <label><input type="radio" name="q4" value="b"> 9</label>
+                            <label><input type="radio" name="q4" value="c"> 13</label>
+                            <label><input type="radio" name="q4" value="d"> 21</label>
+                        </div>
+
+                        <!-- Pregunta 5 -->
+                        <div class="quiz-question">
+                            <p class="question-text"><strong>5.</strong> ¿Cuál es el inverso aditivo de 7?</p>
+                            <label><input type="radio" name="q5" value="a"> 1/7</label>
+                            <label><input type="radio" name="q5" value="b"> −7</label>
+                            <label><input type="radio" name="q5" value="c"> 7</label>
+                            <label><input type="radio" name="q5" value="d"> 0</label>
+                        </div>
+
+                        <!-- Pregunta 6 -->
+                        <div class="quiz-question">
+                            <p class="question-text"><strong>6.</strong> Simplifica: a^7 / a^3</p>
+                            <label><input type="radio" name="q6" value="a"> a^10</label>
+                            <label><input type="radio" name="q6" value="b"> a^4</label>
+                            <label><input type="radio" name="q6" value="c"> a^3</label>
+                            <label><input type="radio" name="q6" value="d"> a^−4</label>
+                        </div>
+
+                        <!-- Pregunta 7 -->
+                        <div class="quiz-question">
+                            <p class="question-text"><strong>7.</strong> ¿Cuál NO es un signo de agrupación?</p>
+                            <label><input type="radio" name="q7" value="a"> ( )</label>
+                            <label><input type="radio" name="q7" value="b"> [ ]</label>
+                            <label><input type="radio" name="q7" value="c"> { }</label>
+                            <label><input type="radio" name="q7" value="d"> “ ”</label>
+                        </div>
+
+                        <!-- Pregunta 8 -->
+                        <div class="quiz-question">
+                            <p class="question-text"><strong>8.</strong> Orden correcto de la jerarquía de operaciones:</p>
+                            <label><input type="radio" name="q8" value="a"> Paréntesis, exponentes, multiplicación/división, suma/resta</label>
+                            <label><input type="radio" name="q8" value="b"> Exponentes, paréntesis, suma, división</label>
+                            <label><input type="radio" name="q8" value="c"> Suma, resta, multiplicación, división, exponentes</label>
+                            <label><input type="radio" name="q8" value="d"> División, multiplicación, paréntesis, suma</label>
+                        </div>
+
+                        <!-- Pregunta 9 -->
+                        <div class="quiz-question">
+                            <p class="question-text"><strong>9.</strong> ¿Por qué ℝ con suma y multiplicación es un campo?</p>
+                            <label><input type="radio" name="q9" value="a"> Porque tiene infinitos elementos</label>
+                            <label><input type="radio" name="q9" value="b"> Porque solo contiene naturales</label>
+                            <label><input type="radio" name="q9" value="c"> Porque además de ser conjunto, cumple axiomas con dos operaciones</label>
+                            <label><input type="radio" name="q9" value="d"> Porque no requiere inversos</label>
+                        </div>
+
+                        <!-- Pregunta 10 -->
+                        <div class="quiz-question">
+                            <p class="question-text"><strong>10.</strong> Calcula: 2^5 / 2^3</p>
+                            <label><input type="radio" name="q10" value="a"> 2</label>
+                            <label><input type="radio" name="q10" value="b"> 4</label>
+                            <label><input type="radio" name="q10" value="c"> 8</label>
+                            <label><input type="radio" name="q10" value="d"> 16</label>
+                        </div>
+
+                        <button type="button" class="submit-quiz-btn" onclick="checkQuizMatematicas()">
+                            <i class="fas fa-check-circle"></i> Enviar Respuestas
+                        </button>
+                    </form>
+
+                    <div id="quiz-result" class="quiz-result" style="display: none;">
+                        <h3><i class="fas fa-trophy"></i> Resultados</h3>
+                        <div class="result-summary">
+                            <div class="result-item correct-answers">
+                                <i class="fas fa-check"></i>
+                                <span>Correctas: <strong id="correct-count">0</strong></span>
+                            </div>
+                            <div class="result-item incorrect-answers">
+                                <i class="fas fa-times"></i>
+                                <span>Incorrectas: <strong id="incorrect-count">0</strong></span>
+                            </div>
+                            <div class="result-item score-percentage">
+                                <i class="fas fa-star"></i>
+                                <span>Puntuación: <strong id="score-percentage">0%</strong></span>
+                            </div>
+                        </div>
+                        <div id="feedback-message" class="feedback-message"></div>
+                        <button class="retry-btn" onclick="retryQuizMatematicas()">
+                            <i class="fas fa-redo"></i> Intentar de nuevo
+                        </button>
+                    </div>
+                    <a class="anchor-inline" href="#indice"><i class="fas fa-anchor"></i> Volver al índice</a>
+                </div>
+
+            </div>
+
+            <a href="index.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Volver al inicio
+            </a>
+        </div>
+    </main>
+
+    <script>
+        const correctAnswersMatematicas = {
+            q1: 'b', q2: 'b', q3: 'b', q4: 'c', q5: 'b',
+            q6: 'b', q7: 'd', q8: 'a', q9: 'c', q10:'b'
+        };
+
+        function checkQuizMatematicas() {
+            let correct = 0, incorrect = 0;
+            const form = document.getElementById('quiz-form');
+            const questions = form.querySelectorAll('.quiz-question');
+
+            questions.forEach(q => {
+                q.classList.remove('correct', 'incorrect');
+                q.querySelectorAll('label').forEach(l => l.classList.remove('correct-answer', 'wrong-answer'));
+            });
+
+            for (let i = 1; i <= 10; i++) {
+                const selected = form.querySelector(`input[name="q${i}"]:checked`);
+                const questionDiv = questions[i - 1];
+                const expected = correctAnswersMatematicas[`q${i}`];
+
+                if (selected) {
+                    if (selected.value === expected) {
+                        correct++;
+                        questionDiv.classList.add('correct');
+                        selected.parentElement.classList.add('correct-answer');
+                    } else {
+                        incorrect++;
+                        questionDiv.classList.add('incorrect');
+                        selected.parentElement.classList.add('wrong-answer');
+                        const correctLabel = questionDiv.querySelector(`input[value="${expected}"]`).parentElement;
+                        correctLabel.classList.add('correct-answer');
+                    }
+                } else {
+                    incorrect++;
+                    questionDiv.classList.add('incorrect');
+                }
+            }
+
+            document.getElementById('correct-count').textContent = correct;
+            document.getElementById('incorrect-count').textContent = incorrect;
+            const percentage = Math.round((correct / 10) * 100);
+            document.getElementById('score-percentage').textContent = percentage + '%';
+
+            const feedbackDiv = document.getElementById('feedback-message');
+            if (percentage === 100) {
+                feedbackDiv.innerHTML = '<i class="fas fa-star"></i> ¡Excelente! Dominas los conceptos.';
+                feedbackDiv.className = 'feedback-message excellent';
+            } else if (percentage >= 70) {
+                feedbackDiv.innerHTML = '<i class="fas fa-thumbs-up"></i> ¡Muy bien! Buen dominio.';
+                feedbackDiv.className = 'feedback-message good';
+            } else if (percentage >= 50) {
+                feedbackDiv.innerHTML = '<i class="fas fa-book"></i> Bien, pero puedes mejorar.';
+                feedbackDiv.className = 'feedback-message average';
+            } else {
+                feedbackDiv.innerHTML = '<i class="fas fa-book-reader"></i> Repasa más y vuelve a intentar.';
+                feedbackDiv.className = 'feedback-message poor';
+            }
+
+            document.getElementById('quiz-result').style.display = 'block';
+            document.querySelector('.submit-quiz-btn').style.display = 'none';
+            document.getElementById('quiz-result').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        function retryQuizMatematicas() {
+            document.getElementById('quiz-form').reset();
+            const questions = document.querySelectorAll('.quiz-question');
+            questions.forEach(q => {
+                q.classList.remove('correct', 'incorrect');
+                q.querySelectorAll('label').forEach(l => l.classList.remove('correct-answer', 'wrong-answer'));
+            });
+            document.getElementById('quiz-result').style.display = 'none';
+            document.querySelector('.submit-quiz-btn').style.display = 'block';
+            document.getElementById('quiz').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

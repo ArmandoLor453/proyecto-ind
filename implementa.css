@@ -1,0 +1,640 @@
+/* Estilos específicos para la página de Implementa */
+
+/* Color principal de Implementa - Turquesa/Cyan */
+:root {
+    --implementa-primary: #4facfe;
+    --implementa-secondary: #00f2fe;
+    --implementa-dark: #3b8fd8;
+    --implementa-light: #e6f7ff;
+}
+
+/* Header específico de Implementa */
+.materia-header {
+    background: linear-gradient(135deg, var(--implementa-primary) 0%, var(--implementa-secondary) 100%);
+    color: white;
+}
+
+.materia-header i {
+    color: white;
+}
+
+/* Topic cards con acento de Implementa */
+.topic-card {
+    border-left: 4px solid var(--implementa-primary);
+}
+
+.topic-card:hover {
+    box-shadow: 0 15px 40px rgba(79, 172, 254, 0.3);
+}
+
+.topic-card h2 {
+    color: var(--implementa-dark);
+}
+
+.topic-card h2 i {
+    color: var(--implementa-secondary);
+}
+
+/* Code boxes con tema de Implementa */
+.code-box {
+    background: linear-gradient(135deg, var(--implementa-light) 0%, #f0fbff 100%);
+    border-left: 4px solid var(--implementa-primary);
+}
+
+.code-box code {
+    color: var(--implementa-dark);
+}
+
+/* Example boxes */
+.example-box {
+    background: linear-gradient(135deg, #f0fbff 0%, var(--implementa-light) 100%);
+    border-left: 4px solid var(--implementa-secondary);
+}
+
+/* Tablas */
+.data-table thead {
+    background: linear-gradient(135deg, var(--implementa-primary) 0%, var(--implementa-secondary) 100%);
+    color: white;
+}
+
+.data-table tbody tr:hover {
+    background: var(--implementa-light);
+}
+
+/* Botón de regreso */
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.8rem 1.4rem;
+    background: linear-gradient(135deg, var(--implementa-primary) 0%, var(--implementa-secondary) 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: all 0.25s ease;
+    border: 1.5px solid rgba(79, 172, 254, 0.45);
+    box-shadow: 0 6px 18px rgba(79, 172, 254, 0.25);
+}
+
+.back-button:hover {
+    transform: translateX(-5px);
+    box-shadow: 0 5px 20px rgba(79, 172, 254, 0.4);
+}
+
+.back-button:focus-visible {
+    outline: 3px solid var(--implementa-secondary);
+    outline-offset: 3px;
+    box-shadow: 0 0 0 4px rgba(0, 242, 254, 0.25);
+}
+
+/* Animaciones específicas */
+@keyframes pulse-implementa {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(79, 172, 254, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 0 15px rgba(79, 172, 254, 0);
+    }
+}
+
+.topic-card:hover h2 i {
+    animation: pulse-implementa 2s infinite;
+}
+
+/* Partículas con color de Implementa */
+.particles .particle {
+    background: radial-gradient(circle, var(--implementa-primary) 0%, transparent 70%);
+}
+
+/* Scrollbar personalizado */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, var(--implementa-primary) 0%, var(--implementa-secondary) 100%);
+}
+
+/* Estilos para código SQL */
+.code-box code strong {
+    color: var(--implementa-secondary);
+}
+
+/* Highlight para comandos SQL */
+.code-box code {
+    font-family: 'Courier New', monospace;
+}
+
+/* ============================================
+   RECURSOS MULTIMEDIA (PDF Y VIDEO)
+   ============================================ */
+.recursos-section {
+    background: linear-gradient(135deg, rgba(79, 172, 254, 0.08) 0%, rgba(0, 242, 254, 0.08) 100%);
+    border-radius: 20px;
+    padding: 3rem;
+    margin: 2rem 0;
+    box-shadow: 0 8px 25px rgba(79, 172, 254, 0.15);
+    border: 2px solid rgba(79, 172, 254, 0.2);
+}
+
+.recursos-section h2 {
+    color: var(--implementa-dark);
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.recursos-section h2 i {
+    color: var(--implementa-secondary);
+    font-size: 2rem;
+}
+
+.recursos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.recurso-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.recurso-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(79, 172, 254, 0.3);
+    border-color: var(--implementa-primary);
+}
+
+.recurso-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.recurso-header i {
+    font-size: 2.5rem;
+    color: var(--implementa-secondary);
+}
+
+.recurso-header h3 {
+    color: var(--implementa-dark);
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.recurso-card p {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.pdf-viewer {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+    border: 2px solid var(--implementa-light);
+}
+
+.pdf-viewer iframe {
+    display: block;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+    border: 2px solid var(--implementa-light);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.download-btn, .watch-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, var(--implementa-primary) 0%, var(--implementa-secondary) 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(79, 172, 254, 0.3);
+    width: 100%;
+    justify-content: center;
+}
+
+.download-btn:hover, .watch-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(79, 172, 254, 0.4);
+}
+
+.download-btn i, .watch-btn i {
+    font-size: 1.2rem;
+}
+
+/* ============================================
+   NAVEGACIÓN POR ANCLAS
+   ============================================ */
+.topic-navigation {
+    background: linear-gradient(135deg, rgba(79, 172, 254, 0.1) 0%, rgba(0, 242, 254, 0.05) 100%);
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: 0 5px 20px rgba(79, 172, 254, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(79, 172, 254, 0.2);
+}
+
+.topic-navigation h3 {
+    color: var(--implementa-dark);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.topic-navigation h3 i {
+    color: var(--implementa-secondary);
+}
+
+.topic-navigation ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 0.8rem;
+}
+
+.topic-navigation li {
+    margin: 0;
+}
+
+.topic-navigation a {
+    display: flex;
+    align-items: center;
+    padding: 0.8rem 1.2rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--implementa-dark);
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+}
+
+.topic-navigation a:hover {
+    background: linear-gradient(135deg, var(--implementa-primary) 0%, var(--implementa-secondary) 100%);
+    color: white;
+    transform: translateX(5px);
+    border-left-color: var(--implementa-dark);
+    box-shadow: 0 5px 15px rgba(79, 172, 254, 0.3);
+}
+
+/* Highlight para secciones */
+.topic-card.highlight {
+    animation: highlight-pulse 2s ease;
+}
+
+@keyframes highlight-pulse {
+    0%, 100% {
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    }
+    50% {
+        box-shadow: 0 10px 40px rgba(79, 172, 254, 0.4);
+        transform: scale(1.02);
+    }
+}
+
+/* ============================================
+   CUESTIONARIO
+   ============================================ */
+.quiz-container {
+    background: linear-gradient(135deg, rgba(79, 172, 254, 0.05) 0%, rgba(0, 242, 254, 0.05) 100%);
+    border-radius: 20px;
+    padding: 3rem;
+    margin: 3rem 0;
+    box-shadow: 0 10px 30px rgba(79, 172, 254, 0.2);
+    border: 2px solid rgba(79, 172, 254, 0.3);
+}
+
+.quiz-container h2 {
+    color: var(--implementa-dark);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.quiz-container h2 i {
+    color: var(--implementa-secondary);
+}
+
+.quiz-container > p {
+    color: #555;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.quiz-question {
+    background: white;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 15px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border-left: 4px solid var(--implementa-primary);
+}
+
+.quiz-question:hover {
+    box-shadow: 0 5px 20px rgba(79, 172, 254, 0.2);
+    transform: translateY(-2px);
+}
+
+.quiz-question h3 {
+    color: var(--implementa-dark);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.quiz-question label {
+    display: block;
+    padding: 0.8rem 1rem;
+    margin: 0.5rem 0;
+    background: #f8f9fa;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    border: 2px solid transparent;
+}
+
+.quiz-question label:hover {
+    background: linear-gradient(135deg, rgba(79, 172, 254, 0.1) 0%, rgba(0, 242, 254, 0.1) 100%);
+    border-color: var(--implementa-primary);
+    transform: translateX(5px);
+}
+
+.quiz-question input[type="radio"] {
+    margin-right: 0.8rem;
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+    accent-color: var(--implementa-primary);
+}
+
+/* Respuestas correctas e incorrectas */
+.quiz-question.correct-answer {
+    background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+    border-left-color: #28a745;
+}
+
+.quiz-question.wrong-answer {
+    background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
+    border-left-color: #dc3545;
+}
+
+.quiz-question.correct-answer h3::after {
+    content: " ✓";
+    color: #28a745;
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
+}
+
+.quiz-question.wrong-answer h3::after {
+    content: " ✗";
+    color: #dc3545;
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
+}
+
+/* Botones del cuestionario */
+.submit-btn, .retry-btn {
+    background: linear-gradient(135deg, var(--implementa-primary) 0%, var(--implementa-secondary) 100%);
+    color: white;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1rem 0.5rem;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    box-shadow: 0 5px 15px rgba(79, 172, 254, 0.3);
+}
+
+.submit-btn:hover, .retry-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(79, 172, 254, 0.4);
+}
+
+.submit-btn:active, .retry-btn:active {
+    transform: translateY(-1px);
+}
+
+.retry-btn {
+    background: linear-gradient(135deg, #6c757d 0%, #5a6268 100%);
+}
+
+/* Accesibilidad y enfoque visible en botones */
+.download-btn:focus-visible,
+.watch-btn:focus-visible,
+.submit-btn:focus-visible,
+.retry-btn:focus-visible {
+    outline: 3px solid var(--implementa-secondary);
+    outline-offset: 3px;
+    box-shadow: 0 0 0 4px rgba(0, 242, 254, 0.25), 0 6px 18px rgba(79, 172, 254, 0.35);
+}
+
+/* Resultado del cuestionario */
+.quiz-result {
+    background: white;
+    padding: 2rem;
+    margin-top: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    display: none;
+    border-left: 5px solid var(--implementa-primary);
+}
+
+.quiz-result h3 {
+    color: var(--implementa-dark);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.quiz-result .score {
+    font-size: 1.3rem;
+    color: #333;
+    margin: 0.5rem 0;
+}
+
+.quiz-result .score strong {
+    color: var(--implementa-primary);
+    font-size: 1.5rem;
+}
+
+.quiz-result .percentage {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--implementa-secondary);
+    margin: 1rem 0;
+}
+
+.quiz-result .feedback-message {
+    font-size: 1.2rem;
+    padding: 1rem;
+    background: linear-gradient(135deg, rgba(79, 172, 254, 0.1) 0%, rgba(0, 242, 254, 0.1) 100%);
+    border-radius: 10px;
+    margin-top: 1rem;
+    color: #333;
+    font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .materia-header {
+        padding: 2rem 1rem;
+    }
+
+    .materia-header h1 {
+        font-size: 2rem;
+    }
+
+    .back-button {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    .recursos-section {
+        padding: 1.5rem;
+    }
+    
+    .recursos-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .pdf-viewer {
+        height: 400px;
+    }
+
+    .recurso-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .download-btn,
+    .watch-btn,
+    .submit-btn,
+    .retry-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+        width: 100%;
+        justify-content: center;
+        display: inline-flex;
+    }
+
+    .topic-navigation {
+        padding: 1.5rem;
+    }
+
+    .topic-navigation h3 {
+        font-size: 1.3rem;
+    }
+
+    .topic-navigation ul {
+        grid-template-columns: 1fr;
+    }
+
+    .topic-navigation a {
+        padding: 0.8rem 1rem;
+        font-size: 0.95rem;
+    }
+
+    .topic-section {
+        padding: 1.5rem;
+        margin: 1.5rem 0;
+    }
+
+    .topic-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .topic-section h3 {
+        font-size: 1.2rem;
+    }
+    
+    .code-box {
+        padding: 1rem;
+    }
+
+    .code-box code {
+        font-size: 0.85rem;
+    }
+
+    .quiz-container {
+        padding: 1.5rem;
+    }
+
+    .quiz-container h2 {
+        font-size: 1.6rem;
+    }
+
+    .quiz-question {
+        padding: 1rem;
+    }
+
+    .quiz-question h3 {
+        font-size: 1.1rem;
+    }
+
+    .quiz-options label {
+        padding: 0.8rem;
+        font-size: 0.95rem;
+    }
+
+    .submit-btn, .retry-btn {
+        width: 100%;
+        justify-content: center;
+        margin: 0.5rem 0;
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .quiz-result {
+        padding: 1.5rem;
+    }
+
+    .result-summary {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}

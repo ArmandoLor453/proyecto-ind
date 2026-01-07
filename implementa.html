@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implementa - CECyTEM</title>
+    <link rel="stylesheet" href="implementa.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .materia-header {
+            background: linear-gradient(135deg, #4ECDC4 0%, #44A08D 100%);
+            padding: 4rem 0 2rem;
+            text-align: center;
+        }
+        .materia-header h1 {
+            color: white;
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .materia-header p {
+            color: rgba(255,255,255,0.95);
+            font-size: 1.3rem;
+        }
+        .content-section {
+            padding: 3rem 0;
+        }
+        .topic-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        .topic-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(78, 205, 196, 0.3);
+        }
+        .topic-card h2 {
+            color: #4ECDC4;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .topic-card h3 {
+            color: white;
+            font-size: 1.5rem;
+            margin: 1.5rem 0 1rem;
+        }
+        .topic-card p, .topic-card li {
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+        .topic-card ul, .topic-card ol {
+            margin-left: 2rem;
+        }
+        .example-box {
+            background: rgba(78, 205, 196, 0.1);
+            border-left: 4px solid #4ECDC4;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-radius: 10px;
+        }
+        .code-box {
+            background: #1e1e1e;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            overflow-x: auto;
+        }
+        .code-box code {
+            color: #4ECDC4;
+            font-family: 'Courier New', monospace;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        .example-box strong {
+            color: #4ECDC4;
+        }
+        .image-container {
+            width: 100%;
+            margin: 2rem 0;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        /* Estilos del botón de regreso se manejan en implementa.css */
+        .db-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        .db-table th, .db-table td {
+            padding: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+        .db-table th {
+            background: rgba(78, 205, 196, 0.2);
+            color: #4ECDC4;
+        }
+    </style>
+</head>
+<body>
+    <div class="particles"></div>
+    
+    <header>
+        <div class="container">
+            
+        </div>
+    </header>
+
+    <div class="materia-header">
+        <div class="container">
+            <h1><i class="fas fa-tools"></i> Implementa</h1>
+            <p>Bases de Datos, Programación y Desarrollo de Software</p>
+        </div>
+    </div>
+
+    <main>
+        <div class="container">
+            <a href="index.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Volver al inicio
+            </a>
+
+            <!-- Recursos Multimedia -->
+            <div class="recursos-section">
+                <h2><i class="fas fa-folder-open"></i> Recursos de Aprendizaje</h2>
+                <div class="recursos-grid">
+                    <!-- PDF -->
+                    <div class="recurso-card">
+                        <div class="recurso-header">
+                            <i class="fas fa-file-pdf"></i>
+                            <h3>Material PDF</h3>
+                        </div>
+                        <p>Algunos trabajos realizados en la materia</p>
+                        <div class="pdf-viewer">
+                            <iframe src="implementa .pdf" 
+                                    frameborder="0" 
+                                    width="100%" 
+                                    height="500px">
+                            </iframe>
+                        </div>
+                        <a href="implementa .pdf" 
+                           target="_blank" 
+                           class="download-btn">
+                            <i class="fas fa-external-link-alt"></i> Ver Recurso
+                        </a>
+                    </div>
+
+                    <!-- Video -->
+                    <div class="recurso-card">
+                        <div class="recurso-header">
+                            <i class="fab fa-youtube"></i>
+                            <h3>Video Tutorial</h3>
+                        </div>
+                        <p>Aprende SQL y bases de datos desde cero</p>
+                        <div class="video-container">
+                            <iframe width="100%" 
+                                    height="315" 
+                                    src="https://youtube.com/shorts/VFgZnYxPQ8s?si=2enTpHk2uQoIUfmQ" 
+                                    title="SQL Database Video" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                        <a href="https://youtube.com/shorts/VFgZnYxPQ8s?si=2enTpHk2uQoIUfmQ" 
+                           target="_blank" 
+                           class="watch-btn">
+                            <i class="fab fa-youtube"></i> Ver en YouTube
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navegación por anclas -->
+            <nav class="topic-navigation">
+                <h3><i class="fas fa-list"></i> Índice de Contenidos</h3>
+                <ul>
+                    <li><a href="#maquetado">1. Maquetado y Diseño</a></li>
+                    <li><a href="#bases-datos">2. Bases de Datos</a></li>
+                    <li><a href="#modelado-er">3. Modelado ER</a></li>
+                    <li><a href="#normalizacion">4. Normalización</a></li>
+                    <li><a href="#empaquetado">5. Empaquetado Software</a></li>
+                    <li><a href="#sql-ddl">6. SQL DDL</a></li>
+                    <li><a href="#create-table">7. CREATE TABLE</a></li>
+                    <li><a href="#tipos-datos">8. Tipos de Datos</a></li>
+                    <li><a href="#operadores">9. Operadores</a></li>
+                    <li><a href="#ciclos">10. Sentencias Cíclicas</a></li>
+                    <li><a href="#poo">11. POO</a></li>
+                    <li><a href="#clases">12. Clases</a></li>
+                    <li><a href="#metodo-main">13. Método Main</a></li>
+                    <li><a href="#ide">14. IDE</a></li>
+                    <li><a href="#sintaxis-for">15. Sintaxis FOR</a></li>
+                    <li><a href="#gestores">16. Gestores de BD</a></li>
+                    <li><a href="#keys">17. Primary/Foreign Key</a></li>
+                    <li><a href="#quiz">📝 Cuestionario Final</a></li>
+                </ul>
+            </nav>
+
+            <div class="content-section">
+                <!-- Maquetado y Diseño -->
+                <div class="topic-card" id="maquetado">
+                    <h2><i class="fas fa-palette"></i> Maquetado y Diseño</h2>
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?w=1200" alt="Maquetado y Diseño">
+                    </div>
+                    <p>El maquetado y diseño web es el proceso de crear la estructura visual y funcional de una página web utilizando HTML, CSS y JavaScript.</p>
+
+                    <h3>Elementos principales:</h3>
+                    <ul>
+                        <li><strong>HTML (HyperText Markup Language):</strong> Estructura del contenido</li>
+                        <li><strong>CSS (Cascading Style Sheets):</strong> Estilos y presentación visual</li>
+                        <li><strong>JavaScript:</strong> Interactividad y funcionalidad dinámica</li>
+                        <li><strong>Responsive Design:</strong> Adaptación a diferentes dispositivos</li>
+                        <li><strong>UI/UX:</strong> Interfaz de usuario y experiencia de usuario</li>
+                    </ul>
+
+                    <div class="example-box">
+                        <strong>Principios de diseño web:</strong><br>
+                        • <strong>Simplicidad:</strong> Diseños limpios y fáciles de navegar<br>
+                        • <strong>Consistencia:</strong> Elementos uniformes en todas las páginas<br>
+                        • <strong>Jerarquía visual:</strong> Orden de importancia en elementos<br>
+                        • <strong>Accesibilidad:</strong> Diseño inclusivo para todos los usuarios<br>
+                        • <strong>Performance:</strong> Carga rápida y optimizada
+                    </div>
+                </div>
+
+                <!-- Bases de Datos Fundamentos -->
+                <div class="topic-card" id="bases-datos">
+                    <h2><i class="fas fa-database"></i> Bases de Datos y Fundamentos</h2>
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=1200" alt="Bases de Datos">
+                    </div>
+                    <p>Una base de datos es un conjunto organizado de información estructurada, almacenada electrónicamente en un sistema informático.</p>
+
+                    <h3>Conceptos fundamentales:</h3>
+                    <ul>
+                        <li><strong>Dato:</strong> Información básica (nombre, edad, dirección)</li>
+                        <li><strong>Tabla:</strong> Conjunto de datos organizados en filas y columnas</li>
+                        <li><strong>Registro:</strong> Fila de una tabla (un elemento completo)</li>
+                        <li><strong>Campo:</strong> Columna de una tabla (un atributo específico)</li>
+                        <li><strong>Clave:</strong> Identificador único de un registro</li>
+                    </ul>
+
+                    <div class="example-box">
+                        <strong>Tipos de Bases de Datos:</strong><br>
+                        • <strong>Relacionales (SQL):</strong> MySQL, PostgreSQL, Oracle, SQL Server<br>
+                        • <strong>No Relacionales (NoSQL):</strong> MongoDB, Redis, Cassandra<br>
+                        • <strong>En memoria:</strong> Redis, Memcached<br>
+                        • <strong>Orientadas a objetos:</strong> db4o, ObjectDB
+                    </div>
+                </div>
+
+                <!-- 3. Modelado Entidad-Relación -->
+                <div class="topic-card" id="modelado-er">
+                    <h2><i class="fas fa-project-diagram"></i> Modelado de Bases de Datos (Entidad-Relación)</h2>
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=1200" alt="Modelado ER">
+                    </div>
+                    <p>El modelo Entidad-Relación (ER) es una técnica de diseño que permite representar gráficamente la estructura de una base de datos.</p>
+
+                    <h3>Componentes del modelo ER:</h3>
+                    <ul>
+                        <li><strong>Entidad:</strong> Objeto o concepto del mundo real (Cliente, Producto, Pedido)</li>
+                        <li><strong>Atributo:</strong> Característica de una entidad (nombre, precio, fecha)</li>
+                        <li><strong>Relación:</strong> Asociación entre entidades (Cliente REALIZA Pedido)</li>
+                        <li><strong>Cardinalidad:</strong> Número de instancias que participan (1:1, 1:N, N:M)</li>
+                    </ul>
+
+                    <div class="example-box">
+                        <strong>Ejemplo de relaciones:</strong><br>
+                        • <strong>Uno a Uno (1:1):</strong> Una persona tiene un pasaporte<br>
+                        • <strong>Uno a Muchos (1:N):</strong> Un cliente puede tener varios pedidos<br>
+                        • <strong>Muchos a Muchos (N:M):</strong> Estudiantes pueden tomar varias materias, y cada materia tiene varios estudiantes
+                    </div>
+                </div>
+
+                <!-- Conceptos Base en BD -->
+                <div class="topic-card">
+                    <h2><i class="fas fa-lightbulb"></i> Conceptos Base en Base de Datos</h2>
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200" alt="Conceptos BD">
+                    </div>
+                    
+                    <h3>Terminología esencial:</h3>
+                    <table class="db-table">
+                        <tr>
+                            <th>Concepto</th>
+                            <th>Definición</th>
+                            <th>Ejemplo</th>
+                        </tr>
+                        <tr>
+                            <td>Schema</td>
+                            <td>Estructura lógica de la BD</td>
+                            <td>Definición de tablas y relaciones</td>
+                        </tr>
+                        <tr>
+                            <td>Query</td>
+                            <td>Consulta para obtener datos</td>
+                            <td>SELECT * FROM usuarios</td>
+                        </tr>
+                        <tr>
+                            <td>Index</td>
+                            <td>Estructura para búsquedas rápidas</td>
+                            <td>Índice en columna ID</td>
+                        </tr>
+                        <tr>
+                            <td>Transaction</td>
+                            <td>Conjunto de operaciones atómicas</td>
+                            <td>Transferencia bancaria</td>
+                        </tr>
+                        <tr>
+                            <td>ACID</td>
+                            <td>Propiedades de transacciones</td>
+                            <td>Atomicity, Consistency, Isolation, Durability</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- 4. Normalización -->
+                <div class="topic-card" id="normalizacion">
+                    <h2><i class="fas fa-chart-line"></i> Normalización de Bases de Datos</h2>
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200" alt="Normalización">
+                    </div>
+                    <p>La normalización es el proceso de organizar datos para reducir redundancia y mejorar la integridad.</p>
+
+                    <h3>Formas Normales:</h3>
+                    <ul>
+                        <li><strong>Primera Forma Normal (1FN):</strong> Eliminar grupos repetitivos, cada campo debe contener valores atómicos</li>
+                        <li><strong>Segunda Forma Normal (2FN):</strong> Cumplir 1FN + eliminar dependencias parciales (todos los atributos dependen de la clave completa)</li>
+                        <li><strong>Tercera Forma Normal (3FN):</strong> Cumplir 2FN + eliminar dependencias transitivas</li>
+                    </ul>
+
+                    <div class="example-box">
+                        <strong>Beneficios de la normalización:</strong><br>
+                        ✓ Reduce redundancia de datos<br>
+                        ✓ Mejora la integridad de datos<br>
+                        ✓ Facilita el mantenimiento<br>
+                        ✓ Optimiza el espacio de almacenamiento<br>
+                        ✓ Previene anomalías de actualización
+                    </div>
+                </div>
+
+                <!-- 5. Empaquetado de Software -->
+                <div class="topic-card" id="empaquetado">
+                    <h2><i class="fas fa-box"></i> Empaquetado de Software</h2>
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1618761714954-0b8cd0026356?w=1200" alt="Empaquetado">
+                    </div>
+                    <p>El empaquetado de software es el proceso de preparar una aplicación para su distribución e instalación.</p>
+
+                    <h3>Formatos comunes:</h3>
+                    <ul>
+                        <li><strong>.exe:</strong> Windows executables</li>
+                        <li><strong>.msi:</strong> Windows Installer packages</li>
+                        <li><strong>.deb:</strong> Debian/Ubuntu packages</li>
+                        <li><strong>.rpm:</strong> Red Hat/Fedora packages</li>
+                        <li><strong>.jar:</strong> Java Archive</li>
+                        <li><strong>.apk:</strong> Android Application Package</li>
+                        <li><strong>.dmg:</strong> macOS Disk Image</li>
+                    </ul>
+
+                    <div class="example-box">
+                        <strong>Elementos de un paquete:</strong><br>
+                        • Archivos ejecutables<br>
+                        • Bibliotecas y dependencias<br>
+                        • Archivos de configuración<br>
+                        • Documentación<br>
+                        • Scripts de instalación/desinstalación<br>
+                        • Metadatos (versión, autor, licencia)
+                    </div>
+                </div>
+
+                <!-- SQL DDL -->
+                <div class="topic-card" id="sql-ddl">
+                    <h2><i class="fas fa-code"></i> SQL DDL (Data Definition Language)</h2>
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=1200" alt="SQL DDL">
+                    </div>
+                    <p>DDL son comandos SQL utilizados para definir y modificar la estructura de la base de datos.</p>
+
+                    <h3>Comandos principales:</h3>
+                    <ul>
+                        <li><strong>CREATE:</strong> Crear objetos (tablas, vistas, índices)</li>
+                        <li><strong>ALTER:</strong> Modificar estructura existente</li>
+                        <li><strong>DROP:</strong> Eliminar objetos</li>
+                        <li><strong>TRUNCATE:</strong> Eliminar todos los registros de una tabla</li>
+                    </ul>
+
+                    <div class="code-box">
+                        <code>
+-- Crear una base de datos<br>
+CREATE DATABASE mi_empresa;<br><br>
+
+-- Usar la base de datos<br>
+USE mi_empresa;<br><br>
+
+-- Crear una tabla<br>
+CREATE TABLE empleados (<br>
+&nbsp;&nbsp;id INT PRIMARY KEY AUTO_INCREMENT,<br>
+&nbsp;&nbsp;nombre VARCHAR(100) NOT NULL,<br>
+&nbsp;&nbsp;departamento VARCHAR(50),<br>
+&nbsp;&nbsp;salario DECIMAL(10, 2),<br>
+&nbsp;&nbsp;fecha_contratacion DATE<br>
+);<br><br>
+
+-- Modificar tabla<br>
+ALTER TABLE empleados ADD COLUMN email VARCHAR(100);<br><br>
+
+-- Eliminar tabla<br>
+DROP TABLE empleados;
+                        </code>
+                    </div>
+                </div>
+
+                <!-- 7. CREATE TABLE -->
+                <div class="topic-card" id="create-table">
+                    <h2><i class="fas fa-table"></i> CREATE TABLE con Definición de Columnas y Tipos de Datos</h2>
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?w=1200" alt="CREATE TABLE">
+                    </div>
+                    <p>El comando CREATE TABLE define la estructura de una nueva tabla especificando columnas y tipos de datos.</p>
+
+                    <h3>Tipos de datos comunes en SQL:</h3>
+                    <table class="db-table">
+                        <tr>
+                            <th>Tipo</th>
+                            <th>Descripción</th>
+                            <th>Ejemplo</th>
+                        </tr>
+                        <tr>
+                            <td>INT</td>
+                            <td>Números enteros</td>
+                            <td>1, 100, -50</td>
+                        </tr>
+                        <tr>
+                            <td>VARCHAR(n)</td>
+                            <td>Cadena de texto variable</td>
+                            <td>'Juan', 'Hola Mundo'</td>
+                        </tr>
+                        <tr>
+                            <td>DECIMAL(p,s)</td>
+                            <td>Números decimales</td>
+                            <td>1500.50, 99.99</td>
+                        </tr>
+                        <tr>
+                            <td>DATE</td>
+                            <td>Fecha</td>
+                            <td>2026-01-05</td>
+                        </tr>
+                        <tr>
+                            <td>BOOLEAN</td>
+                            <td>Verdadero/Falso</td>
+                            <td>TRUE, FALSE</td>
+                        </tr>
+                        <tr>
+                            <td>TEXT</td>
+                            <td>Texto largo</td>
+                            <td>Descripciones extensas</td>
+                        </tr>
+                    </table>
+
+                    <div class="code-box">
+                        <code>
+CREATE TABLE productos (<br>
+&nbsp;&nbsp;producto_id INT PRIMARY KEY AUTO_INCREMENT,<br>
+&nbsp;&nbsp;nombre VARCHAR(100) NOT NULL,<br>
+&nbsp;&nbsp;descripcion TEXT,<br>
+&nbsp;&nbsp;precio DECIMAL(10, 2) NOT NULL,<br>
+&nbsp;&nbsp;stock INT DEFAULT 0,<br>
+&nbsp;&nbsp;disponible BOOLEAN DEFAULT TRUE,<br>
+&nbsp;&nbsp;fecha_creacion DATE,<br>
+&nbsp;&nbsp;categoria_id INT,<br>
+&nbsp;&nbsp;FOREIGN KEY (categoria_id) REFERENCES categorias(id)<br>
+);
+                        </code>
+                    </div>
+                </div>
+
+                <!-- 9. Operadores -->
+                <div class="topic-card" id="operadores">
+                    <h2><i class="fas fa-plus-circle"></i> Operadores Utilizados en Programación</h2>
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1555952494-efd681c7e3f9?w=1200" alt="Operadores">
+                    </div>
+                    <p>Los operadores son símbolos que realizan operaciones sobre variables y valores.</p>
+
+                    <h3>Tipos de operadores:</h3>
+                    
+                    <table class="db-table">
+                        <tr>
+                            <th>Tipo</th>
+                            <th>Operadores</th>
+                            <th>Ejemplo</th>
+                        </tr>
+                        <tr>
+                            <td>Aritméticos</td>
+                            <td>+, -, *, /, %</td>
+                            <td>5 + 3 = 8</td>
+                        </tr>
+                        <tr>
+                            <td>Comparación</td>
+                            <td>==, !=, &lt;, &gt;, &lt;=, &gt;=</td>
+                            <td>x > 10</td>
+                        </tr>
+                        <tr>
+                            <td>Lógicos</td>
+                            <td>&&, ||, !</td>
+                            <td>(x > 5) && (y < 10)</td>
+                        </tr>
+                        <tr>
+                            <td>Asignación</td>
+                            <td>=, +=, -=, *=, /=</td>
+                            <td>x += 5</td>
+                        </tr>
+                        <tr>
+                            <td>Incremento/Decremento</td>
+                            <td>++, --</td>
+                            <td>i++, --j</td>
+                        </tr>
+                    </table>
+
+                    <div class="example-box">
+                        <strong>Ejemplos en Java:</strong><br>
+                        int a = 10, b = 5;<br>
+                        int suma = a + b; // 15<br>
+                        int resta = a - b; // 5<br>
+                        int multiplicacion = a * b; // 50<br>
+                        int division = a / b; // 2<br>
+                        int modulo = a % b; // 0<br><br>
+                        boolean resultado = (a > b) && (a != 0); // true
+                    </div>
+                </div>
+
+                <!-- 10. Sentencias Cíclicas -->
+                <div class="topic-card" id="ciclos">
+                    <h2><i class="fas fa-sync-alt"></i> Sentencias Cíclicas</h2>
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1550439062-609e1531270e?w=1200" alt="Ciclos">
+                    </div>
+                    <p>Las sentencias cíclicas permiten repetir un bloque de código múltiples veces.</p>
+
+                    <h3>Principales estructuras:</h3>
+                    
+                    <div class="code-box">
+                        <code>
+<strong>// CICLO FOR</strong><br>
+for (int i = 0; i < 10; i++) {<br>
+&nbsp;&nbsp;System.out.println("Iteración: " + i);<br>
+}<br><br>
+
+<strong>// CICLO WHILE</strong><br>
+int i = 0;<br>
+while (i < 10) {<br>
+&nbsp;&nbsp;System.out.println("Iteración: " + i);<br>
+&nbsp;&nbsp;i++;<br>
+}<br><br>
+
+<strong>// CICLO DO-WHILE</strong><br>
+int i = 0;<br>
+do {<br>
+&nbsp;&nbsp;System.out.println("Iteración: " + i);<br>
+&nbsp;&nbsp;i++;<br>
+} while (i < 10);<br><br>
+
+<strong>// FOREACH (para colecciones)</strong><br>
+int[] numeros = {1, 2, 3, 4, 5};<br>
+for (int num : numeros) {<br>
+&nbsp;&nbsp;System.out.println(num);<br>
+}
+                        </code>
+                    </div>
+                </div>
+
+                <!-- POO -->
+                <div class="topic-card" id="poo">
+                    <h2><i class="fas fa-cubes"></i> Programación Orientada a Objetos (POO)</h2>
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=1200" alt="POO">
+                    </div>
+                    <p>La POO es un paradigma de programación basado en objetos que contienen datos y métodos.</p>
+
+                    <h3>Principios fundamentales:</h3>
+                    <ul>
+                        <li><strong>Encapsulamiento:</strong> Ocultar detalles internos del objeto</li>
+                        <li><strong>Herencia:</strong> Reutilizar código mediante clases derivadas</li>
+                        <li><strong>Polimorfismo:</strong> Múltiples formas de un mismo método</li>
+                        <li><strong>Abstracción:</strong> Representar conceptos esenciales</li>
+                    </ul>
+
+                    <div class="example-box">
+                        <strong>Ventajas de la POO:</strong><br>
+                        ✓ Reutilización de código<br>
+                        ✓ Modularidad y organización<br>
+                        ✓ Mantenimiento más sencillo<br>
+                        ✓ Escalabilidad<br>
+                        ✓ Modelado del mundo real
+                    </div>
+                </div>
+
+                <!-- Qué es una Clase en POO -->
+                <div class="topic-card">
+                    <h2><i class="fas fa-cube"></i> ¿Qué es una Clase en POO?</h2>
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200" alt="Clase POO">
+                    </div>
+                    <p>Una clase es una plantilla o molde que define atributos y métodos comunes a un grupo de objetos.</p>
+
+                    <div class="code-box">
+                        <code>
+<strong>// Ejemplo de una clase en Java</strong><br>
+public class Persona {<br>
+&nbsp;&nbsp;// Atributos (variables de instancia)<br>
+&nbsp;&nbsp;private String nombre;<br>
+&nbsp;&nbsp;private int edad;<br>
+&nbsp;&nbsp;private String email;<br><br>
+&nbsp;&nbsp;
+&nbsp;&nbsp;// Constructor<br>
+&nbsp;&nbsp;public Persona(String nombre, int edad, String email) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;this.nombre = nombre;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;this.edad = edad;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;this.email = email;<br>
+&nbsp;&nbsp;}<br><br>
+&nbsp;&nbsp;
+&nbsp;&nbsp;// Métodos (comportamiento)<br>
+&nbsp;&nbsp;public void saludar() {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Hola, mi nombre es " + nombre);<br>
+&nbsp;&nbsp;}<br><br>
+&nbsp;&nbsp;
+&nbsp;&nbsp;// Getters y Setters<br>
+&nbsp;&nbsp;public String getNombre() {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return nombre;<br>
+&nbsp;&nbsp;}<br><br>
+&nbsp;&nbsp;
+&nbsp;&nbsp;public void setNombre(String nombre) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;this.nombre = nombre;<br>
+&nbsp;&nbsp;}<br>
+}
+                        </code>
+                    </div>
+                </div>
+
+                <!-- Método Principal en Java -->
+                <div class="topic-card" id="metodo-main">
+                    <h2><i class="fas fa-play"></i> ¿Cuál es el Método Principal en un Programa en Java?</h2>
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200" alt="Java Main">
+                    </div>
+                    <p>El método <strong>main()</strong> es el punto de entrada de cualquier aplicación Java. Es donde comienza la ejecución del programa.</p>
+
+                    <div class="code-box">
+                        <code>
+public class MiPrograma {<br>
+&nbsp;&nbsp;<strong>public static void main(String[] args)</strong> {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;// Aquí comienza la ejecución del programa<br>
+&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("¡Hola, Mundo!");<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;// Crear objetos y ejecutar lógica<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Persona persona = new Persona("Juan", 25, "juan@email.com");<br>
+&nbsp;&nbsp;&nbsp;&nbsp;persona.saludar();<br>
+&nbsp;&nbsp;}<br>
+}
+                        </code>
+                    </div>
+
+                    <div class="example-box">
+                        <strong>Componentes del método main:</strong><br>
+                        • <strong>public:</strong> Accesible desde cualquier lugar<br>
+                        • <strong>static:</strong> Pertenece a la clase, no requiere instancia<br>
+                        • <strong>void:</strong> No retorna ningún valor<br>
+                        • <strong>main:</strong> Nombre obligatorio del método<br>
+                        • <strong>String[] args:</strong> Parámetros de línea de comandos
+                    </div>
+                </div>
+
+                <!-- Qué es un IDE -->
+                <div class="topic-card" id="ide">
+                    <h2><i class="fas fa-laptop-code"></i> ¿Qué es un IDE?</h2>
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=1200" alt="IDE">
+                    </div>
+                    <p>IDE significa <strong>Integrated Development Environment</strong> (Entorno de Desarrollo Integrado). Es un software que proporciona herramientas completas para programar.</p>
+
+                    <h3>Componentes de un IDE:</h3>
+                    <ul>
+                        <li><strong>Editor de código:</strong> Con resaltado de sintaxis y autocompletado</li>
+                        <li><strong>Compilador/Intérprete:</strong> Para ejecutar el código</li>
+                        <li><strong>Depurador (Debugger):</strong> Para encontrar y corregir errores</li>
+                        <li><strong>Administrador de proyectos:</strong> Organiza archivos y recursos</li>
+                        <li><strong>Control de versiones:</strong> Integración con Git</li>
+                    </ul>
+
+                    <div class="example-box">
+                        <strong>IDEs populares:</strong><br>
+                        • <strong>Java:</strong> IntelliJ IDEA, Eclipse, NetBeans<br>
+                        • <strong>Python:</strong> PyCharm, Visual Studio Code<br>
+                        • <strong>C/C++:</strong> Visual Studio, Code::Blocks<br>
+                        • <strong>Web:</strong> Visual Studio Code, WebStorm<br>
+                        • <strong>Android:</strong> Android Studio
+                    </div>
+                </div>
+
+                <!-- Sintaxis Ciclo FOR -->
+                <div class="topic-card" id="sintaxis-for">
+                    <h2><i class="fas fa-repeat"></i> Sintaxis de Ciclo FOR</h2>
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=1200" alt="Ciclo FOR">
+                    </div>
+                    <p>El ciclo FOR es una estructura de control que permite repetir un bloque de código un número específico de veces.</p>
+
+                    <div class="code-box">
+                        <code>
+<strong>// Sintaxis básica:</strong><br>
+for (inicialización; condición; incremento) {<br>
+&nbsp;&nbsp;// Código a repetir<br>
+}<br><br>
+
+<strong>// Ejemplo 1: Contar del 1 al 10</strong><br>
+for (int i = 1; i <= 10; i++) {<br>
+&nbsp;&nbsp;System.out.println(i);<br>
+}<br><br>
+
+<strong>// Ejemplo 2: Recorrer un array</strong><br>
+String[] nombres = {"Ana", "Carlos", "María"};<br>
+for (int i = 0; i < nombres.length; i++) {<br>
+&nbsp;&nbsp;System.out.println("Nombre: " + nombres[i]);<br>
+}<br><br>
+
+<strong>// Ejemplo 3: Ciclo descendente</strong><br>
+for (int i = 10; i >= 1; i--) {<br>
+&nbsp;&nbsp;System.out.println(i);<br>
+}<br><br>
+
+<strong>// Ejemplo 4: Incremento de 2 en 2</strong><br>
+for (int i = 0; i <= 20; i += 2) {<br>
+&nbsp;&nbsp;System.out.println("Número par: " + i);<br>
+}
+                        </code>
+                    </div>
+                </div>
+
+                <!-- Gestor de Base de Datos -->
+                <div class="topic-card" id="gestores">
+                    <h2><i class="fas fa-server"></i> ¿Qué es un Gestor de Base de Datos?</h2>
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200" alt="DBMS">
+                    </div>
+                    <p>Un Sistema Gestor de Base de Datos (DBMS - Database Management System) es un software que permite crear, gestionar y administrar bases de datos.</p>
+
+                    <h3>Funciones principales:</h3>
+                    <ul>
+                        <li><strong>Almacenamiento:</strong> Guardar datos de forma organizada</li>
+                        <li><strong>Consulta:</strong> Recuperar información mediante queries</li>
+                        <li><strong>Actualización:</strong> Modificar datos existentes</li>
+                        <li><strong>Seguridad:</strong> Control de acceso y permisos</li>
+                        <li><strong>Respaldo:</strong> Backup y recuperación de datos</li>
+                        <li><strong>Integridad:</strong> Mantener consistencia de datos</li>
+                    </ul>
+
+                    <div class="example-box">
+                        <strong>Gestores populares:</strong><br>
+                        • <strong>MySQL:</strong> Open source, muy popular para web<br>
+                        • <strong>PostgreSQL:</strong> Open source, robusto y avanzado<br>
+                        • <strong>Oracle Database:</strong> Empresarial, potente<br>
+                        • <strong>Microsoft SQL Server:</strong> Para entornos Windows<br>
+                        • <strong>MongoDB:</strong> Base de datos NoSQL<br>
+                        • <strong>SQLite:</strong> Ligero, embebido en aplicaciones
+                    </div>
+                </div>
+
+                <!-- 17. Primary Key y Foreign Key -->
+                <div class="topic-card" id="keys">
+                    <h2><i class="fas fa-key"></i> Primary Key y Foreign Key</h2>
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200" alt="Keys">
+                    </div>
+                    
+                    <h3>Primary Key (Clave Primaria):</h3>
+                    <p>Es un campo o conjunto de campos que identifica de forma única cada registro en una tabla.</p>
+                    <ul>
+                        <li>Debe ser único (no se puede repetir)</li>
+                        <li>No puede ser NULL</li>
+                        <li>Solo puede haber una primary key por tabla</li>
+                        <li>Generalmente se usa un campo ID con auto-incremento</li>
+                    </ul>
+
+                    <h3>Foreign Key (Clave Foránea):</h3>
+                    <p>Es un campo que establece una relación entre dos tablas, referenciando la primary key de otra tabla.</p>
+                    <ul>
+                        <li>Mantiene la integridad referencial</li>
+                        <li>Previene datos huérfanos</li>
+                        <li>Puede ser NULL (si la relación es opcional)</li>
+                        <li>Una tabla puede tener múltiples foreign keys</li>
+                    </ul>
+
+                    <div class="code-box">
+                        <code>
+<strong>-- Tabla con PRIMARY KEY</strong><br>
+CREATE TABLE clientes (<br>
+&nbsp;&nbsp;cliente_id INT PRIMARY KEY AUTO_INCREMENT,<br>
+&nbsp;&nbsp;nombre VARCHAR(100),<br>
+&nbsp;&nbsp;email VARCHAR(100)<br>
+);<br><br>
+
+<strong>-- Tabla con FOREIGN KEY</strong><br>
+CREATE TABLE pedidos (<br>
+&nbsp;&nbsp;pedido_id INT PRIMARY KEY AUTO_INCREMENT,<br>
+&nbsp;&nbsp;fecha DATE,<br>
+&nbsp;&nbsp;total DECIMAL(10, 2),<br>
+&nbsp;&nbsp;cliente_id INT,<br>
+&nbsp;&nbsp;FOREIGN KEY (cliente_id) REFERENCES clientes(cliente_id)<br>
+);
+                        </code>
+                    </div>
+
+                    <div class="example-box">
+                        <strong>Ejemplo de relación:</strong><br>
+                        Si tenemos un cliente con ID = 1, podemos crear múltiples pedidos con cliente_id = 1, estableciendo así una relación 1:N (un cliente puede tener muchos pedidos).
+                    </div>
+                </div>
+
+                <!-- Cuestionario -->
+                <div class="quiz-container" id="quiz">
+                    <h2><i class="fas fa-clipboard-check"></i> Cuestionario de Implementación</h2>
+                    <p>Pon a prueba tus conocimientos sobre bases de datos, SQL y programación. Selecciona la respuesta correcta para cada pregunta.</p>
+
+                    <form id="quizForm">
+                        <!-- Pregunta 1 -->
+                        <div class="quiz-question">
+                            <h3>1. ¿Qué es una base de datos relacional?</h3>
+                            <label><input type="radio" name="q1" value="a"> Una colección de archivos JSON</label>
+                            <label><input type="radio" name="q1" value="b"> Un conjunto de datos organizados en tablas relacionadas</label>
+                            <label><input type="radio" name="q1" value="c"> Un sistema de archivos de texto</label>
+                            <label><input type="radio" name="q1" value="d"> Una base de datos sin estructura</label>
+                        </div>
+
+                        <!-- Pregunta 2 -->
+                        <div class="quiz-question">
+                            <h3>2. ¿Qué comando SQL se usa para crear una tabla?</h3>
+                            <label><input type="radio" name="q2" value="a"> INSERT TABLE</label>
+                            <label><input type="radio" name="q2" value="b"> CREATE TABLE</label>
+                            <label><input type="radio" name="q2" value="c"> NEW TABLE</label>
+                            <label><input type="radio" name="q2" value="d"> MAKE TABLE</label>
+                        </div>
+
+                        <!-- Pregunta 3 -->
+                        <div class="quiz-question">
+                            <h3>3. ¿Qué es una Primary Key?</h3>
+                            <label><input type="radio" name="q3" value="a"> Una clave que puede tener valores duplicados</label>
+                            <label><input type="radio" name="q3" value="b"> Una clave opcional en una tabla</label>
+                            <label><input type="radio" name="q3" value="c"> Un identificador único para cada registro en una tabla</label>
+                            <label><input type="radio" name="q3" value="d"> Una clave externa de otra tabla</label>
+                        </div>
+
+                        <!-- Pregunta 4 -->
+                        <div class="quiz-question">
+                            <h3>4. ¿Cuál es la primera forma normal (1FN)?</h3>
+                            <label><input type="radio" name="q4" value="a"> Tener claves primarias en todas las tablas</label>
+                            <label><input type="radio" name="q4" value="b"> Eliminar grupos repetitivos y tener valores atómicos</label>
+                            <label><input type="radio" name="q4" value="c"> Eliminar todas las dependencias transitivas</label>
+                            <label><input type="radio" name="q4" value="d"> Separar datos en múltiples tablas</label>
+                        </div>
+
+                        <!-- Pregunta 5 -->
+                        <div class="quiz-question">
+                            <h3>5. ¿Qué significa POO?</h3>
+                            <label><input type="radio" name="q5" value="a"> Proceso Orientado a Objetos</label>
+                            <label><input type="radio" name="q5" value="b"> Programación Orientada a Objetos</label>
+                            <label><input type="radio" name="q5" value="c"> Procedimiento Operativo Organizado</label>
+                            <label><input type="radio" name="q5" value="d"> Programación de Objetos Optimizados</label>
+                        </div>
+
+                        <!-- Pregunta 6 -->
+                        <div class="quiz-question">
+                            <h3>6. ¿Cuál es la sintaxis correcta del método main en Java?</h3>
+                            <label><input type="radio" name="q6" value="a"> private void main(String[] args)</label>
+                            <label><input type="radio" name="q6" value="b"> public static void main(String[] args)</label>
+                            <label><input type="radio" name="q6" value="c"> static void main(String args)</label>
+                            <label><input type="radio" name="q6" value="d"> public void main()</label>
+                        </div>
+
+                        <!-- Pregunta 7 -->
+                        <div class="quiz-question">
+                            <h3>7. ¿Qué tipo de dato SQL se usa para almacenar texto de hasta 255 caracteres?</h3>
+                            <label><input type="radio" name="q7" value="a"> TEXT</label>
+                            <label><input type="radio" name="q7" value="b"> VARCHAR(255)</label>
+                            <label><input type="radio" name="q7" value="c"> CHAR(255)</label>
+                            <label><input type="radio" name="q7" value="d"> STRING(255)</label>
+                        </div>
+
+                        <!-- Pregunta 8 -->
+                        <div class="quiz-question">
+                            <h3>8. ¿Qué es un IDE?</h3>
+                            <label><input type="radio" name="q8" value="a"> Internet Development Environment</label>
+                            <label><input type="radio" name="q8" value="b"> Internal Data Editor</label>
+                            <label><input type="radio" name="q8" value="c"> Integrated Development Environment</label>
+                            <label><input type="radio" name="q8" value="d"> Interactive Design Editor</label>
+                        </div>
+
+                        <!-- Pregunta 9 -->
+                        <div class="quiz-question">
+                            <h3>9. ¿Cuál de estos NO es un gestor de base de datos?</h3>
+                            <label><input type="radio" name="q9" value="a"> MySQL</label>
+                            <label><input type="radio" name="q9" value="b"> PostgreSQL</label>
+                            <label><input type="radio" name="q9" value="c"> Java</label>
+                            <label><input type="radio" name="q9" value="d"> Oracle</label>
+                        </div>
+
+                        <!-- Pregunta 10 -->
+                        <div class="quiz-question">
+                            <h3>10. ¿Qué comando DDL elimina una tabla?</h3>
+                            <label><input type="radio" name="q10" value="a"> DELETE TABLE</label>
+                            <label><input type="radio" name="q10" value="b"> REMOVE TABLE</label>
+                            <label><input type="radio" name="q10" value="c"> DROP TABLE</label>
+                            <label><input type="radio" name="q10" value="d"> DESTROY TABLE</label>
+                        </div>
+
+                        <button type="button" class="submit-btn" onclick="checkQuizImplementa()">
+                            <i class="fas fa-check-circle"></i> Verificar Respuestas
+                        </button>
+                        <button type="button" class="retry-btn" onclick="retryQuizImplementa()" style="display: none;">
+                            <i class="fas fa-redo"></i> Intentar de Nuevo
+                        </button>
+                    </form>
+
+                    <div id="quizResult" class="quiz-result"></div>
+                </div>
+
+            </div>
+
+            <a href="index.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Volver al inicio
+            </a>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        // Respuestas correctas del cuestionario
+        const correctAnswersImplementa = {
+            q1: 'b',
+            q2: 'b',
+            q3: 'c',
+            q4: 'b',
+            q5: 'b',
+            q6: 'b',
+            q7: 'b',
+            q8: 'c',
+            q9: 'c',
+            q10: 'c'
+        };
+
+        function checkQuizImplementa() {
+            let score = 0;
+            const totalQuestions = Object.keys(correctAnswersImplementa).length;
+            const form = document.getElementById('quizForm');
+            const resultDiv = document.getElementById('quizResult');
+
+            // Revisar cada pregunta
+            for (let question in correctAnswersImplementa) {
+                const selectedAnswer = form.querySelector(`input[name="${question}"]:checked`);
+                const questionDiv = form.querySelector(`input[name="${question}"]`).closest('.quiz-question');
+                
+                // Limpiar clases previas
+                questionDiv.classList.remove('correct-answer', 'wrong-answer');
+                
+                if (selectedAnswer) {
+                    if (selectedAnswer.value === correctAnswersImplementa[question]) {
+                        score++;
+                        questionDiv.classList.add('correct-answer');
+                    } else {
+                        questionDiv.classList.add('wrong-answer');
+                    }
+                }
+            }
+
+            // Calcular porcentaje
+            const percentage = (score / totalQuestions) * 100;
+
+            // Mostrar resultado
+            let feedback = '';
+            if (percentage === 100) {
+                feedback = '¡Perfecto! 🎉 Dominas completamente los temas de implementación.';
+            } else if (percentage >= 70) {
+                feedback = '¡Bien hecho! 👏 Tienes un buen conocimiento de bases de datos y programación.';
+            } else if (percentage >= 50) {
+                feedback = 'Regular. 📚 Revisa los temas de SQL, POO y gestores de BD.';
+            } else {
+                feedback = 'Necesitas estudiar más. 💪 Repasa los conceptos fundamentales.';
+            }
+
+            resultDiv.innerHTML = `
+                <h3>Resultado del Cuestionario</h3>
+                <p class="score">Obtuviste: <strong>${score} de ${totalQuestions}</strong> respuestas correctas</p>
+                <p class="percentage">Porcentaje: <strong>${percentage.toFixed(1)}%</strong></p>
+                <p class="feedback-message">${feedback}</p>
+            `;
+            resultDiv.style.display = 'block';
+
+            // Mostrar botón de reintentar
+            document.querySelector('.submit-btn').style.display = 'none';
+            document.querySelector('.retry-btn').style.display = 'inline-block';
+
+            // Scroll al resultado
+            resultDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        function retryQuizImplementa() {
+            const form = document.getElementById('quizForm');
+            const resultDiv = document.getElementById('quizResult');
+            
+            // Limpiar formulario
+            form.reset();
+            
+            // Limpiar clases de respuestas
+            document.querySelectorAll('.quiz-question').forEach(q => {
+                q.classList.remove('correct-answer', 'wrong-answer');
+            });
+            
+            // Ocultar resultado
+            resultDiv.style.display = 'none';
+            
+            // Cambiar botones
+            document.querySelector('.submit-btn').style.display = 'inline-block';
+            document.querySelector('.retry-btn').style.display = 'none';
+            
+            // Scroll al inicio del quiz
+            document.getElementById('quiz').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Smooth scroll para enlaces de ancla
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    target.classList.add('highlight');
+                    setTimeout(() => target.classList.remove('highlight'), 2000);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
